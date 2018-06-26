@@ -13,9 +13,12 @@
 		4FC5989120E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4FC5988F20E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld */; };
 		4FC5989320E2CEC80042899B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FC5989220E2CEC80042899B /* Assets.xcassets */; };
 		4FC5989620E2CEC80042899B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC5989420E2CEC80042899B /* LaunchScreen.storyboard */; };
+		4FD1F22520E2D3700011808D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FD1F22420E2D3700011808D /* GoogleService-Info.plist */; };
+		84EE5065E7732310C155EC0A /* Pods_BRIDGE_Rider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6ECB225865E0AB04BF1BC25 /* Pods_BRIDGE_Rider.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0845BD4CAC28B848F299EF24 /* Pods-BRIDGE-Rider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRIDGE-Rider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider.debug.xcconfig"; sourceTree = "<group>"; };
 		4FC5988520E2CEC60042899B /* BRIDGE-Rider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BRIDGE-Rider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC5988820E2CEC60042899B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FC5988A20E2CEC60042899B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		4FC5989220E2CEC80042899B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FC5989520E2CEC80042899B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FC5989720E2CEC80042899B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FD1F22420E2D3700011808D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AD63462D0C6786F7DB130B70 /* Pods-BRIDGE-Rider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRIDGE-Rider.release.xcconfig"; path = "Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider.release.xcconfig"; sourceTree = "<group>"; };
+		C6ECB225865E0AB04BF1BC25 /* Pods_BRIDGE_Rider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BRIDGE_Rider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84EE5065E7732310C155EC0A /* Pods_BRIDGE_Rider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34ADB6464F23FAD487A8AEF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0845BD4CAC28B848F299EF24 /* Pods-BRIDGE-Rider.debug.xcconfig */,
+				AD63462D0C6786F7DB130B70 /* Pods-BRIDGE-Rider.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4FC5987C20E2CEC60042899B = {
 			isa = PBXGroup;
 			children = (
 				4FC5988720E2CEC60042899B /* BRIDGE-Rider */,
 				4FC5988620E2CEC60042899B /* Products */,
+				34ADB6464F23FAD487A8AEF1 /* Pods */,
+				C6B6BA39D56018AFE10FC9A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,9 +80,18 @@
 				4FC5989220E2CEC80042899B /* Assets.xcassets */,
 				4FC5989420E2CEC80042899B /* LaunchScreen.storyboard */,
 				4FC5989720E2CEC80042899B /* Info.plist */,
+				4FD1F22420E2D3700011808D /* GoogleService-Info.plist */,
 				4FC5988F20E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld */,
 			);
 			path = "BRIDGE-Rider";
+			sourceTree = "<group>";
+		};
+		C6B6BA39D56018AFE10FC9A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6ECB225865E0AB04BF1BC25 /* Pods_BRIDGE_Rider.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FC5989A20E2CEC80042899B /* Build configuration list for PBXNativeTarget "BRIDGE-Rider" */;
 			buildPhases = (
+				CF5EA0B8298ECC2DA631C679 /* [CP] Check Pods Manifest.lock */,
 				4FC5988120E2CEC60042899B /* Sources */,
 				4FC5988220E2CEC60042899B /* Frameworks */,
 				4FC5988320E2CEC60042899B /* Resources */,
+				A9E86DADA1565EC53717FEB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +155,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FC5989620E2CEC80042899B /* LaunchScreen.storyboard in Resources */,
+				4FD1F22520E2D3700011808D /* GoogleService-Info.plist in Resources */,
 				4FC5989320E2CEC80042899B /* Assets.xcassets in Resources */,
 				4FC5988E20E2CEC60042899B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A9E86DADA1565EC53717FEB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF5EA0B8298ECC2DA631C679 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BRIDGE-Rider-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4FC5988120E2CEC60042899B /* Sources */ = {
@@ -282,11 +371,13 @@
 		};
 		4FC5989B20E2CEC80042899B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0845BD4CAC28B848F299EF24 /* Pods-BRIDGE-Rider.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EN646ZUBQA;
 				INFOPLIST_FILE = "BRIDGE-Rider/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +391,13 @@
 		};
 		4FC5989C20E2CEC80042899B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD63462D0C6786F7DB130B70 /* Pods-BRIDGE-Rider.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EN646ZUBQA;
 				INFOPLIST_FILE = "BRIDGE-Rider/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

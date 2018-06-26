@@ -1,0 +1,6 @@
+framework module Pods_BRIDGE_Rider {
+  umbrella header "Pods-BRIDGE-Rider-umbrella.h"
+
+  export *
+  module * { export * }
+}
