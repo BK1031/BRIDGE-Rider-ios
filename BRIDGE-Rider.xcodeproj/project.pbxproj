@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F9399F520E3222100268AA6 /* CheckUserLoggedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F220E3221F00268AA6 /* CheckUserLoggedViewController.swift */; };
+		4F9399F620E3222100268AA6 /* ConnectionCheckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F320E3222000268AA6 /* ConnectionCheckerViewController.swift */; };
+		4F9399F720E3222100268AA6 /* ConnectionErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F420E3222100268AA6 /* ConnectionErrorViewController.swift */; };
+		4F9399F920E3238300268AA6 /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F820E3238300268AA6 /* Initialization.swift */; };
 		4FC5988920E2CEC60042899B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC5988820E2CEC60042899B /* AppDelegate.swift */; };
 		4FC5988B20E2CEC60042899B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC5988A20E2CEC60042899B /* ViewController.swift */; };
 		4FC5988E20E2CEC60042899B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC5988C20E2CEC60042899B /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 
 /* Begin PBXFileReference section */
 		0845BD4CAC28B848F299EF24 /* Pods-BRIDGE-Rider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRIDGE-Rider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider.debug.xcconfig"; sourceTree = "<group>"; };
+		4F9399F220E3221F00268AA6 /* CheckUserLoggedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckUserLoggedViewController.swift; sourceTree = "<group>"; };
+		4F9399F320E3222000268AA6 /* ConnectionCheckerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCheckerViewController.swift; sourceTree = "<group>"; };
+		4F9399F420E3222100268AA6 /* ConnectionErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionErrorViewController.swift; sourceTree = "<group>"; };
+		4F9399F820E3238300268AA6 /* Initialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Initialization.swift; sourceTree = "<group>"; };
 		4FC5988520E2CEC60042899B /* BRIDGE-Rider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BRIDGE-Rider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC5988820E2CEC60042899B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FC5988A20E2CEC60042899B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,8 +82,12 @@
 		4FC5988720E2CEC60042899B /* BRIDGE-Rider */ = {
 			isa = PBXGroup;
 			children = (
+				4F9399F820E3238300268AA6 /* Initialization.swift */,
 				4FC5988820E2CEC60042899B /* AppDelegate.swift */,
 				4FC5988A20E2CEC60042899B /* ViewController.swift */,
+				4F9399F220E3221F00268AA6 /* CheckUserLoggedViewController.swift */,
+				4F9399F320E3222000268AA6 /* ConnectionCheckerViewController.swift */,
+				4F9399F420E3222100268AA6 /* ConnectionErrorViewController.swift */,
 				4FC5988C20E2CEC60042899B /* Main.storyboard */,
 				4FC5989220E2CEC80042899B /* Assets.xcassets */,
 				4FC5989420E2CEC80042899B /* LaunchScreen.storyboard */,
@@ -171,29 +183,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
-				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -227,8 +227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F9399F520E3222100268AA6 /* CheckUserLoggedViewController.swift in Sources */,
+				4F9399F720E3222100268AA6 /* ConnectionErrorViewController.swift in Sources */,
 				4FC5989120E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld in Sources */,
+				4F9399F620E3222100268AA6 /* ConnectionCheckerViewController.swift in Sources */,
 				4FC5988B20E2CEC60042899B /* ViewController.swift in Sources */,
+				4F9399F920E3238300268AA6 /* Initialization.swift in Sources */,
 				4FC5988920E2CEC60042899B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

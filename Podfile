@@ -11,6 +11,6 @@ target 'BRIDGE-Rider' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
-  pod 'Firebase/Firestore'
+  pod 'Firebase/Database'
 
 end

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JKj-de-mzZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BRIDGE_Rider" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,5 +23,168 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Connection Error View Controller-->
+        <scene sceneID="N43-0j-Qr8">
+            <objects>
+                <viewController id="5cp-y7-0mp" customClass="ConnectionErrorViewController" customModule="BRIDGE_Rider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rC8-5h-g0w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="BRIDGE Rider Icon" translatesAutoresizingMaskIntoConstraints="NO" id="zuA-mb-iwf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="335" translatesAutoresizingMaskIntoConstraints="NO" id="c9u-Bx-dly">
+                                <rect key="frame" x="20" y="266" width="335" height="251"/>
+                                <string key="text">We encountered a problem when trying to connect you to our servers. This page will automatically disappear if a connection with the server is established.
+
+Troubleshooting Tips:
+- Check your wireless connection
+- Restart the BRIDGE app
+- Restart your device</string>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connection Error" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UY-bn-tMA">
+                                <rect key="frame" x="20" y="220" width="335" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="c9u-Bx-dly" firstAttribute="leading" secondItem="qhm-r6-G9b" secondAttribute="leading" constant="20" id="7TD-H5-NHs"/>
+                            <constraint firstItem="qhm-r6-G9b" firstAttribute="bottom" secondItem="c9u-Bx-dly" secondAttribute="bottom" constant="150" id="I7c-oT-D8S"/>
+                            <constraint firstItem="c9u-Bx-dly" firstAttribute="top" secondItem="1UY-bn-tMA" secondAttribute="bottom" constant="10" id="LNY-Fb-Y0R"/>
+                            <constraint firstItem="qhm-r6-G9b" firstAttribute="trailing" secondItem="c9u-Bx-dly" secondAttribute="trailing" constant="20" id="VdQ-X8-kca"/>
+                            <constraint firstItem="zuA-mb-iwf" firstAttribute="leading" secondItem="qhm-r6-G9b" secondAttribute="leading" id="e62-kZ-rhV"/>
+                            <constraint firstItem="zuA-mb-iwf" firstAttribute="trailing" secondItem="qhm-r6-G9b" secondAttribute="trailing" id="mHw-zv-E6j"/>
+                            <constraint firstItem="zuA-mb-iwf" firstAttribute="top" secondItem="rC8-5h-g0w" secondAttribute="top" id="rkq-kh-bgH"/>
+                            <constraint firstItem="1UY-bn-tMA" firstAttribute="top" secondItem="zuA-mb-iwf" secondAttribute="bottom" constant="20" id="uO7-jz-wnv"/>
+                            <constraint firstItem="1UY-bn-tMA" firstAttribute="leading" secondItem="qhm-r6-G9b" secondAttribute="leading" constant="20" id="whn-oR-sTv"/>
+                            <constraint firstItem="qhm-r6-G9b" firstAttribute="trailing" secondItem="1UY-bn-tMA" secondAttribute="trailing" constant="20" id="zhp-4e-gBI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qhm-r6-G9b"/>
+                    </view>
+                    <connections>
+                        <segue destination="HP3-YN-rBl" kind="presentation" identifier="retryConnection" modalTransitionStyle="crossDissolve" id="6ls-Jt-lhT"/>
+                        <segue destination="JKj-de-mzZ" kind="presentation" identifier="toChecker" animates="NO" id="izd-U5-kG5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DsN-RV-nJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1076" y="-67"/>
+        </scene>
+        <!--Check User Logged View Controller-->
+        <scene sceneID="cD4-wD-Ysa">
+            <objects>
+                <viewController id="HP3-YN-rBl" customClass="CheckUserLoggedViewController" customModule="BRIDGE_Rider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jlW-oO-sb2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BRIDGE Rider Icon" translatesAutoresizingMaskIntoConstraints="NO" id="mQC-hU-qWU">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="79t-R1-eqN"/>
+                                    <constraint firstAttribute="height" constant="200" id="iSL-6j-aZM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mQC-hU-qWU" firstAttribute="centerY" secondItem="jlW-oO-sb2" secondAttribute="centerY" id="fgd-mt-m8b"/>
+                            <constraint firstItem="mQC-hU-qWU" firstAttribute="centerX" secondItem="jlW-oO-sb2" secondAttribute="centerX" id="plZ-Bk-TNr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qL8-bm-fgu"/>
+                    </view>
+                    <connections>
+                        <segue destination="5cp-y7-0mp" kind="presentation" identifier="connectionError" animates="NO" id="Wu4-cn-bIQ"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toLog" modalTransitionStyle="crossDissolve" id="TG4-N7-kkj"/>
+                        <segue destination="lnH-82-h0H" kind="presentation" identifier="userLogged" modalTransitionStyle="partialCurl" id="3Zd-1N-epb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Psf-3K-h0X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1076" y="678.71064467766121"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vAj-R2-N8X">
+            <objects>
+                <viewController id="lnH-82-h0H" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gJD-He-Aj5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PKq-Kn-7Nk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8UC-Ke-2HD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="764"/>
+        </scene>
+        <!--Connection Checker View Controller-->
+        <scene sceneID="lRS-Ul-bvn">
+            <objects>
+                <viewController id="JKj-de-mzZ" customClass="ConnectionCheckerViewController" customModule="BRIDGE_Rider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bAK-Pd-boU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="BRIDGE Rider Icon" translatesAutoresizingMaskIntoConstraints="NO" id="swu-je-Mui">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="335" translatesAutoresizingMaskIntoConstraints="NO" id="ej8-MC-wyt">
+                                <rect key="frame" x="20" y="266" width="335" height="251"/>
+                                <string key="text">We encountered a problem when trying to connect you to our servers. This page will automatically disappear if a connection with the server is established.
+
+Troubleshooting Tips:
+- Check your wireless connection
+- Restart the BRIDGE app
+- Restart your device</string>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connection Error" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASt-o6-eJM">
+                                <rect key="frame" x="20" y="220" width="335" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="D17-Qx-IjJ" firstAttribute="trailing" secondItem="ASt-o6-eJM" secondAttribute="trailing" constant="20" id="56a-jd-UgK"/>
+                            <constraint firstItem="D17-Qx-IjJ" firstAttribute="bottom" secondItem="ej8-MC-wyt" secondAttribute="bottom" constant="150" id="GnK-dc-xK4"/>
+                            <constraint firstItem="swu-je-Mui" firstAttribute="trailing" secondItem="D17-Qx-IjJ" secondAttribute="trailing" id="HKN-px-OtZ"/>
+                            <constraint firstItem="ASt-o6-eJM" firstAttribute="top" secondItem="swu-je-Mui" secondAttribute="bottom" constant="20" id="PWg-Ep-SdE"/>
+                            <constraint firstItem="ej8-MC-wyt" firstAttribute="leading" secondItem="D17-Qx-IjJ" secondAttribute="leading" constant="20" id="R0W-2z-ixV"/>
+                            <constraint firstItem="ASt-o6-eJM" firstAttribute="leading" secondItem="D17-Qx-IjJ" secondAttribute="leading" constant="20" id="Uvm-e2-519"/>
+                            <constraint firstItem="D17-Qx-IjJ" firstAttribute="trailing" secondItem="ej8-MC-wyt" secondAttribute="trailing" constant="20" id="YP2-OL-qIx"/>
+                            <constraint firstItem="swu-je-Mui" firstAttribute="top" secondItem="bAK-Pd-boU" secondAttribute="top" id="boG-Zr-zjQ"/>
+                            <constraint firstItem="ej8-MC-wyt" firstAttribute="top" secondItem="ASt-o6-eJM" secondAttribute="bottom" constant="10" id="kzR-NL-atP"/>
+                            <constraint firstItem="swu-je-Mui" firstAttribute="leading" secondItem="D17-Qx-IjJ" secondAttribute="leading" id="znq-mm-tQz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D17-Qx-IjJ"/>
+                    </view>
+                    <connections>
+                        <segue destination="5cp-y7-0mp" kind="presentation" identifier="backChecker" animates="NO" id="d4F-xI-KIQ"/>
+                        <segue destination="HP3-YN-rBl" kind="presentation" identifier="connectedBack" modalTransitionStyle="crossDissolve" id="LLQ-7e-fyM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QVj-JR-lgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1985" y="-61"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="BRIDGE Rider Icon" width="1024" height="1024"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="LLQ-7e-fyM"/>
+        <segue reference="Wu4-cn-bIQ"/>
+    </inferredMetricsTieBreakers>
 </document>
