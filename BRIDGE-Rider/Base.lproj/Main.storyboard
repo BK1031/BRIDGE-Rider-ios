@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BRIDGE_Rider" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="BRIDGE_Rider" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,6 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="30" y="-67"/>
         </scene>
         <!--Connection Error View Controller-->
         <scene sceneID="N43-0j-Qr8">
@@ -108,12 +109,12 @@ Troubleshooting Tips:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Psf-3K-h0X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1076" y="678.71064467766121"/>
+            <point key="canvasLocation" x="-1076" y="725"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vAj-R2-N8X">
             <objects>
-                <viewController id="lnH-82-h0H" sceneMemberID="viewController">
+                <viewController id="lnH-82-h0H" customClass="ViewController" customModule="BRIDGE_Rider" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gJD-He-Aj5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,7 +124,7 @@ Troubleshooting Tips:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8UC-Ke-2HD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="764"/>
+            <point key="canvasLocation" x="30" y="725"/>
         </scene>
         <!--Connection Checker View Controller-->
         <scene sceneID="lRS-Ul-bvn">

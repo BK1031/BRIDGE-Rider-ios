@@ -11,6 +11,7 @@
 		4F9399F620E3222100268AA6 /* ConnectionCheckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F320E3222000268AA6 /* ConnectionCheckerViewController.swift */; };
 		4F9399F720E3222100268AA6 /* ConnectionErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F420E3222100268AA6 /* ConnectionErrorViewController.swift */; };
 		4F9399F920E3238300268AA6 /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F820E3238300268AA6 /* Initialization.swift */; };
+		4F9399FC20E3282B00268AA6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399FB20E3282B00268AA6 /* WelcomeViewController.swift */; };
 		4FC5988920E2CEC60042899B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC5988820E2CEC60042899B /* AppDelegate.swift */; };
 		4FC5988B20E2CEC60042899B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC5988A20E2CEC60042899B /* ViewController.swift */; };
 		4FC5988E20E2CEC60042899B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC5988C20E2CEC60042899B /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		4F9399F320E3222000268AA6 /* ConnectionCheckerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCheckerViewController.swift; sourceTree = "<group>"; };
 		4F9399F420E3222100268AA6 /* ConnectionErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionErrorViewController.swift; sourceTree = "<group>"; };
 		4F9399F820E3238300268AA6 /* Initialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Initialization.swift; sourceTree = "<group>"; };
+		4F9399FB20E3282B00268AA6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		4FC5988520E2CEC60042899B /* BRIDGE-Rider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BRIDGE-Rider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC5988820E2CEC60042899B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FC5988A20E2CEC60042899B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4F9399FA20E3272600268AA6 /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				4F9399F320E3222000268AA6 /* ConnectionCheckerViewController.swift */,
+				4F9399F420E3222100268AA6 /* ConnectionErrorViewController.swift */,
+				4F9399F220E3221F00268AA6 /* CheckUserLoggedViewController.swift */,
+			);
+			path = Startup;
+			sourceTree = "<group>";
+		};
 		4FC5987C20E2CEC60042899B = {
 			isa = PBXGroup;
 			children = (
@@ -84,10 +96,9 @@
 			children = (
 				4F9399F820E3238300268AA6 /* Initialization.swift */,
 				4FC5988820E2CEC60042899B /* AppDelegate.swift */,
+				4F9399FA20E3272600268AA6 /* Startup */,
+				4F9399FB20E3282B00268AA6 /* WelcomeViewController.swift */,
 				4FC5988A20E2CEC60042899B /* ViewController.swift */,
-				4F9399F220E3221F00268AA6 /* CheckUserLoggedViewController.swift */,
-				4F9399F320E3222000268AA6 /* ConnectionCheckerViewController.swift */,
-				4F9399F420E3222100268AA6 /* ConnectionErrorViewController.swift */,
 				4FC5988C20E2CEC60042899B /* Main.storyboard */,
 				4FC5989220E2CEC80042899B /* Assets.xcassets */,
 				4FC5989420E2CEC80042899B /* LaunchScreen.storyboard */,
@@ -228,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F9399F520E3222100268AA6 /* CheckUserLoggedViewController.swift in Sources */,
+				4F9399FC20E3282B00268AA6 /* WelcomeViewController.swift in Sources */,
 				4F9399F720E3222100268AA6 /* ConnectionErrorViewController.swift in Sources */,
 				4FC5989120E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld in Sources */,
 				4F9399F620E3222100268AA6 /* ConnectionCheckerViewController.swift in Sources */,
