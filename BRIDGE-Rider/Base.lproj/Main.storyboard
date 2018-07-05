@@ -23,15 +23,41 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BRIDGE Rider Icon" translatesAutoresizingMaskIntoConstraints="NO" id="UmN-VV-wog">
+                                <rect key="frame" x="112" y="86" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="eVq-xH-x1g"/>
+                                    <constraint firstAttribute="height" constant="150" id="eg6-uS-pCn"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YTG-LK-m1R">
+                                <rect key="frame" x="10" y="607" width="355" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hUg-Q9-3R0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IWY-ua-PBD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1KJ-rh-cDl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YTG-LK-m1R" secondAttribute="bottom" constant="10" id="BrR-Mt-zIF"/>
+                            <constraint firstItem="UmN-VV-wog" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F4j-LK-c62"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YTG-LK-m1R" secondAttribute="trailing" constant="10" id="RRX-Pt-9XM"/>
+                            <constraint firstItem="UmN-VV-wog" firstAttribute="top" secondItem="IWY-ua-PBD" secondAttribute="bottom" constant="20" id="UBx-UH-saX"/>
+                            <constraint firstItem="YTG-LK-m1R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="cka-r7-ia8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IWY-ua-PBD" secondAttribute="trailing" constant="20" id="l9B-yI-6Wl"/>
                             <constraint firstItem="IWY-ua-PBD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="yKu-hk-oqR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="getStartedButton" destination="YTG-LK-m1R" id="foa-ZP-zFp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,7 +143,7 @@ Troubleshooting Tips:
                     <connections>
                         <segue destination="5cp-y7-0mp" kind="presentation" identifier="connectionError" animates="NO" id="Wu4-cn-bIQ"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toLog" modalTransitionStyle="crossDissolve" id="TG4-N7-kkj"/>
-                        <segue destination="kHe-Ln-Olb" kind="presentation" identifier="userLogged" modalTransitionStyle="partialCurl" id="3Zd-1N-epb"/>
+                        <segue destination="kHe-Ln-Olb" kind="presentation" identifier="userLogged" modalTransitionStyle="crossDissolve" id="3Zd-1N-epb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Psf-3K-h0X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -135,17 +161,35 @@ Troubleshooting Tips:
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="noY-kg-gvV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qh5-wK-anW">
+                                <rect key="frame" x="10" y="558" width="355" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Gry-A1-YT9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                <state key="normal" title="Request Ride">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="noY-kg-gvV" secondAttribute="bottom" id="3JY-L7-aAY"/>
                             <constraint firstItem="noY-kg-gvV" firstAttribute="trailing" secondItem="PKq-Kn-7Nk" secondAttribute="trailing" id="MFm-cf-jD8"/>
                             <constraint firstItem="noY-kg-gvV" firstAttribute="top" secondItem="gJD-He-Aj5" secondAttribute="top" id="Nb1-up-i33"/>
+                            <constraint firstItem="PKq-Kn-7Nk" firstAttribute="trailing" secondItem="qh5-wK-anW" secondAttribute="trailing" constant="10" id="f2U-Yz-bq2"/>
+                            <constraint firstItem="PKq-Kn-7Nk" firstAttribute="bottom" secondItem="qh5-wK-anW" secondAttribute="bottom" constant="10" id="gRQ-uy-Wvu"/>
+                            <constraint firstItem="qh5-wK-anW" firstAttribute="leading" secondItem="PKq-Kn-7Nk" secondAttribute="leading" constant="10" id="iAd-aB-SOZ"/>
                             <constraint firstItem="noY-kg-gvV" firstAttribute="leading" secondItem="PKq-Kn-7Nk" secondAttribute="leading" id="kj1-q3-T6N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PKq-Kn-7Nk"/>
                     </view>
                     <navigationItem key="navigationItem" id="uIu-lw-On0"/>
+                    <connections>
+                        <outlet property="mapView" destination="noY-kg-gvV" id="MGT-eq-d1g"/>
+                        <outlet property="requestButton" destination="qh5-wK-anW" id="OOp-WR-KeW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8UC-Ke-2HD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -247,7 +291,7 @@ Troubleshooting Tips:
         <image name="BRIDGE Rider Icon" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LLQ-7e-fyM"/>
+        <segue reference="6ls-Jt-lhT"/>
         <segue reference="Wu4-cn-bIQ"/>
     </inferredMetricsTieBreakers>
 </document>

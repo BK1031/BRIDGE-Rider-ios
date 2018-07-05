@@ -31,6 +31,20 @@ class CheckUserLoggedViewController: UIViewController {
                         }
                         
                         //Extract User Info form Firebase Here
+                        Database.database().reference().child("users").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
+                            let userData = snapshot.value as! [String: AnyObject]
+                            name = userData["name"] as! String
+                            phone = userData["phone"] as! String
+                            school = userData["school"] as! String
+                            print(school)
+                        })
+                        
+                        //Extract User School Coordinates
+                        Database.database().reference().child("schools").child(school).observeSingleEvent(of: .value, with: { (snapshot) in
+                            let schoolCoordinates = snapshot.value as! [String: Double]
+                            schoolLat = schoolCoordinates["lat"]!
+                            schoolLong = schoolCoordinates["long"]!
+                        })
                         
                         self.logged = true
                     }

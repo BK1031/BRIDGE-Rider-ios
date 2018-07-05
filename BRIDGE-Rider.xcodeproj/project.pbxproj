@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F6B3B2E20EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2920EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx */; };
+		4F6B3B2F20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2A20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx */; };
+		4F6B3B3020EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2B20EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx */; };
+		4F6B3B3120EE89CA00AB5DE2 /* BridgeDemoRiderLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2C20EE89CA00AB5DE2 /* BridgeDemoRiderLocation.gpx */; };
+		4F6B3B3220EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2D20EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx */; };
 		4F9399F520E3222100268AA6 /* CheckUserLoggedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F220E3221F00268AA6 /* CheckUserLoggedViewController.swift */; };
 		4F9399F620E3222100268AA6 /* ConnectionCheckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F320E3222000268AA6 /* ConnectionCheckerViewController.swift */; };
 		4F9399F720E3222100268AA6 /* ConnectionErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F420E3222100268AA6 /* ConnectionErrorViewController.swift */; };
@@ -24,6 +29,11 @@
 
 /* Begin PBXFileReference section */
 		0845BD4CAC28B848F299EF24 /* Pods-BRIDGE-Rider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRIDGE-Rider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider.debug.xcconfig"; sourceTree = "<group>"; };
+		4F6B3B2920EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoDropLocation.gpx; sourceTree = "<group>"; };
+		4F6B3B2A20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoRoutePickup.gpx; sourceTree = "<group>"; };
+		4F6B3B2B20EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoDriverStart.gpx; sourceTree = "<group>"; };
+		4F6B3B2C20EE89CA00AB5DE2 /* BridgeDemoRiderLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoRiderLocation.gpx; sourceTree = "<group>"; };
+		4F6B3B2D20EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoRouteDropOff.gpx; sourceTree = "<group>"; };
 		4F9399F220E3221F00268AA6 /* CheckUserLoggedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckUserLoggedViewController.swift; sourceTree = "<group>"; };
 		4F9399F320E3222000268AA6 /* ConnectionCheckerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCheckerViewController.swift; sourceTree = "<group>"; };
 		4F9399F420E3222100268AA6 /* ConnectionErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionErrorViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +71,18 @@
 				AD63462D0C6786F7DB130B70 /* Pods-BRIDGE-Rider.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		4F6B3B3320EE89D600AB5DE2 /* GPX Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F6B3B2B20EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx */,
+				4F6B3B2920EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx */,
+				4F6B3B2C20EE89CA00AB5DE2 /* BridgeDemoRiderLocation.gpx */,
+				4F6B3B2D20EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx */,
+				4F6B3B2A20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx */,
+			);
+			path = "GPX Files";
 			sourceTree = "<group>";
 		};
 		4F9399FA20E3272600268AA6 /* Startup */ = {
@@ -102,6 +124,7 @@
 				4FC5988C20E2CEC60042899B /* Main.storyboard */,
 				4FC5989220E2CEC80042899B /* Assets.xcassets */,
 				4FC5989420E2CEC80042899B /* LaunchScreen.storyboard */,
+				4F6B3B3320EE89D600AB5DE2 /* GPX Files */,
 				4FC5989720E2CEC80042899B /* Info.plist */,
 				4FD1F22420E2D3700011808D /* GoogleService-Info.plist */,
 				4FC5988F20E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld */,
@@ -178,9 +201,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FC5989620E2CEC80042899B /* LaunchScreen.storyboard in Resources */,
+				4F6B3B3120EE89CA00AB5DE2 /* BridgeDemoRiderLocation.gpx in Resources */,
 				4FD1F22520E2D3700011808D /* GoogleService-Info.plist in Resources */,
 				4FC5989320E2CEC80042899B /* Assets.xcassets in Resources */,
+				4F6B3B3220EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx in Resources */,
+				4F6B3B3020EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx in Resources */,
+				4F6B3B2E20EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx in Resources */,
 				4FC5988E20E2CEC60042899B /* Main.storyboard in Resources */,
+				4F6B3B2F20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

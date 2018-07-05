@@ -8,18 +8,39 @@
 
 import UIKit
 import Firebase
+import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
-    //Firebase Databse Reference Creation
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var requestButton: UIButton!
+    
+    let locationManager = CLLocationManager()
+    
+    //Firebase Database Reference Creation
     var ref:DatabaseReference?
     var databaseHandle:DatabaseHandle?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Firebase Databse Reference Setup
+        //Firebase Database Reference Setup
         ref = Database.database().reference()
+        
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        requestButton.layer.cornerRadius = 10
     }
 
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
+        let center = location.coordinate
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region = MKCoordinateRegion(center: center, span: span)
+        mapView.setRegion(region, animated: true)
+        mapView.showsUserLocation = true
+    }
+    
 }
 
