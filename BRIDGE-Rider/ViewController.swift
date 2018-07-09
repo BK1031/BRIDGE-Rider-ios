@@ -30,7 +30,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
+        self.navigationItem.title = "BRIDGE"
         requestButton.layer.cornerRadius = 10
+        
+        print("School Lat: \(schoolLat)")
+        print("School Long: \(schoolLong)")
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

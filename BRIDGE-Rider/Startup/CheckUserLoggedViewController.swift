@@ -35,15 +35,13 @@ class CheckUserLoggedViewController: UIViewController {
                             let userData = snapshot.value as! [String: AnyObject]
                             name = userData["name"] as! String
                             phone = userData["phone"] as! String
-                            school = userData["school"] as! String
-                            print(school)
-                        })
-                        
-                        //Extract User School Coordinates
-                        Database.database().reference().child("schools").child(school).observeSingleEvent(of: .value, with: { (snapshot) in
-                            let schoolCoordinates = snapshot.value as! [String: Double]
-                            schoolLat = schoolCoordinates["lat"]!
-                            schoolLong = schoolCoordinates["long"]!
+                            school = userData["school"] as! String 
+                            
+                            //Hardcoded School Coordinates
+                            if school == "Valley Christian High School" {
+                                schoolLat = 37.2761
+                                schoolLong = 121.8254
+                            }
                         })
                         
                         self.logged = true

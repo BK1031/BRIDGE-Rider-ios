@@ -27,8 +27,6 @@ var school = ""
 var schoolLat = 0.0
 var schoolLong = 0.0
 
-var driverStatus = "Not Registered"
-
 var destination = ""
 
 var schoolsList = ["BASIS Independent Silicon Valley", "Bellarmine College Preparatory", "Harker’s Upper School", "Valley Christian High School"]

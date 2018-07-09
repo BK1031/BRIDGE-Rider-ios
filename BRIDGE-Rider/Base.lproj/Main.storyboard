@@ -253,11 +253,15 @@ Troubleshooting Tips:
         <scene sceneID="YNH-2q-oBD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vZj-wq-YsN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="CMb-hc-U88"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="CMb-hc-U88"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="jRt-cI-TTX">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="25"/>
+                            <color key="textColor" red="0.99607843137254903" green="0.83529411764705885" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -277,6 +281,7 @@ Troubleshooting Tips:
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.99607843139999996" green="0.8365689516" blue="0.28481131790000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="vZj-wq-YsN" kind="relationship" relationship="viewControllers" id="eyH-Le-hKi"/>
@@ -289,6 +294,7 @@ Troubleshooting Tips:
     </scenes>
     <resources>
         <image name="BRIDGE Rider Icon" width="1024" height="1024"/>
+        <image name="home" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6ls-Jt-lhT"/>
