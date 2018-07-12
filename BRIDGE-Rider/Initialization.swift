@@ -14,13 +14,16 @@ var email = ""
 var phone = ""
 var userID = ""
 var profilePic: UIImage = #imageLiteral(resourceName: "profile")
+
 var addressLine1 = ""
 var addressCity = ""
 var addressState = ""
 var addressZIP = ""
 var addressFull = ""
+
 var homeLat = 0.0
 var homeLong = 0.0
+
 var accountBalance = 0.0
 
 var school = ""

@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,14 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to BRIDGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWY-ua-PBD">
-                                <rect key="frame" x="20" y="30" width="335" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BRIDGE Rider Icon" translatesAutoresizingMaskIntoConstraints="NO" id="UmN-VV-wog">
-                                <rect key="frame" x="112" y="86" width="150" height="150"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BRIDGE Rider Icon" translatesAutoresizingMaskIntoConstraints="NO" id="UmN-VV-wog">
+                                <rect key="frame" x="112" y="30" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="eVq-xH-x1g"/>
                                     <constraint firstAttribute="height" constant="150" id="eg6-uS-pCn"/>
@@ -40,28 +35,50 @@
                                 <state key="normal" title="Get Started">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="getStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dI1-Y6-w4d"/>
+                                </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVk-Ov-MK3">
+                                <rect key="frame" x="20" y="200" width="335" height="387"/>
+                                <connections>
+                                    <segue destination="sb2-U8-C8O" kind="embed" id="SrT-kT-aCT"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXQ-0v-dJE">
+                                <rect key="frame" x="0.0" y="192" width="375" height="475"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="475" id="TpV-CA-Pje"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="IWY-ua-PBD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1KJ-rh-cDl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iVk-Ov-MK3" secondAttribute="trailing" constant="20" id="B9r-0e-GA9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YTG-LK-m1R" secondAttribute="bottom" constant="10" id="BrR-Mt-zIF"/>
+                            <constraint firstItem="iVk-Ov-MK3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Dus-cn-aI6"/>
                             <constraint firstItem="UmN-VV-wog" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F4j-LK-c62"/>
+                            <constraint firstItem="NXQ-0v-dJE" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" id="FEo-Cy-ekd"/>
+                            <constraint firstItem="YTG-LK-m1R" firstAttribute="top" secondItem="iVk-Ov-MK3" secondAttribute="bottom" constant="20" id="G6f-bo-lGX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NXQ-0v-dJE" secondAttribute="trailing" id="JS3-kW-ioX"/>
+                            <constraint firstItem="UmN-VV-wog" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="M0Q-lm-CvD"/>
+                            <constraint firstItem="iVk-Ov-MK3" firstAttribute="top" secondItem="UmN-VV-wog" secondAttribute="bottom" constant="20" id="MiA-Ze-Cuj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YTG-LK-m1R" secondAttribute="trailing" constant="10" id="RRX-Pt-9XM"/>
-                            <constraint firstItem="UmN-VV-wog" firstAttribute="top" secondItem="IWY-ua-PBD" secondAttribute="bottom" constant="20" id="UBx-UH-saX"/>
+                            <constraint firstItem="NXQ-0v-dJE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WbD-yg-Cz9"/>
                             <constraint firstItem="YTG-LK-m1R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="cka-r7-ia8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IWY-ua-PBD" secondAttribute="trailing" constant="20" id="l9B-yI-6Wl"/>
-                            <constraint firstItem="IWY-ua-PBD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="yKu-hk-oqR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="getStartedButton" destination="YTG-LK-m1R" id="foa-ZP-zFp"/>
+                        <outlet property="registrationView" destination="NXQ-0v-dJE" id="7qc-cO-gCk"/>
+                        <outlet property="registrationViewHeight" destination="TpV-CA-Pje" id="8yO-Vx-DBM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="-67"/>
+            <point key="canvasLocation" x="29.600000000000001" y="-67.016491754122939"/>
         </scene>
         <!--Connection Error View Controller-->
         <scene sceneID="N43-0j-Qr8">
@@ -72,7 +89,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="BRIDGE Rider Icon" translatesAutoresizingMaskIntoConstraints="NO" id="zuA-mb-iwf">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <rect key="frame" x="112.5" y="30" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="RB4-7w-8Er"/>
+                                    <constraint firstAttribute="height" constant="150" id="yoP-UO-LAw"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="335" translatesAutoresizingMaskIntoConstraints="NO" id="c9u-Bx-dly">
                                 <rect key="frame" x="20" y="266" width="335" height="251"/>
@@ -96,14 +117,12 @@ Troubleshooting Tips:
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="c9u-Bx-dly" firstAttribute="leading" secondItem="qhm-r6-G9b" secondAttribute="leading" constant="20" id="7TD-H5-NHs"/>
+                            <constraint firstItem="zuA-mb-iwf" firstAttribute="top" secondItem="qhm-r6-G9b" secondAttribute="top" constant="10" id="EV2-co-Mpg"/>
                             <constraint firstItem="qhm-r6-G9b" firstAttribute="bottom" secondItem="c9u-Bx-dly" secondAttribute="bottom" constant="150" id="I7c-oT-D8S"/>
                             <constraint firstItem="c9u-Bx-dly" firstAttribute="top" secondItem="1UY-bn-tMA" secondAttribute="bottom" constant="10" id="LNY-Fb-Y0R"/>
                             <constraint firstItem="qhm-r6-G9b" firstAttribute="trailing" secondItem="c9u-Bx-dly" secondAttribute="trailing" constant="20" id="VdQ-X8-kca"/>
-                            <constraint firstItem="zuA-mb-iwf" firstAttribute="leading" secondItem="qhm-r6-G9b" secondAttribute="leading" id="e62-kZ-rhV"/>
-                            <constraint firstItem="zuA-mb-iwf" firstAttribute="trailing" secondItem="qhm-r6-G9b" secondAttribute="trailing" id="mHw-zv-E6j"/>
-                            <constraint firstItem="zuA-mb-iwf" firstAttribute="top" secondItem="rC8-5h-g0w" secondAttribute="top" id="rkq-kh-bgH"/>
-                            <constraint firstItem="1UY-bn-tMA" firstAttribute="top" secondItem="zuA-mb-iwf" secondAttribute="bottom" constant="20" id="uO7-jz-wnv"/>
                             <constraint firstItem="1UY-bn-tMA" firstAttribute="leading" secondItem="qhm-r6-G9b" secondAttribute="leading" constant="20" id="whn-oR-sTv"/>
+                            <constraint firstItem="zuA-mb-iwf" firstAttribute="centerX" secondItem="rC8-5h-g0w" secondAttribute="centerX" id="z2G-TJ-Rzy"/>
                             <constraint firstItem="qhm-r6-G9b" firstAttribute="trailing" secondItem="1UY-bn-tMA" secondAttribute="trailing" constant="20" id="zhp-4e-gBI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qhm-r6-G9b"/>
@@ -115,7 +134,7 @@ Troubleshooting Tips:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DsN-RV-nJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1076" y="-67"/>
+            <point key="canvasLocation" x="-1076" y="-67.016491754122939"/>
         </scene>
         <!--Check User Logged View Controller-->
         <scene sceneID="cD4-wD-Ysa">
@@ -203,9 +222,6 @@ Troubleshooting Tips:
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="BRIDGE Rider Icon" translatesAutoresizingMaskIntoConstraints="NO" id="swu-je-Mui">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="335" translatesAutoresizingMaskIntoConstraints="NO" id="ej8-MC-wyt">
                                 <rect key="frame" x="20" y="266" width="335" height="251"/>
                                 <string key="text">We encountered a problem when trying to connect you to our servers. This page will automatically disappear if a connection with the server is established.
@@ -224,19 +240,24 @@ Troubleshooting Tips:
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="BRIDGE Rider Icon" translatesAutoresizingMaskIntoConstraints="NO" id="swu-je-Mui">
+                                <rect key="frame" x="112.5" y="30" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="km1-Kd-G90"/>
+                                    <constraint firstAttribute="width" constant="150" id="xCH-mq-IrS"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="D17-Qx-IjJ" firstAttribute="trailing" secondItem="ASt-o6-eJM" secondAttribute="trailing" constant="20" id="56a-jd-UgK"/>
                             <constraint firstItem="D17-Qx-IjJ" firstAttribute="bottom" secondItem="ej8-MC-wyt" secondAttribute="bottom" constant="150" id="GnK-dc-xK4"/>
-                            <constraint firstItem="swu-je-Mui" firstAttribute="trailing" secondItem="D17-Qx-IjJ" secondAttribute="trailing" id="HKN-px-OtZ"/>
-                            <constraint firstItem="ASt-o6-eJM" firstAttribute="top" secondItem="swu-je-Mui" secondAttribute="bottom" constant="20" id="PWg-Ep-SdE"/>
                             <constraint firstItem="ej8-MC-wyt" firstAttribute="leading" secondItem="D17-Qx-IjJ" secondAttribute="leading" constant="20" id="R0W-2z-ixV"/>
                             <constraint firstItem="ASt-o6-eJM" firstAttribute="leading" secondItem="D17-Qx-IjJ" secondAttribute="leading" constant="20" id="Uvm-e2-519"/>
                             <constraint firstItem="D17-Qx-IjJ" firstAttribute="trailing" secondItem="ej8-MC-wyt" secondAttribute="trailing" constant="20" id="YP2-OL-qIx"/>
-                            <constraint firstItem="swu-je-Mui" firstAttribute="top" secondItem="bAK-Pd-boU" secondAttribute="top" id="boG-Zr-zjQ"/>
+                            <constraint firstItem="swu-je-Mui" firstAttribute="centerX" secondItem="bAK-Pd-boU" secondAttribute="centerX" id="bLa-Yp-E4C"/>
                             <constraint firstItem="ej8-MC-wyt" firstAttribute="top" secondItem="ASt-o6-eJM" secondAttribute="bottom" constant="10" id="kzR-NL-atP"/>
-                            <constraint firstItem="swu-je-Mui" firstAttribute="leading" secondItem="D17-Qx-IjJ" secondAttribute="leading" id="znq-mm-tQz"/>
+                            <constraint firstItem="swu-je-Mui" firstAttribute="top" secondItem="D17-Qx-IjJ" secondAttribute="top" constant="10" id="zOu-Kw-Lay"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="D17-Qx-IjJ"/>
                     </view>
@@ -247,7 +268,7 @@ Troubleshooting Tips:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVj-JR-lgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1985" y="-61"/>
+            <point key="canvasLocation" x="-1986" y="-67"/>
         </scene>
         <!--Home-->
         <scene sceneID="YNH-2q-oBD">
@@ -291,13 +312,51 @@ Troubleshooting Tips:
             </objects>
             <point key="canvasLocation" x="29.600000000000001" y="724.58770614692662"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="0og-8R-9Ja">
+            <objects>
+                <viewController id="sb2-U8-C8O" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tWt-xA-N2t">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="387"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School Ride-Sharing Made Smart." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKT-gs-AUm">
+                                <rect key="frame" x="10" y="35" width="315" height="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ride sharing" translatesAutoresizingMaskIntoConstraints="NO" id="u8A-dj-D2S">
+                                <rect key="frame" x="26" y="142" width="283" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="tuP-Xf-wwC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="u8A-dj-D2S" secondAttribute="trailing" constant="10" id="9Hp-lS-SbR"/>
+                            <constraint firstItem="gKT-gs-AUm" firstAttribute="top" secondItem="tWt-xA-N2t" secondAttribute="top" constant="35" id="l5M-6G-jH2"/>
+                            <constraint firstItem="u8A-dj-D2S" firstAttribute="leading" secondItem="tWt-xA-N2t" secondAttribute="leadingMargin" constant="10" id="m5A-Jh-i44"/>
+                            <constraint firstItem="gKT-gs-AUm" firstAttribute="leading" secondItem="tWt-xA-N2t" secondAttribute="leading" constant="10" id="pq4-16-LW7"/>
+                            <constraint firstAttribute="trailing" secondItem="gKT-gs-AUm" secondAttribute="trailing" constant="10" id="vPy-eB-wpG"/>
+                            <constraint firstItem="u8A-dj-D2S" firstAttribute="top" secondItem="gKT-gs-AUm" secondAttribute="bottom" constant="35" id="wQy-df-AAm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x7N-xW-bDa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aAt-uG-Muq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="816.79999999999995" y="-68.365817091454275"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BRIDGE Rider Icon" width="1024" height="1024"/>
         <image name="home" width="30" height="30"/>
+        <image name="ride sharing" width="625" height="172"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6ls-Jt-lhT"/>
-        <segue reference="Wu4-cn-bIQ"/>
+        <segue reference="LLQ-7e-fyM"/>
+        <segue reference="d4F-xI-KIQ"/>
     </inferredMetricsTieBreakers>
 </document>
