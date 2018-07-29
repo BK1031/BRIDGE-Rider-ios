@@ -169,7 +169,7 @@
                                         <rect key="frame" x="105" y="41" width="165.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" textContentType="address-line1"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" textContentType="address-line1"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your address below:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4b-Km-3KM">
                                         <rect key="frame" x="88" y="10" width="199" height="21"/>
@@ -181,13 +181,13 @@
                                         <rect key="frame" x="156.5" y="121" width="63" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" textContentType="address-level1"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" keyboardAppearance="alert" textContentType="address-level1"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ZIP Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UJ2-es-atF">
                                         <rect key="frame" x="134.5" y="161" width="107" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" textContentType="postal-code"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" textContentType="postal-code"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKh-qB-egE">
                                         <rect key="frame" x="104" y="201" width="167" height="33"/>
@@ -215,7 +215,7 @@
                                         <rect key="frame" x="163.5" y="81" width="49" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" textContentType="address-level2"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" textContentType="address-level2"/>
                                     </textField>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afk-Ml-SDf">
                                         <rect key="frame" x="0.0" y="234" width="375" height="125"/>
@@ -312,6 +312,7 @@
                         <outlet property="termsLabel" destination="pXe-Bm-5eZ" id="iyG-3r-fOr"/>
                         <outlet property="termsSwitch" destination="Z25-ox-J34" id="uDX-dZ-E1v"/>
                         <outlet property="zipTextField" destination="UJ2-es-atF" id="rq3-Zr-xuW"/>
+                        <segue destination="kHe-Ln-Olb" kind="presentation" identifier="getStarted" modalTransitionStyle="crossDissolve" id="BrH-lN-SPC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -594,6 +595,7 @@ Troubleshooting Tips:
         <image name="ride sharing" width="625" height="172"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="BrH-lN-SPC"/>
         <segue reference="6ls-Jt-lhT"/>
         <segue reference="Wu4-cn-bIQ"/>
     </inferredMetricsTieBreakers>

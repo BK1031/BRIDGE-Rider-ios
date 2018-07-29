@@ -32,19 +32,14 @@ class CheckUserLoggedViewController: UIViewController {
                         
                         //Extract User Info form Firebase Here
                         Database.database().reference().child("users").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
-                            let userData = snapshot.value as! [String: AnyObject]
-                            name = userData["name"] as! String
-                            phone = userData["phone"] as! String
-                            school = userData["school"] as! String
-                            homeLat = userData["homeLat"] as! Double
-                            homeLong = userData["homeLong"] as! Double
-                            accountBalance = userData["accountBalance"] as! Double
-                            isStudent = userData["isStudent"] as! Bool
-                            
-                            //Hardcoded School Coordinates
-                            if school == "Valley Christian High School" {
-                                schoolLat = 37.2761
-                                schoolLong = 121.8254
+                            if let userData = snapshot.value as? [String: AnyObject] {
+                                name = userData["name"] as! String
+                                phone = userData["phone"] as! String
+                                school = userData["school"] as! String
+                                homeLat = userData["homeLat"] as! Double
+                                homeLong = userData["homeLong"] as! Double
+                                accountBalance = userData["accountBalance"] as! Double
+                                isStudent = userData["isStudent"] as! Bool
                             }
                         })
                         

@@ -163,10 +163,9 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         UIView.animate(withDuration: 0.25, animations: {
             self.schoolsPciker.isHidden = false
             self.schoolsPickerHeight.constant = 125
-            self.studentText.text = "I am a student at \(school)"
             self.view.layoutIfNeeded()
         }) { (finished) in
-            //Exectute code once finished
+            self.studentText.text = "I am a student at \(school)"
         }
     }
     
@@ -194,7 +193,7 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
         
         Auth.auth().createUser(withEmail: email, password: tempPassword) { (user, error) in
-            if error != nil {
+            if error == nil {
                 let user = Auth.auth().currentUser
                 if let user = user {
                     userID = user.uid
@@ -202,6 +201,8 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 let usersReference = self.ref?.child("users").child(userID)
                 let values = ["name": name, "email": email, "address": addressFull, "accountBalance": accountBalance, "phone": phone, "school": school, "homeLat": homeLat, "homeLong": homeLong, "isStudent": isStudent] as [String : Any]
                 usersReference?.updateChildValues(values)
+                
+                self.performSegue(withIdentifier: "getStarted", sender: self)
             }
             else {
                 let alert = UIAlertController(title: "Account Creation Error", message: "There was an error creating your BRIDGE Account: \(error!)", preferredStyle: .alert)

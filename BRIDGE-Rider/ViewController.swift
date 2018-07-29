@@ -32,6 +32,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         self.navigationItem.title = "BRIDGE"
         requestButton.layer.cornerRadius = 10
+        
+        //Hardcoded School Coordinates
+        if school == "Valley Christian High School" {
+            schoolLat = 37.2761
+            schoolLong = 121.8254
+        }
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
