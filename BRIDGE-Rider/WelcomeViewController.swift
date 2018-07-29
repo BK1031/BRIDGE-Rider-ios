@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import PhoneNumberKit
 import Firebase
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var getStartedButton: UIButton!
     @IBOutlet weak var createAccountButton: UIButton!
@@ -18,21 +19,77 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var registrationView: UIView!
     @IBOutlet weak var registrationViewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var phoneTextField: PhoneNumberTextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmTextField: UITextField!
+    @IBOutlet weak var termsLabel: UILabel!
+    @IBOutlet weak var termsButton: UIButton!
+    @IBOutlet weak var termsSwitch: UISwitch!
+    
+    @IBOutlet weak var addressView: UIView!
+    @IBOutlet weak var addressViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var goButton: UIButton!
+    @IBOutlet weak var schoolButton: UIButton!
+    @IBOutlet weak var line1TextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var stateTextField: UITextField!
+    @IBOutlet weak var zipTextField: UITextField!
+    @IBOutlet weak var schoolsPickerHeight: NSLayoutConstraint!
+    @IBOutlet weak var schoolsPciker: UIPickerView!
+    
+    var confirm = false
+    
     //Firebase Database Reference Creation
     var ref:DatabaseReference?
     var databaseHandle:DatabaseHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         //Firebase Database Reference Setup
         ref = Database.database().reference()
         
         getStartedButton.layer.cornerRadius = 10
         registrationView.layer.cornerRadius = 10
+        goButton.layer.cornerRadius = 10
+        addressView.layer.cornerRadius = 10
         createAccountButton.layer.cornerRadius = 10
         createAccountButton.isHidden = true
+        goButton.isHidden = true
         loginButton.isHidden = true
+        schoolsPciker.isHidden = true
         registrationViewHeight.constant = 0
+        addressViewHeight.constant = 0
+        
+        schoolsPciker.delegate = self
+        schoolsPciker.dataSource = self
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return schoolsList.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return schoolsList[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        school = schoolsList[row]
+        schoolButton.setTitle(school, for: .normal)
+        UIView.animate(withDuration: 0.25, animations: {
+            self.schoolsPciker.isHidden = true
+            self.schoolsPickerHeight.constant = 0
+            self.view.layoutIfNeeded()
+        }) { (finished) in
+            //Exectute code once finished
+        }
     }
     
     @IBAction func getStarted(_ sender: UIButton) {
@@ -44,6 +101,73 @@ class WelcomeViewController: UIViewController {
             self.createAccountButton.isHidden = false
             self.loginButton.isHidden = false
         }
+    }
+    
+    @IBAction func confirmed(_ sender: Any) {
+        if termsSwitch.isOn {
+            confirm = true
+        }
+        else {
+            confirm = false
+        }
+    }
+    
+    @IBAction func createAccount(_ sender: Any) {
+        if nameTextField.text! == "" || phoneTextField.text! == "" || emailTextField.text! == "" || passwordTextField.text! == "" {
+            let alert = UIAlertController(title: "Missing Information", message: "Information is missing from your entry. Please fill in all of the fields below to create your BRIDGE Account.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Got it", style: .default, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        }
+        else if passwordTextField.text != confirmTextField.text! {
+            let alert = UIAlertController(title: "Passwords Do Not Match", message: "Your passwords do not match.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Got it", style: .default, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        }
+        else if confirm != true {
+            let alert = UIAlertController(title: "Terms and Conditions", message: "You must agree to the terms and conditions to create a BRIDGE Account.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Got it", style: .default, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        }
+        else {
+            tempPassword = passwordTextField.text!
+            name = nameTextField.text!
+            email = emailTextField.text!
+            phone = phoneTextField.text!
+            
+            UIView.animate(withDuration: 0.25, delay: 0, options: [.curveEaseOut], animations: {
+                self.registrationViewHeight.constant = 0
+                self.createAccountButton.isHidden = true
+                self.loginButton.isHidden = true
+                self.view.layoutIfNeeded()
+            }) { (finished) in
+                //Execute once animation finished
+                UIView.animate(withDuration: 0.25, animations: {
+                    self.addressViewHeight.constant = self.view.frame.height - (self.view.safeAreaInsets.top + 180)
+                    self.goButton.isHidden = false
+                    self.view.layoutIfNeeded()
+                }, completion: { (finished) in
+                    //Execute once finishes (yes, again)
+                })
+            }
+            
+        }
+    }
+    
+    @IBAction func selectSchool(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.25, animations: {
+            self.schoolsPciker.isHidden = false
+            self.schoolsPickerHeight.constant = 125
+            self.view.layoutIfNeeded()
+        }) { (finished) in
+            //Exectute code once finished
+        }
+    }
+    
+    @IBAction func go(_ sender: Any) {
+        
     }
     
     @IBAction func login(_ sender: UIButton) {

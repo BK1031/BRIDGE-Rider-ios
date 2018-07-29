@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+var appVersion = "1.0"
+
+var tempPassword = ""
+
 var name = ""
 var email = ""
 var phone = ""
