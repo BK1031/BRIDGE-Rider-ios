@@ -9,6 +9,7 @@
 import UIKit
 import PhoneNumberKit
 import Firebase
+import CoreLocation
 
 class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -39,6 +40,8 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var zipTextField: UITextField!
     @IBOutlet weak var schoolsPickerHeight: NSLayoutConstraint!
     @IBOutlet weak var schoolsPciker: UIPickerView!
+    @IBOutlet weak var studentText: UILabel!
+    @IBOutlet weak var studentSwitch: UISwitch!
     
     var confirm = false
     
@@ -160,6 +163,7 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         UIView.animate(withDuration: 0.25, animations: {
             self.schoolsPciker.isHidden = false
             self.schoolsPickerHeight.constant = 125
+            self.studentText.text = "I am a student at \(school)"
             self.view.layoutIfNeeded()
         }) { (finished) in
             //Exectute code once finished
@@ -167,7 +171,55 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     @IBAction func go(_ sender: Any) {
+        addressLine1 = line1TextField.text!
+        addressCity = cityTextField.text!
+        addressState = stateTextField.text!
+        addressZIP = zipTextField.text!
+        addressFull = ("\(addressLine1), \(addressCity), \(addressState), \(addressZIP)")
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(addressFull) { (placemarks, error) in
+            if error == nil {
+                if let placemark = placemarks?[0] {
+                    let location = placemark.location!
+                    homeLat = location.coordinate.latitude
+                    homeLong = location.coordinate.longitude
+                }
+            }
+            else {
+                let alert = UIAlertController(title: "Geocoding Error", message: "There was an error geocoding your provided address: \(error!)", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Got it", style: .default, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
         
+        Auth.auth().createUser(withEmail: email, password: tempPassword) { (user, error) in
+            if error != nil {
+                let user = Auth.auth().currentUser
+                if let user = user {
+                    userID = user.uid
+                }
+                let usersReference = self.ref?.child("users").child(userID)
+                let values = ["name": name, "email": email, "address": addressFull, "accountBalance": accountBalance, "phone": phone, "school": school, "homeLat": homeLat, "homeLong": homeLong, "isStudent": isStudent] as [String : Any]
+                usersReference?.updateChildValues(values)
+            }
+            else {
+                let alert = UIAlertController(title: "Account Creation Error", message: "There was an error creating your BRIDGE Account: \(error!)", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Got it", style: .default, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+        
+    }
+    
+    @IBAction func student(_ sender: Any) {
+        if studentSwitch.isOn {
+            isStudent = true
+        }
+        else {
+            isStudent = false
+        }
     }
     
     @IBAction func login(_ sender: UIButton) {

@@ -17,6 +17,7 @@ var name = ""
 var email = ""
 var phone = ""
 var userID = ""
+var isStudent = false
 var profilePic: UIImage = #imageLiteral(resourceName: "profile")
 
 var addressLine1 = ""

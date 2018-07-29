@@ -232,6 +232,9 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3A1-xu-G6R">
                                         <rect key="frame" x="20" y="364" width="51" height="31"/>
                                         <color key="onTintColor" red="0.016995774580000001" green="0.48766422269999998" blue="0.99898439650000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="student:" destination="BYZ-38-t0r" eventType="valueChanged" id="4rk-eO-Jaf"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -303,6 +306,8 @@
                         <outlet property="schoolsPciker" destination="afk-Ml-SDf" id="wIO-Aw-ZYh"/>
                         <outlet property="schoolsPickerHeight" destination="DMy-b1-UmA" id="MPs-68-oUE"/>
                         <outlet property="stateTextField" destination="JQX-FN-w7c" id="7BN-bM-H1y"/>
+                        <outlet property="studentSwitch" destination="3A1-xu-G6R" id="R2Z-np-BLv"/>
+                        <outlet property="studentText" destination="PRg-kY-h3n" id="ZzM-ed-Dg9"/>
                         <outlet property="termsButton" destination="IF2-CC-oKg" id="a9i-9i-xvj"/>
                         <outlet property="termsLabel" destination="pXe-Bm-5eZ" id="iyG-3r-fOr"/>
                         <outlet property="termsSwitch" destination="Z25-ox-J34" id="uDX-dZ-E1v"/>
