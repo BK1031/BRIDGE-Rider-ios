@@ -15,7 +15,7 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBOutlet weak var getStartedButton: UIButton!
     @IBOutlet weak var createAccountButton: UIButton!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var haveAccountButton: UIButton!
     
     @IBOutlet weak var registrationView: UIView!
     @IBOutlet weak var registrationViewHeight: NSLayoutConstraint!
@@ -43,6 +43,12 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var studentText: UILabel!
     @IBOutlet weak var studentSwitch: UISwitch!
     
+    @IBOutlet weak var loginViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var loginView: UIView!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var emailLoginTextField: UIView!
+    @IBOutlet weak var passwordLoginTextField: UIView!
+    
     var confirm = false
     
     //Firebase Database Reference Creation
@@ -57,15 +63,19 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
         getStartedButton.layer.cornerRadius = 10
         registrationView.layer.cornerRadius = 10
+        loginView.layer.cornerRadius = 10
         goButton.layer.cornerRadius = 10
         addressView.layer.cornerRadius = 10
         createAccountButton.layer.cornerRadius = 10
         createAccountButton.isHidden = true
         goButton.isHidden = true
+        loginButton.layer.cornerRadius = 10
         loginButton.isHidden = true
+        haveAccountButton.isHidden = true
         schoolsPciker.isHidden = true
         registrationViewHeight.constant = 0
         addressViewHeight.constant = 0
+        loginViewHeight.constant = 0
         
         schoolsPciker.delegate = self
         schoolsPciker.dataSource = self
@@ -102,7 +112,7 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }) { (finished) in
             //Execute once animation finished
             self.createAccountButton.isHidden = false
-            self.loginButton.isHidden = false
+            self.haveAccountButton.isHidden = false
         }
     }
     
@@ -143,7 +153,7 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             UIView.animate(withDuration: 0.25, delay: 0, options: [.curveEaseOut], animations: {
                 self.registrationViewHeight.constant = 0
                 self.createAccountButton.isHidden = true
-                self.loginButton.isHidden = true
+                self.haveAccountButton.isHidden = true
                 self.view.layoutIfNeeded()
             }) { (finished) in
                 //Execute once animation finished
@@ -227,10 +237,17 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         UIView.animate(withDuration: 0.25, delay: 0, options: [.curveEaseOut], animations: {
             self.registrationViewHeight.constant = 0
             self.createAccountButton.isHidden = true
-            self.loginButton.isHidden = true
+            self.haveAccountButton.isHidden = true
             self.view.layoutIfNeeded()
         }) { (finished) in
             //Execute once animation finished
+            UIView.animate(withDuration: 0.25, animations: {
+                self.loginViewHeight.constant = self.view.frame.height - (self.view.safeAreaInsets.top + 180)
+                self.loginButton.isHidden = false
+                self.view.layoutIfNeeded()
+            }, completion: { (finished) in
+                //Execute once animation is finished (yes, again lol)
+            })
         }
     }
     
