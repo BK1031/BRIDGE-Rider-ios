@@ -59,5 +59,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         self.performSegue(withIdentifier: "requestRide", sender: self)
     }
     
+    @IBAction func accountView(_ sender: Any) {
+        self.performSegue(withIdentifier: "toAccount", sender: self)
+    }
+    
 }
 

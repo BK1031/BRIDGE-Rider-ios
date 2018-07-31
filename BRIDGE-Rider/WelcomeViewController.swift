@@ -272,6 +272,7 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                         homeLong = userData["homeLong"] as! Double
                         accountBalance = userData["accountBalance"] as! Double
                         isStudent = userData["isStudent"] as! Bool
+                        addressFull = userData["address"] as! String
                     }
                 })
                 self.performSegue(withIdentifier: "getStarted", sender: self)

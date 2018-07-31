@@ -97,6 +97,14 @@
 			path = "GPX Files";
 			sourceTree = "<group>";
 		};
+		4F863DB82110162700406B81 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				4F863DB6211011AC00406B81 /* AccountViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		4F9399FA20E3272600268AA6 /* Startup */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +142,7 @@
 				4FC5988A20E2CEC60042899B /* ViewController.swift */,
 				4F9399FB20E3282B00268AA6 /* WelcomeViewController.swift */,
 				4F121963210FE82C00BE0BD4 /* Ride */,
-				4F863DB6211011AC00406B81 /* AccountViewController.swift */,
+				4F863DB82110162700406B81 /* Account */,
 				4FC5988C20E2CEC60042899B /* Main.storyboard */,
 				4FC5989220E2CEC80042899B /* Assets.xcassets */,
 				4FC5989420E2CEC80042899B /* LaunchScreen.storyboard */,

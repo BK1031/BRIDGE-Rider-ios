@@ -40,6 +40,7 @@ class CheckUserLoggedViewController: UIViewController {
                                 homeLong = userData["homeLong"] as! Double
                                 accountBalance = userData["accountBalance"] as! Double
                                 isStudent = userData["isStudent"] as! Bool
+                                addressFull = userData["address"] as! String
                             }
                         })
                         
