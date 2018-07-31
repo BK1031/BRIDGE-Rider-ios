@@ -14,6 +14,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var requestButton: UIButton!
+    @IBOutlet weak var profileButton: UIButton!
     
     let locationManager = CLLocationManager()
     
@@ -38,6 +39,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             schoolLat = 37.2761
             schoolLong = 121.8254
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        profileButton.setImage(profilePic, for: .normal)
+        profileButton.imageView?.layer.cornerRadius = (profileButton.imageView?.frame.height)! / 2
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
