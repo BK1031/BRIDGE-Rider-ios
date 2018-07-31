@@ -977,7 +977,6 @@ Troubleshooting Tips:
         <image name="ride sharing" width="625" height="172"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XSg-k9-nen"/>
         <segue reference="BrH-lN-SPC"/>
         <segue reference="LLQ-7e-fyM"/>
         <segue reference="Wu4-cn-bIQ"/>
