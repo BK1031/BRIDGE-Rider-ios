@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F121962210FE82600BE0BD4 /* RiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F121961210FE82600BE0BD4 /* RiderViewController.swift */; };
 		4F6B3B2E20EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2920EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx */; };
 		4F6B3B2F20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2A20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx */; };
 		4F6B3B3020EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2B20EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		0845BD4CAC28B848F299EF24 /* Pods-BRIDGE-Rider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRIDGE-Rider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider.debug.xcconfig"; sourceTree = "<group>"; };
+		4F121961210FE82600BE0BD4 /* RiderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderViewController.swift; sourceTree = "<group>"; };
 		4F6B3B2920EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoDropLocation.gpx; sourceTree = "<group>"; };
 		4F6B3B2A20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoRoutePickup.gpx; sourceTree = "<group>"; };
 		4F6B3B2B20EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoDriverStart.gpx; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 				AD63462D0C6786F7DB130B70 /* Pods-BRIDGE-Rider.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		4F121963210FE82C00BE0BD4 /* Ride */ = {
+			isa = PBXGroup;
+			children = (
+				4F121961210FE82600BE0BD4 /* RiderViewController.swift */,
+			);
+			path = Ride;
 			sourceTree = "<group>";
 		};
 		4F6B3B3320EE89D600AB5DE2 /* GPX Files */ = {
@@ -119,8 +129,9 @@
 				4F9399F820E3238300268AA6 /* Initialization.swift */,
 				4FC5988820E2CEC60042899B /* AppDelegate.swift */,
 				4F9399FA20E3272600268AA6 /* Startup */,
-				4F9399FB20E3282B00268AA6 /* WelcomeViewController.swift */,
 				4FC5988A20E2CEC60042899B /* ViewController.swift */,
+				4F9399FB20E3282B00268AA6 /* WelcomeViewController.swift */,
+				4F121963210FE82C00BE0BD4 /* Ride */,
 				4FC5988C20E2CEC60042899B /* Main.storyboard */,
 				4FC5989220E2CEC80042899B /* Assets.xcassets */,
 				4FC5989420E2CEC80042899B /* LaunchScreen.storyboard */,
@@ -270,6 +281,7 @@
 				4F9399FC20E3282B00268AA6 /* WelcomeViewController.swift in Sources */,
 				4F9399F720E3222100268AA6 /* ConnectionErrorViewController.swift in Sources */,
 				4FC5989120E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld in Sources */,
+				4F121962210FE82600BE0BD4 /* RiderViewController.swift in Sources */,
 				4F9399F620E3222100268AA6 /* ConnectionCheckerViewController.swift in Sources */,
 				4FC5988B20E2CEC60042899B /* ViewController.swift in Sources */,
 				4F9399F920E3238300268AA6 /* Initialization.swift in Sources */,

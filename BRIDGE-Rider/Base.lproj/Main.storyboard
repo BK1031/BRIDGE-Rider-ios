@@ -226,7 +226,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6k3-Jw-CA3">
-                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                                <rect key="frame" x="0.0" y="192" width="375" height="475"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to your BRIDGE Account below:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Naz-1Y-5mR">
                                         <rect key="frame" x="20" y="10" width="335" height="21"/>
@@ -256,7 +256,7 @@
                                     <constraint firstItem="f4l-N2-cdv" firstAttribute="leading" secondItem="6k3-Jw-CA3" secondAttribute="leading" constant="20" id="Rx5-gm-uBY"/>
                                     <constraint firstItem="G0O-qY-DO1" firstAttribute="leading" secondItem="6k3-Jw-CA3" secondAttribute="leading" constant="20" id="TWE-18-KSm"/>
                                     <constraint firstAttribute="trailing" secondItem="Naz-1Y-5mR" secondAttribute="trailing" constant="20" id="bGk-yW-4Va"/>
-                                    <constraint firstAttribute="height" id="bMx-In-X3y"/>
+                                    <constraint firstAttribute="height" constant="475" id="bMx-In-X3y"/>
                                     <constraint firstAttribute="trailing" secondItem="G0O-qY-DO1" secondAttribute="trailing" constant="20" id="sJv-hJ-cEi"/>
                                     <constraint firstItem="f4l-N2-cdv" firstAttribute="top" secondItem="G0O-qY-DO1" secondAttribute="bottom" constant="10" id="tnj-PP-F3o"/>
                                 </constraints>
@@ -310,6 +310,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jGw-Xt-JKR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -353,7 +356,7 @@
                         <outlet property="cityTextField" destination="pXu-zS-07E" id="nwH-oB-GgI"/>
                         <outlet property="confirmTextField" destination="dLX-CU-fFg" id="vlF-r1-IzZ"/>
                         <outlet property="createAccountButton" destination="FYD-Qk-FbS" id="pLu-BG-H6i"/>
-                        <outlet property="emailLoginTextField" destination="6k3-Jw-CA3" id="9GU-sx-PNP"/>
+                        <outlet property="emailLoginTextField" destination="G0O-qY-DO1" id="4e2-YH-iop"/>
                         <outlet property="emailTextField" destination="38A-J5-dvR" id="EZg-G3-c3h"/>
                         <outlet property="getStartedButton" destination="YTG-LK-m1R" id="foa-ZP-zFp"/>
                         <outlet property="goButton" destination="3WL-sg-2af" id="2er-hQ-0FI"/>
@@ -363,7 +366,7 @@
                         <outlet property="loginView" destination="6k3-Jw-CA3" id="ani-wf-gWl"/>
                         <outlet property="loginViewHeight" destination="bMx-In-X3y" id="R57-m5-Ad0"/>
                         <outlet property="nameTextField" destination="z8m-2P-uDj" id="f7m-Dp-CY5"/>
-                        <outlet property="passwordLoginTextField" destination="6k3-Jw-CA3" id="ovK-Kk-mdc"/>
+                        <outlet property="passwordLoginTextField" destination="f4l-N2-cdv" id="slB-e3-h5A"/>
                         <outlet property="passwordTextField" destination="I7o-gf-6nK" id="LNC-bv-4av"/>
                         <outlet property="phoneTextField" destination="rFm-Ca-qRq" id="F3f-o5-Qlm"/>
                         <outlet property="registrationView" destination="NXQ-0v-dJE" id="7qc-cO-gCk"/>
@@ -495,6 +498,9 @@ Troubleshooting Tips:
                                 <state key="normal" title="Request Ride">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="requestRide:" destination="lnH-82-h0H" eventType="touchUpInside" id="LZf-AS-7ob"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -513,6 +519,7 @@ Troubleshooting Tips:
                     <connections>
                         <outlet property="mapView" destination="noY-kg-gvV" id="MGT-eq-d1g"/>
                         <outlet property="requestButton" destination="qh5-wK-anW" id="OOp-WR-KeW"/>
+                        <segue destination="F4j-ey-Kgf" kind="presentation" identifier="requestRide" modalTransitionStyle="crossDissolve" id="ud3-aT-pQ9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8UC-Ke-2HD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -654,6 +661,86 @@ Troubleshooting Tips:
             </objects>
             <point key="canvasLocation" x="816.79999999999995" y="-68.365817091454275"/>
         </scene>
+        <!--Request Ride View Controller-->
+        <scene sceneID="cJJ-Ne-dPf">
+            <objects>
+                <viewController id="qVC-vG-k7c" userLabel="Request Ride View Controller" customClass="RiderViewController" customModule="BRIDGE_Rider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3hG-M4-95p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HPb-du-M3R">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnL-Hh-P2w">
+                                <rect key="frame" x="10" y="607" width="355" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="O3z-Sv-bP0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                <state key="normal" title="Cancel Ride">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelRideButton:" destination="qVC-vG-k7c" eventType="touchUpInside" id="fZ9-Ru-ZoM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for Drivers..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t95-Vd-Bmg">
+                                <rect key="frame" x="20" y="74" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VLc-gu-xLY" firstAttribute="bottom" secondItem="jnL-Hh-P2w" secondAttribute="bottom" constant="10" id="4Fv-df-GEb"/>
+                            <constraint firstItem="HPb-du-M3R" firstAttribute="bottom" secondItem="3hG-M4-95p" secondAttribute="bottom" id="FWg-Jb-Nnm"/>
+                            <constraint firstItem="HPb-du-M3R" firstAttribute="leading" secondItem="VLc-gu-xLY" secondAttribute="leading" id="GkU-72-gQ7"/>
+                            <constraint firstItem="t95-Vd-Bmg" firstAttribute="leading" secondItem="VLc-gu-xLY" secondAttribute="leading" constant="20" id="JVU-9Q-dHM"/>
+                            <constraint firstItem="t95-Vd-Bmg" firstAttribute="top" secondItem="VLc-gu-xLY" secondAttribute="top" constant="10" id="SMc-S1-Mhy"/>
+                            <constraint firstItem="jnL-Hh-P2w" firstAttribute="leading" secondItem="VLc-gu-xLY" secondAttribute="leading" constant="10" id="Us7-qW-Tjh"/>
+                            <constraint firstItem="HPb-du-M3R" firstAttribute="top" secondItem="3hG-M4-95p" secondAttribute="top" id="Wpu-BH-3dt"/>
+                            <constraint firstItem="VLc-gu-xLY" firstAttribute="trailing" secondItem="jnL-Hh-P2w" secondAttribute="trailing" constant="10" id="nqK-hO-GfH"/>
+                            <constraint firstItem="HPb-du-M3R" firstAttribute="trailing" secondItem="VLc-gu-xLY" secondAttribute="trailing" id="pjR-dd-kYl"/>
+                            <constraint firstItem="VLc-gu-xLY" firstAttribute="trailing" secondItem="t95-Vd-Bmg" secondAttribute="trailing" constant="20" id="tcw-o0-QbJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VLc-gu-xLY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="BRIDGE" id="hS6-Zh-LrP"/>
+                    <connections>
+                        <outlet property="cancelRideButton" destination="jnL-Hh-P2w" id="ktl-uq-h9f"/>
+                        <outlet property="mapView" destination="HPb-du-M3R" id="jct-y7-0N2"/>
+                        <segue destination="kHe-Ln-Olb" kind="presentation" identifier="cancelRide" modalTransitionStyle="crossDissolve" id="Wls-nh-FBB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ror-ZA-Fy9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2727" y="-26"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fLc-92-RFT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F4j-ey-Kgf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Nei-Tr-b5l">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="30"/>
+                            <color key="textColor" red="0.99607843139999996" green="0.8365689516" blue="0.28481131790000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qVC-vG-k7c" kind="relationship" relationship="rootViewController" id="LB6-ky-9Bq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fcn-HR-kcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1908" y="-26"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BRIDGE Rider Icon" width="1024" height="1024"/>
@@ -661,8 +748,8 @@ Troubleshooting Tips:
         <image name="ride sharing" width="625" height="172"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BrH-lN-SPC"/>
-        <segue reference="6ls-Jt-lhT"/>
-        <segue reference="Wu4-cn-bIQ"/>
+        <segue reference="Wls-nh-FBB"/>
+        <segue reference="LLQ-7e-fyM"/>
+        <segue reference="d4F-xI-KIQ"/>
     </inferredMetricsTieBreakers>
 </document>

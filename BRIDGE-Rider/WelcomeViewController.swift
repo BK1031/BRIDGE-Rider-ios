@@ -46,8 +46,8 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var loginViewHeight: NSLayoutConstraint!
     @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var emailLoginTextField: UIView!
-    @IBOutlet weak var passwordLoginTextField: UIView!
+    @IBOutlet weak var emailLoginTextField: UITextField!
+    @IBOutlet weak var passwordLoginTextField: UITextField!
     
     var confirm = false
     
@@ -248,6 +248,40 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             }, completion: { (finished) in
                 //Execute once animation is finished (yes, again lol)
             })
+        }
+    }
+    
+    @IBAction func loginUser(_ sender: Any) {
+        Auth.auth().signIn(withEmail: emailLoginTextField.text!, password: passwordLoginTextField.text!) { (user, error) in
+            let user = Auth.auth().currentUser
+            if user != nil {
+                
+                let user = Auth.auth().currentUser
+                if let user = user {
+                    userID = user.uid
+                    email = user.email!
+                }
+                
+                //Extract User Info form Firebase Here
+                Database.database().reference().child("users").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
+                    if let userData = snapshot.value as? [String: AnyObject] {
+                        name = userData["name"] as! String
+                        phone = userData["phone"] as! String
+                        school = userData["school"] as! String
+                        homeLat = userData["homeLat"] as! Double
+                        homeLong = userData["homeLong"] as! Double
+                        accountBalance = userData["accountBalance"] as! Double
+                        isStudent = userData["isStudent"] as! Bool
+                    }
+                })
+                self.performSegue(withIdentifier: "getStarted", sender: self)
+            }
+            else {
+                let alert = UIAlertController(title: "Login Error", message: "There was an error logging you into your BRIDGE Account: \(error!)", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Got it", style: .default, handler: nil)
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
     

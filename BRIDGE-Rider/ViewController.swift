@@ -49,5 +49,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         mapView.showsUserLocation = true
     }
     
+    @IBAction func requestRide(_ sender: Any) {
+        self.performSegue(withIdentifier: "requestRide", sender: self)
+    }
+    
 }
 
