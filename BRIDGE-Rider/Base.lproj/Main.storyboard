@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JKj-de-mzZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JKj-de-mzZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BRIDGE Rider Icon" translatesAutoresizingMaskIntoConstraints="NO" id="UmN-VV-wog">
-                                <rect key="frame" x="112" y="30" width="150" height="150"/>
+                                <rect key="frame" x="112.5" y="30" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="eVq-xH-x1g"/>
                                     <constraint firstAttribute="height" constant="150" id="eg6-uS-pCn"/>
@@ -92,7 +91,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IF2-CC-oKg">
-                                        <rect key="frame" x="112" y="272" width="150" height="30"/>
+                                        <rect key="frame" x="112.5" y="272" width="150" height="30"/>
                                         <state key="normal" title="Terms and Conditions"/>
                                     </button>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z25-ox-J34">
@@ -729,11 +728,39 @@ Troubleshooting Tips:
                         <outlet property="cancelRideButton" destination="jnL-Hh-P2w" id="ktl-uq-h9f"/>
                         <outlet property="mapView" destination="HPb-du-M3R" id="jct-y7-0N2"/>
                         <segue destination="kHe-Ln-Olb" kind="presentation" identifier="cancelRide" modalTransitionStyle="crossDissolve" id="Wls-nh-FBB"/>
+                        <segue destination="Z4C-bd-UC1" kind="presentation" identifier="toDriverView" modalTransitionStyle="crossDissolve" id="Xif-hh-qSi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ror-ZA-Fy9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2727" y="-26"/>
+        </scene>
+        <!--BRIDGE-->
+        <scene sceneID="v76-ng-NZZ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sIf-04-Ayq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="df5-Vu-6Rx" customClass="DriverLocationViewController" customModule="BRIDGE_Rider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I51-eQ-1LG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YDZ-Ja-SYY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YDZ-Ja-SYY" firstAttribute="leading" secondItem="2iR-F4-rZJ" secondAttribute="leading" id="AQ3-kP-qXW"/>
+                            <constraint firstItem="YDZ-Ja-SYY" firstAttribute="top" secondItem="I51-eQ-1LG" secondAttribute="top" id="Vc5-x1-wfL"/>
+                            <constraint firstItem="YDZ-Ja-SYY" firstAttribute="bottom" secondItem="I51-eQ-1LG" secondAttribute="bottom" id="Vv3-0R-7OE"/>
+                            <constraint firstItem="YDZ-Ja-SYY" firstAttribute="trailing" secondItem="2iR-F4-rZJ" secondAttribute="trailing" id="cIH-AE-diG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2iR-F4-rZJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="BRIDGE" id="Uh0-Zy-shD"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="4281" y="-27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fLc-92-RFT">
@@ -969,6 +996,28 @@ Troubleshooting Tips:
             </objects>
             <point key="canvasLocation" x="2726" y="725"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dIa-PP-hCE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z4C-bd-UC1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="WeH-Yu-RUa">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="25"/>
+                            <color key="textColor" red="0.99607843139999996" green="0.8365689516" blue="0.28481131790000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="df5-Vu-6Rx" kind="relationship" relationship="rootViewController" id="Ops-fP-gWa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="leO-dH-glO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3528.8000000000002" y="-27.436281859070466"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BRIDGE Rider Icon" width="1024" height="1024"/>
@@ -977,7 +1026,7 @@ Troubleshooting Tips:
         <image name="ride sharing" width="625" height="172"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BrH-lN-SPC"/>
+        <segue reference="Wls-nh-FBB"/>
         <segue reference="LLQ-7e-fyM"/>
         <segue reference="Wu4-cn-bIQ"/>
         <segue reference="y2E-HM-QNg"/>

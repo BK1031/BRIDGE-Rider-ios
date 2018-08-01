@@ -33,8 +33,26 @@ class RiderViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         
         ref = Database.database().reference()
         let usersReference = self.ref?.child("rideRequests").child(userID)
-        let values = ["riderName": name, "lat": 0.0, "long": 0.0, "riderID": userID, "rideAccepted": "false", "dest": destination] as [String : Any]
+        let values = ["riderName": name, "lat": 0.0, "long": 0.0, "riderID": userID, "rideAccepted": false, "dest": destination] as [String : Any]
         usersReference?.updateChildValues(values)
+        
+        ref?.child("rideRequests").child(userID).child("rideAccepted").observe(.value, with: { (snapshot) in
+            if let driverConfirmed = snapshot.value as? Bool {
+                if driverConfirmed {
+                    //Driver Confirmed Ride
+                    let alert = UIAlertController(title: "Ride Confirmed", message: "Your ride request has been confirmed.", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "Got it", style: .default, handler: { (action) in
+                        let usersReference = self.ref?.child("rideRequests").child(userID)
+                        let values = ["riderName": nil, "lat": nil, "long": nil, "riderID": nil, "rideAccepted": nil, "dest": nil] as [String : AnyObject]
+                        usersReference?.updateChildValues(values)
+                        //Segue to Driver Location VC
+                        self.performSegue(withIdentifier: "toDriverView", sender: self)
+                    })
+                    alert.addAction(action)
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        })
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

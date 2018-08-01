@@ -13,6 +13,7 @@
 		4F6B3B3020EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2B20EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx */; };
 		4F6B3B3120EE89CA00AB5DE2 /* BridgeDemoRiderLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2C20EE89CA00AB5DE2 /* BridgeDemoRiderLocation.gpx */; };
 		4F6B3B3220EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2D20EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx */; };
+		4F73376921122BDB00DD005E /* DriverLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F73376821122BDB00DD005E /* DriverLocationViewController.swift */; };
 		4F863DB7211011AD00406B81 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F863DB6211011AC00406B81 /* AccountViewController.swift */; };
 		4F9399F520E3222100268AA6 /* CheckUserLoggedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F220E3221F00268AA6 /* CheckUserLoggedViewController.swift */; };
 		4F9399F620E3222100268AA6 /* ConnectionCheckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F320E3222000268AA6 /* ConnectionCheckerViewController.swift */; };
@@ -37,6 +38,7 @@
 		4F6B3B2B20EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoDriverStart.gpx; sourceTree = "<group>"; };
 		4F6B3B2C20EE89CA00AB5DE2 /* BridgeDemoRiderLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoRiderLocation.gpx; sourceTree = "<group>"; };
 		4F6B3B2D20EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoRouteDropOff.gpx; sourceTree = "<group>"; };
+		4F73376821122BDB00DD005E /* DriverLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverLocationViewController.swift; sourceTree = "<group>"; };
 		4F863DB6211011AC00406B81 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		4F9399F220E3221F00268AA6 /* CheckUserLoggedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckUserLoggedViewController.swift; sourceTree = "<group>"; };
 		4F9399F320E3222000268AA6 /* ConnectionCheckerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCheckerViewController.swift; sourceTree = "<group>"; };
@@ -77,12 +79,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		4F121963210FE82C00BE0BD4 /* Ride */ = {
+		4F121963210FE82C00BE0BD4 /* Rider */ = {
 			isa = PBXGroup;
 			children = (
 				4F121961210FE82600BE0BD4 /* RiderViewController.swift */,
+				4F73376821122BDB00DD005E /* DriverLocationViewController.swift */,
 			);
-			path = Ride;
+			path = Rider;
 			sourceTree = "<group>";
 		};
 		4F6B3B3320EE89D600AB5DE2 /* GPX Files */ = {
@@ -141,7 +144,7 @@
 				4F9399FA20E3272600268AA6 /* Startup */,
 				4FC5988A20E2CEC60042899B /* ViewController.swift */,
 				4F9399FB20E3282B00268AA6 /* WelcomeViewController.swift */,
-				4F121963210FE82C00BE0BD4 /* Ride */,
+				4F121963210FE82C00BE0BD4 /* Rider */,
 				4F863DB82110162700406B81 /* Account */,
 				4FC5988C20E2CEC60042899B /* Main.storyboard */,
 				4FC5989220E2CEC80042899B /* Assets.xcassets */,
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F73376921122BDB00DD005E /* DriverLocationViewController.swift in Sources */,
 				4F9399F520E3222100268AA6 /* CheckUserLoggedViewController.swift in Sources */,
 				4F9399FC20E3282B00268AA6 /* WelcomeViewController.swift in Sources */,
 				4F9399F720E3222100268AA6 /* ConnectionErrorViewController.swift in Sources */,
