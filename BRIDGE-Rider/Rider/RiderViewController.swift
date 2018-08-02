@@ -45,6 +45,10 @@ class RiderViewController: UIViewController, MKMapViewDelegate, CLLocationManage
                         let usersReference = self.ref?.child("rideRequests").child(userID)
                         let values = ["riderName": nil, "lat": nil, "long": nil, "riderID": nil, "rideAccepted": nil, "dest": nil] as [String : AnyObject]
                         usersReference?.updateChildValues(values)
+                        //Move Firebase Branch
+                        let newRef = self.ref?.child("acceptedRides").child(userID)
+                        let newValues = ["riderName": name, "riderLat": 0.0, "riderLong": 0.0, "driverID": "", "driverLat": 0.0, "driverLong": 0.0, "driverArrived": false, "dest": destination] as [String : Any]
+                        newRef?.updateChildValues(newValues)
                         //Segue to Driver Location VC
                         self.performSegue(withIdentifier: "toDriverView", sender: self)
                     })

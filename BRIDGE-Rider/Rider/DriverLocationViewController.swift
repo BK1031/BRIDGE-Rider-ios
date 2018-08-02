@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
 class DriverLocationViewController: UIViewController {
+    
+    var ref:DatabaseReference?
+    var databaseHandle:DatabaseHandle?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        ref = Database.database().reference()
     }
 
 }

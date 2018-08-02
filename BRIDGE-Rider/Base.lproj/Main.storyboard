@@ -738,7 +738,6 @@ Troubleshooting Tips:
         <!--BRIDGE-->
         <scene sceneID="v76-ng-NZZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sIf-04-Ayq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="df5-Vu-6Rx" customClass="DriverLocationViewController" customModule="BRIDGE_Rider" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I51-eQ-1LG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -759,6 +758,7 @@ Troubleshooting Tips:
                     </view>
                     <navigationItem key="navigationItem" title="BRIDGE" id="Uh0-Zy-shD"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sIf-04-Ayq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4281" y="-27"/>
         </scene>
@@ -1027,8 +1027,8 @@ Troubleshooting Tips:
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Wls-nh-FBB"/>
-        <segue reference="LLQ-7e-fyM"/>
+        <segue reference="6ls-Jt-lhT"/>
         <segue reference="Wu4-cn-bIQ"/>
-        <segue reference="y2E-HM-QNg"/>
+        <segue reference="TG4-N7-kkj"/>
     </inferredMetricsTieBreakers>
 </document>
