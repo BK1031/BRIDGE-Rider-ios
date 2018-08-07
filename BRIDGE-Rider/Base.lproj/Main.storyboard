@@ -757,6 +757,9 @@ Troubleshooting Tips:
                         <viewLayoutGuide key="safeArea" id="2iR-F4-rZJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="BRIDGE" id="Uh0-Zy-shD"/>
+                    <connections>
+                        <outlet property="mapView" destination="YDZ-Ja-SYY" id="juh-BG-Jwx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sIf-04-Ayq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
