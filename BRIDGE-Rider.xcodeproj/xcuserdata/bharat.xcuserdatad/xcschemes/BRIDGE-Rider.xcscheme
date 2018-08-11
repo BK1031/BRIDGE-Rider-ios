@@ -64,8 +64,8 @@
       <AdditionalOptions>
       </AdditionalOptions>
       <LocationScenarioReference
-         identifier = "../BRIDGE-Rider/GPX Files/BridgeDemoRiderLocation.gpx"
-         referenceType = "0">
+         identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
+         referenceType = "1">
       </LocationScenarioReference>
    </LaunchAction>
    <ProfileAction

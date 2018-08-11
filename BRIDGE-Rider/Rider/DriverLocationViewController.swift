@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import MapKit
 import CoreLocation
+import UserNotifications
 
 class DriverLocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
@@ -49,7 +50,7 @@ class DriverLocationViewController: UIViewController, CLLocationManagerDelegate,
         annotation.subtitle = "This is the location of your BRIDGE."
         self.mapView.addAnnotation(annotation)
         
-        databaseHandle = ref?.child("acceptedRides").child(userID).observe(.value, with: { (snapshot) in
+        ref?.child("acceptedRides").child(userID).observe(.value, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 self.mapView.removeAnnotation(annotation)
                 self.driverLat = dictionary["driverLat"] as! Double
@@ -91,11 +92,25 @@ class DriverLocationViewController: UIViewController, CLLocationManagerDelegate,
                 
             }
         })
+        
+        ref?.child("acceptedRides").child(userID).child("driverArrived").observe(.value, with: { (snapshot) in
+            if let driverArrived = snapshot.value as? Bool {
+                if driverArrived {
+                    //Driver has arrived!
+                    let alert = UIAlertController(title: "BRIDGE Arrived", message: "Your BRIDGE has arrived!", preferredStyle: .alert)
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        })
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locationManager.location?.coordinate {
             riderLocation = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+            let requestRef = ref?.child("acceptedRides").child(userID)
+            let values = ["riderLat": riderLocation!.latitude, "riderLong": riderLocation!.longitude] as [String : Any]
+            requestRef?.updateChildValues(values)
         }
         
     }

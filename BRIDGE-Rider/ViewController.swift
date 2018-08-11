@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import MapKit
+import UserNotifications
 
 class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
@@ -30,6 +31,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
+        
+        let center =  UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { (result, error) in
+            //handle result of request failure
+        }
         
         self.navigationItem.title = "BRIDGE"
         requestButton.layer.cornerRadius = 10
