@@ -96,9 +96,20 @@ class DriverLocationViewController: UIViewController, CLLocationManagerDelegate,
         ref?.child("acceptedRides").child(userID).child("driverArrived").observe(.value, with: { (snapshot) in
             if let driverArrived = snapshot.value as? Bool {
                 if driverArrived {
-                    //Driver has arrived!
-                    let alert = UIAlertController(title: "BRIDGE Arrived", message: "Your BRIDGE has arrived!", preferredStyle: .alert)
+                    //Driver has arrived - Do some shit here:
+                    let alert = UIAlertController(title: "Driver Arrived", message: "Your BRIDGE has arrived!", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "Got it", style: .default, handler: nil)
+                    alert.addAction(action)
                     self.present(alert, animated: true, completion: nil)
+                }
+            }
+        })
+        
+        ref?.child("acceptedRides").child(userID).child("pickedUp").observe(.value, with: { (snapshot) in
+            if let pickedUp = snapshot.value as? Bool {
+                if pickedUp {
+                    //Rider has been picked up!
+                    self.performSegue(withIdentifier: "finalStretch", sender: self)
                 }
             }
         })

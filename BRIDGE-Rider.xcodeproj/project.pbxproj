@@ -27,6 +27,7 @@
 		4FC5989320E2CEC80042899B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FC5989220E2CEC80042899B /* Assets.xcassets */; };
 		4FC5989620E2CEC80042899B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC5989420E2CEC80042899B /* LaunchScreen.storyboard */; };
 		4FD1F22520E2D3700011808D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FD1F22420E2D3700011808D /* GoogleService-Info.plist */; };
+		4FF938E5211E705B00C55AFE /* FinalDestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF938E4211E705B00C55AFE /* FinalDestViewController.swift */; };
 		84EE5065E7732310C155EC0A /* Pods_BRIDGE_Rider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6ECB225865E0AB04BF1BC25 /* Pods_BRIDGE_Rider.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		4FC5989520E2CEC80042899B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FC5989720E2CEC80042899B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FD1F22420E2D3700011808D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4FF938E4211E705B00C55AFE /* FinalDestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalDestViewController.swift; sourceTree = "<group>"; };
 		AD63462D0C6786F7DB130B70 /* Pods-BRIDGE-Rider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRIDGE-Rider.release.xcconfig"; path = "Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider.release.xcconfig"; sourceTree = "<group>"; };
 		C6ECB225865E0AB04BF1BC25 /* Pods_BRIDGE_Rider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BRIDGE_Rider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 			children = (
 				4F121961210FE82600BE0BD4 /* RiderViewController.swift */,
 				4F73376821122BDB00DD005E /* DriverLocationViewController.swift */,
+				4FF938E4211E705B00C55AFE /* FinalDestViewController.swift */,
 			);
 			path = Rider;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F73376921122BDB00DD005E /* DriverLocationViewController.swift in Sources */,
+				4FF938E5211E705B00C55AFE /* FinalDestViewController.swift in Sources */,
 				4F9399F520E3222100268AA6 /* CheckUserLoggedViewController.swift in Sources */,
 				4F9399FC20E3282B00268AA6 /* WelcomeViewController.swift in Sources */,
 				4F9399F720E3222100268AA6 /* ConnectionErrorViewController.swift in Sources */,
