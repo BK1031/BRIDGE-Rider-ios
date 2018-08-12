@@ -44,6 +44,7 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate, MKMa
         mapView.showsUserLocation = true
         
         descriptionView.layer.cornerRadius = 10
+        doneButton.layer.cornerRadius = 10
         
         let sourceCoordinates = locationManager.location?.coordinate
         if destination == "Home" {
@@ -81,8 +82,8 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate, MKMa
         
         let annotation = MKPointAnnotation()
         annotation.coordinate = destCoordinates
-        annotation.title = "Rider"
-        annotation.subtitle = "This is the location of your rider."
+        annotation.title = destination
+        annotation.subtitle = "This is the location of your destination."
         mapView.addAnnotation(annotation)
         
         let geoFenceRegion:CLCircularRegion = CLCircularRegion(center: destCoordinates, radius: 10, identifier: "Destination")
@@ -99,6 +100,12 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate, MKMa
     @IBAction func doneRide(_ sender: Any) {
         if arrived {
             //TODO: Save ride history here
+            
+            //Delete Request Data
+            let requestRef = ref?.child("acceptedRides").child(userID)
+            let values = ["riderName": nil, "riderLat": nil, "riderLong": nil, "driverID": nil, "driverLat": nil, "driverLong": nil, "driverArrived": nil, "pickedUp": nil, "dest": nil] as [String : AnyObject]
+            requestRef?.updateChildValues(values)
+            
             self.performSegue(withIdentifier: "rideDone", sender: self)
         }
         else {
@@ -106,11 +113,23 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate, MKMa
             let action = UIAlertAction(title: "Cancel", style: .default, handler: nil)
             let action2 = UIAlertAction(title: "End Ride", style: .destructive) { (done) in
                 //TODO: Copy ride history saving shit here
+                
+                //Delete Request Data
+                let requestRef = self.ref?.child("acceptedRides").child(userID)
+                let values = ["riderName": nil, "riderLat": nil, "riderLong": nil, "driverID": nil, "driverLat": nil, "driverLong": nil, "driverArrived": nil, "pickedUp": nil, "dest": nil] as [String : AnyObject]
+                requestRef?.updateChildValues(values)
+                
                 self.performSegue(withIdentifier: "rideDone", sender: self)
             }
             alert.addAction(action)
             alert.addAction(action2)
             self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locationManager.location?.coordinate {
+            userLocation = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
         }
     }
     

@@ -15,6 +15,7 @@ import UserNotifications
 class DriverLocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var driverButton: UIButton!
     
     var ref:DatabaseReference?
     var databaseHandle:DatabaseHandle?
@@ -36,6 +37,8 @@ class DriverLocationViewController: UIViewController, CLLocationManagerDelegate,
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         locationManager.allowsBackgroundLocationUpdates = true
+        
+        driverButton.layer.cornerRadius = 10
         
         let sourceCoordinates = locationManager.location?.coordinate
         
@@ -114,6 +117,10 @@ class DriverLocationViewController: UIViewController, CLLocationManagerDelegate,
             }
         })
         
+    }
+    
+    @IBAction func driverInfo(_ sender: Any) {
+        //Segue to driver info here
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

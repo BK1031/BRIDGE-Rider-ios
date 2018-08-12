@@ -701,32 +701,87 @@ Troubleshooting Tips:
                                     <action selector="cancelRideButton:" destination="qVC-vG-k7c" eventType="touchUpInside" id="fZ9-Ru-ZoM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for Drivers..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t95-Vd-Bmg">
-                                <rect key="frame" x="20" y="74" width="335" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dz-PW-tRN">
+                                <rect key="frame" x="20" y="74" width="335" height="125"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting for drivers..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzA-iL-jkP">
+                                        <rect key="frame" x="10" y="10" width="315" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwW-LF-K6Z">
+                                        <rect key="frame" x="10" y="35.5" width="315" height="30"/>
+                                        <state key="normal" title="Click to Select Destination">
+                                            <color key="titleColor" red="0.99607843139999996" green="0.8365689516" blue="0.28481131790000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectDest:" destination="qVC-vG-k7c" eventType="touchUpInside" id="tAf-uD-bjs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWA-re-bUJ">
+                                        <rect key="frame" x="0.0" y="73" width="167.5" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                        <state key="normal" title="Home">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="home:" destination="qVC-vG-k7c" eventType="touchUpInside" id="lUH-wU-oQS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRT-KP-s6C">
+                                        <rect key="frame" x="167.5" y="73" width="167.5" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                        <state key="normal" title="School">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="schoolSelected:" destination="qVC-vG-k7c" eventType="touchUpInside" id="lth-Po-IJk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="YzA-iL-jkP" firstAttribute="leading" secondItem="7dz-PW-tRN" secondAttribute="leading" constant="10" id="54Z-A5-lnj"/>
+                                    <constraint firstItem="IwW-LF-K6Z" firstAttribute="leading" secondItem="7dz-PW-tRN" secondAttribute="leading" constant="10" id="6hW-4r-Z8j"/>
+                                    <constraint firstItem="DRT-KP-s6C" firstAttribute="width" secondItem="7dz-PW-tRN" secondAttribute="width" multiplier="0.5" id="EFT-8y-1Jp"/>
+                                    <constraint firstAttribute="trailing" secondItem="DRT-KP-s6C" secondAttribute="trailing" id="LFV-tj-t5V"/>
+                                    <constraint firstItem="IWA-re-bUJ" firstAttribute="width" secondItem="7dz-PW-tRN" secondAttribute="width" multiplier="0.5" id="NeS-eo-HAi"/>
+                                    <constraint firstAttribute="trailing" secondItem="IwW-LF-K6Z" secondAttribute="trailing" constant="10" id="PD6-tY-5PO"/>
+                                    <constraint firstAttribute="bottom" secondItem="IWA-re-bUJ" secondAttribute="bottom" constant="10" id="dWL-IO-6Ou"/>
+                                    <constraint firstAttribute="bottom" secondItem="DRT-KP-s6C" secondAttribute="bottom" constant="10" id="fSs-q6-x6X"/>
+                                    <constraint firstAttribute="height" constant="125" id="jSt-tZ-c68"/>
+                                    <constraint firstItem="IWA-re-bUJ" firstAttribute="leading" secondItem="7dz-PW-tRN" secondAttribute="leading" id="jgx-4l-Pyz"/>
+                                    <constraint firstAttribute="trailing" secondItem="YzA-iL-jkP" secondAttribute="trailing" constant="10" id="nnI-eh-7ya"/>
+                                    <constraint firstItem="YzA-iL-jkP" firstAttribute="top" secondItem="7dz-PW-tRN" secondAttribute="top" constant="10" id="xuU-wX-d8M"/>
+                                    <constraint firstItem="IwW-LF-K6Z" firstAttribute="top" secondItem="YzA-iL-jkP" secondAttribute="bottom" id="zfh-bE-7vq"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="VLc-gu-xLY" firstAttribute="bottom" secondItem="jnL-Hh-P2w" secondAttribute="bottom" constant="10" id="4Fv-df-GEb"/>
+                            <constraint firstItem="VLc-gu-xLY" firstAttribute="trailing" secondItem="7dz-PW-tRN" secondAttribute="trailing" constant="20" id="FR2-NY-AFA"/>
                             <constraint firstItem="HPb-du-M3R" firstAttribute="bottom" secondItem="3hG-M4-95p" secondAttribute="bottom" id="FWg-Jb-Nnm"/>
                             <constraint firstItem="HPb-du-M3R" firstAttribute="leading" secondItem="VLc-gu-xLY" secondAttribute="leading" id="GkU-72-gQ7"/>
-                            <constraint firstItem="t95-Vd-Bmg" firstAttribute="leading" secondItem="VLc-gu-xLY" secondAttribute="leading" constant="20" id="JVU-9Q-dHM"/>
-                            <constraint firstItem="t95-Vd-Bmg" firstAttribute="top" secondItem="VLc-gu-xLY" secondAttribute="top" constant="10" id="SMc-S1-Mhy"/>
                             <constraint firstItem="jnL-Hh-P2w" firstAttribute="leading" secondItem="VLc-gu-xLY" secondAttribute="leading" constant="10" id="Us7-qW-Tjh"/>
                             <constraint firstItem="HPb-du-M3R" firstAttribute="top" secondItem="3hG-M4-95p" secondAttribute="top" id="Wpu-BH-3dt"/>
+                            <constraint firstItem="7dz-PW-tRN" firstAttribute="top" secondItem="VLc-gu-xLY" secondAttribute="top" constant="10" id="cz9-Oy-Hnu"/>
                             <constraint firstItem="VLc-gu-xLY" firstAttribute="trailing" secondItem="jnL-Hh-P2w" secondAttribute="trailing" constant="10" id="nqK-hO-GfH"/>
                             <constraint firstItem="HPb-du-M3R" firstAttribute="trailing" secondItem="VLc-gu-xLY" secondAttribute="trailing" id="pjR-dd-kYl"/>
-                            <constraint firstItem="VLc-gu-xLY" firstAttribute="trailing" secondItem="t95-Vd-Bmg" secondAttribute="trailing" constant="20" id="tcw-o0-QbJ"/>
+                            <constraint firstItem="7dz-PW-tRN" firstAttribute="leading" secondItem="VLc-gu-xLY" secondAttribute="leading" constant="20" id="uxa-3Q-MIE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VLc-gu-xLY"/>
                     </view>
                     <navigationItem key="navigationItem" title="BRIDGE" id="hS6-Zh-LrP"/>
                     <connections>
                         <outlet property="cancelRideButton" destination="jnL-Hh-P2w" id="ktl-uq-h9f"/>
+                        <outlet property="homeButton" destination="IWA-re-bUJ" id="aFu-H8-ZyA"/>
                         <outlet property="mapView" destination="HPb-du-M3R" id="jct-y7-0N2"/>
+                        <outlet property="schoolButton" destination="DRT-KP-s6C" id="PXQ-80-1x6"/>
+                        <outlet property="selectionButton" destination="IwW-LF-K6Z" id="7BV-tR-7UX"/>
+                        <outlet property="selectionView" destination="7dz-PW-tRN" id="bAB-Bz-FK8"/>
+                        <outlet property="selectionViewHeight" destination="jSt-tZ-c68" id="X3O-xV-S5M"/>
                         <segue destination="kHe-Ln-Olb" kind="presentation" identifier="cancelRide" modalTransitionStyle="crossDissolve" id="Wls-nh-FBB"/>
                         <segue destination="Z4C-bd-UC1" kind="presentation" identifier="toDriverView" modalTransitionStyle="crossDissolve" id="Xif-hh-qSi"/>
                     </connections>
@@ -746,10 +801,27 @@ Troubleshooting Tips:
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YDZ-Ja-SYY">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1f3-ZW-aZ0">
+                                <rect key="frame" x="10" y="607" width="355" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nve-g6-Q9l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                <state key="normal" title="My BRIDGE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverInfo:" destination="df5-Vu-6Rx" eventType="touchUpInside" id="azA-k4-dHR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="1f3-ZW-aZ0" firstAttribute="leading" secondItem="I51-eQ-1LG" secondAttribute="leading" constant="10" id="1DF-31-rME"/>
                             <constraint firstItem="YDZ-Ja-SYY" firstAttribute="leading" secondItem="2iR-F4-rZJ" secondAttribute="leading" id="AQ3-kP-qXW"/>
+                            <constraint firstAttribute="trailing" secondItem="1f3-ZW-aZ0" secondAttribute="trailing" constant="10" id="IPV-8d-Bzk"/>
+                            <constraint firstItem="2iR-F4-rZJ" firstAttribute="bottom" secondItem="1f3-ZW-aZ0" secondAttribute="bottom" constant="10" id="N5z-3w-gTL"/>
                             <constraint firstItem="YDZ-Ja-SYY" firstAttribute="top" secondItem="I51-eQ-1LG" secondAttribute="top" id="Vc5-x1-wfL"/>
                             <constraint firstItem="YDZ-Ja-SYY" firstAttribute="bottom" secondItem="I51-eQ-1LG" secondAttribute="bottom" id="Vv3-0R-7OE"/>
                             <constraint firstItem="YDZ-Ja-SYY" firstAttribute="trailing" secondItem="2iR-F4-rZJ" secondAttribute="trailing" id="cIH-AE-diG"/>
@@ -758,6 +830,7 @@ Troubleshooting Tips:
                     </view>
                     <navigationItem key="navigationItem" title="BRIDGE" id="Uh0-Zy-shD"/>
                     <connections>
+                        <outlet property="driverButton" destination="1f3-ZW-aZ0" id="hgb-xU-FDN"/>
                         <outlet property="mapView" destination="YDZ-Ja-SYY" id="juh-BG-Jwx"/>
                         <segue destination="vXi-jf-gxF" kind="presentation" identifier="finalStretch" modalTransitionStyle="crossDissolve" id="sir-Uf-cQR"/>
                     </connections>
@@ -957,6 +1030,7 @@ Troubleshooting Tips:
                         <outlet property="signOutButton" destination="5KN-EC-PWq" id="yes-f8-u4f"/>
                         <segue destination="R6W-pc-J2I" kind="show" identifier="editAccount" id="qie-zt-K5U"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="signOut" modalTransitionStyle="flipHorizontal" id="y2E-HM-QNg"/>
+                        <segue destination="HP3-YN-rBl" kind="presentation" identifier="logOut" modalTransitionStyle="flipHorizontal" id="jKJ-e6-nTK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkK-sJ-U1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1126,8 +1200,8 @@ Troubleshooting Tips:
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Wls-nh-FBB"/>
-        <segue reference="6ls-Jt-lhT"/>
+        <segue reference="jKJ-e6-nTK"/>
         <segue reference="Wu4-cn-bIQ"/>
-        <segue reference="TG4-N7-kkj"/>
+        <segue reference="y2E-HM-QNg"/>
     </inferredMetricsTieBreakers>
 </document>

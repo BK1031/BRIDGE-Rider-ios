@@ -29,7 +29,7 @@ class AccountViewController: UIViewController {
         emailLabel.text = email
         phoneLabel.text = phone
         addressLabel.text = addressFull
-        schoolLabel.text = "Valley Christian High School"
+        schoolLabel.text = school
         schoolAddressLabel.text = "100 Skyway Drive, San Jose, CA 95111"
         accountBalanceLabel.text = "$\(accountBalance)"
         profileImageView.image = profilePic
