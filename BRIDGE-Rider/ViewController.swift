@@ -45,6 +45,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             schoolLat = 37.2761
             schoolLong = -121.8254
         }
+        
+        ref?.child("stableVersion").observeSingleEvent(of: .value, with: { (snapshot) in
+            if let stableVersion = snapshot.value as? Double {
+                if appVersion < stableVersion {
+                    let alert = UIAlertController(title: "Outdated App", message: "It looks like you are using an outdated version of the BRIDGE Driver App. Please update to the latest version to avoid any bugs or crashes.", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "Got it", style: .default, handler: { (action) in
+                        exit(1)
+                    })
+                    alert.addAction(action)
+                    self.present(alert, animated: true, completion: nil)
+                }
+                else if appVersion > stableVersion {
+                    let alert = UIAlertController(title: "BRIDGE Canary Detected", message: "It looks like you are using the BRIDGE Canary release of our Driver app. Note that this version should only be used for approved beta testing and not for everyday use.", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "Got it", style: .default, handler: { (action) in
+                        //Don't do anything boi
+                    })
+                    alert.addAction(action)
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        })
     }
     
     override func viewDidAppear(_ animated: Bool) {
