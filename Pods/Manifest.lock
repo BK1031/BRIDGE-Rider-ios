@@ -44,6 +44,20 @@ PODS:
   - "GoogleToolboxForMac/NSString+URLArguments (2.1.4)"
   - GTMSessionFetcher/Core (1.1.15)
   - leveldb-library (1.20)
+  - Mapbox-iOS-SDK (4.2.0)
+  - MapboxCoreNavigation (0.19.0):
+    - MapboxDirections.swift (~> 0.22.0)
+    - MapboxMobileEvents (~> 0.4)
+    - Turf (~> 0.2)
+  - MapboxDirections.swift (0.22.0):
+    - Polyline (~> 4.2)
+  - MapboxMobileEvents (0.4.51)
+  - MapboxNavigation (0.19.0):
+    - Mapbox-iOS-SDK (~> 4.2)
+    - MapboxCoreNavigation (= 0.19.0)
+    - MapboxSpeech (~> 0.0.1)
+    - Solar (~> 2.1)
+  - MapboxSpeech (0.0.1)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -55,16 +69,22 @@ PODS:
   - PhoneNumberKit/PhoneNumberKitCore (2.1.0)
   - PhoneNumberKit/UIKit (2.1.0):
     - PhoneNumberKit/PhoneNumberKitCore
+  - Polyline (4.2.0)
+  - Solar (2.1.0)
+  - Turf (0.2.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - Mapbox-iOS-SDK (~> 4.2)
+  - MapboxDirections.swift (~> 0.22)
+  - MapboxNavigation (~> 0.19)
   - PhoneNumberKit (~> 2.1)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -75,8 +95,17 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - GTMSessionFetcher
     - leveldb-library
+    - Mapbox-iOS-SDK
+    - MapboxCoreNavigation
+    - MapboxDirections.swift
+    - MapboxMobileEvents
+    - MapboxNavigation
+    - MapboxSpeech
     - nanopb
     - PhoneNumberKit
+    - Polyline
+    - Solar
+    - Turf
 
 SPEC CHECKSUMS:
   Firebase: 5ec5e863d269d82d66b4bf56856726f8fb8f0fb3
@@ -89,9 +118,18 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  Mapbox-iOS-SDK: 706d52e3ad095e16944d9643f37d5a97627f6c19
+  MapboxCoreNavigation: 1b9cbdc0fb2cbd0dcbe9875e9fa6dadf26e75f55
+  MapboxDirections.swift: 67da008c3bff72ab68b0fc166185eebda23303be
+  MapboxMobileEvents: 83ed9a5ea8f81ca455c350cb15f05ce287d5d2a3
+  MapboxNavigation: 2ab6934287e41cb9a58c873ff60378d42433a8ec
+  MapboxSpeech: 6cc9b3d53adc2988af3ebc704dd17907b84a3f9f
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   PhoneNumberKit: 62003f40ff75315fd3738286558bc365365ac222
+  Polyline: 3d69f75bb136357e27291d439d0436c6ebda57a4
+  Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
+  Turf: 65817136031583da7ea2b43e6611dd10ddbdab2f
 
-PODFILE CHECKSUM: 7a1dedb6447a495aaaacffd0107eea7a0af1aa8e
+PODFILE CHECKSUM: 4547c8e4d19cbf4d18d2100245001816408da9e8
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

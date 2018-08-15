@@ -18,6 +18,7 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate, MKMa
     @IBOutlet weak var descriptionView: UIView!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var descriptionText: UILabel!
+    @IBOutlet weak var descriptionViewHeigh: NSLayoutConstraint!
     
     var ref:DatabaseReference?
     var databaseHandle:DatabaseHandle?
@@ -90,11 +91,23 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate, MKMa
         locationManager.startMonitoring(for: geoFenceRegion)
     }
     
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor =  UIColor.blue
+        renderer.lineWidth = 5.0
+        
+        return renderer
+    }
+    
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         //Rider arrived at destination! We done bois!
         arrived = true
         doneButton.setTitle("Done", for: .normal)
-        descriptionText.text = "You have arrived at your final destination. Thank you for using BRIDGE!"
+        UIView.animate(withDuration: 0.1) {
+            self.descriptionViewHeigh.constant = 100
+            self.descriptionText.text = "You have arrived at your final destination. Thank you for using BRIDGE!"
+            self.view.layoutIfNeeded()
+        }
     }
 
     @IBAction func doneRide(_ sender: Any) {
@@ -102,6 +115,7 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate, MKMa
             //TODO: Save ride history here
             
             //Delete Request Data
+            self.locationManager.stopUpdatingLocation()
             let requestRef = ref?.child("acceptedRides").child(userID)
             let values = ["riderName": nil, "riderLat": nil, "riderLong": nil, "driverID": nil, "driverLat": nil, "driverLong": nil, "driverArrived": nil, "pickedUp": nil, "dest": nil] as [String : AnyObject]
             requestRef?.updateChildValues(values)
@@ -115,6 +129,7 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate, MKMa
                 //TODO: Copy ride history saving shit here
                 
                 //Delete Request Data
+                self.locationManager.stopUpdatingLocation()
                 let requestRef = self.ref?.child("acceptedRides").child(userID)
                 let values = ["riderName": nil, "riderLat": nil, "riderLong": nil, "driverID": nil, "driverLat": nil, "driverLong": nil, "driverArrived": nil, "pickedUp": nil, "dest": nil] as [String : AnyObject]
                 requestRef?.updateChildValues(values)

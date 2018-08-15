@@ -485,9 +485,10 @@ Troubleshooting Tips:
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="noY-kg-gvV">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5v-Eg-Of3" customClass="MGLMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </mapView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qh5-wK-anW">
                                 <rect key="frame" x="10" y="558" width="355" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
@@ -516,21 +517,21 @@ Troubleshooting Tips:
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="noY-kg-gvV" secondAttribute="bottom" id="3JY-L7-aAY"/>
-                            <constraint firstItem="noY-kg-gvV" firstAttribute="trailing" secondItem="PKq-Kn-7Nk" secondAttribute="trailing" id="MFm-cf-jD8"/>
                             <constraint firstItem="ned-I5-tTl" firstAttribute="leading" secondItem="PKq-Kn-7Nk" secondAttribute="leading" constant="20" id="MsZ-bq-dNh"/>
-                            <constraint firstItem="noY-kg-gvV" firstAttribute="top" secondItem="gJD-He-Aj5" secondAttribute="top" id="Nb1-up-i33"/>
+                            <constraint firstAttribute="bottom" secondItem="q5v-Eg-Of3" secondAttribute="bottom" id="TOF-8q-Rgu"/>
+                            <constraint firstItem="q5v-Eg-Of3" firstAttribute="top" secondItem="gJD-He-Aj5" secondAttribute="top" id="aNW-tV-4KX"/>
                             <constraint firstItem="PKq-Kn-7Nk" firstAttribute="trailing" secondItem="qh5-wK-anW" secondAttribute="trailing" constant="10" id="f2U-Yz-bq2"/>
                             <constraint firstItem="PKq-Kn-7Nk" firstAttribute="bottom" secondItem="qh5-wK-anW" secondAttribute="bottom" constant="10" id="gRQ-uy-Wvu"/>
+                            <constraint firstItem="q5v-Eg-Of3" firstAttribute="trailing" secondItem="PKq-Kn-7Nk" secondAttribute="trailing" id="hQf-VW-VN8"/>
                             <constraint firstItem="qh5-wK-anW" firstAttribute="leading" secondItem="PKq-Kn-7Nk" secondAttribute="leading" constant="10" id="iAd-aB-SOZ"/>
+                            <constraint firstItem="q5v-Eg-Of3" firstAttribute="leading" secondItem="PKq-Kn-7Nk" secondAttribute="leading" id="iAk-h2-Efo"/>
                             <constraint firstItem="ned-I5-tTl" firstAttribute="top" secondItem="PKq-Kn-7Nk" secondAttribute="top" constant="20" id="j7Q-Od-Qsc"/>
-                            <constraint firstItem="noY-kg-gvV" firstAttribute="leading" secondItem="PKq-Kn-7Nk" secondAttribute="leading" id="kj1-q3-T6N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PKq-Kn-7Nk"/>
                     </view>
                     <navigationItem key="navigationItem" id="uIu-lw-On0"/>
                     <connections>
-                        <outlet property="mapView" destination="noY-kg-gvV" id="MGT-eq-d1g"/>
+                        <outlet property="mapView" destination="q5v-Eg-Of3" id="fTe-br-12l"/>
                         <outlet property="profileButton" destination="ned-I5-tTl" id="gia-oM-9y6"/>
                         <outlet property="requestButton" destination="qh5-wK-anW" id="OOp-WR-KeW"/>
                         <segue destination="F4j-ey-Kgf" kind="presentation" identifier="requestRide" modalTransitionStyle="crossDissolve" id="ud3-aT-pQ9"/>
@@ -633,8 +634,6 @@ Troubleshooting Tips:
                     </tabBar>
                     <connections>
                         <segue destination="vZj-wq-YsN" kind="relationship" relationship="viewControllers" id="eyH-Le-hKi"/>
-                        <segue destination="KyN-yC-dfX" kind="relationship" relationship="viewControllers" id="NPD-0A-a1o"/>
-                        <segue destination="LXw-ih-KnJ" kind="relationship" relationship="viewControllers" id="mJk-Vt-a3N"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pm9-vQ-S14" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1162,8 +1161,9 @@ Troubleshooting Tips:
                     <connections>
                         <outlet property="descriptionText" destination="oOs-3t-gBL" id="FLP-QO-nQT"/>
                         <outlet property="descriptionView" destination="9zA-wK-FYT" id="cIz-jT-wMW"/>
+                        <outlet property="descriptionViewHeigh" destination="Zel-I6-dWD" id="D6Z-5o-rGk"/>
                         <outlet property="doneButton" destination="iuO-2F-gNC" id="6q3-UC-gdp"/>
-                        <outlet property="mapView" destination="DQu-ep-kjk" id="2pq-y6-W4f"/>
+                        <outlet property="mapView" destination="DQu-ep-kjk" id="Hwl-e9-tHk"/>
                         <segue destination="kHe-Ln-Olb" kind="presentation" identifier="rideDone" modalTransitionStyle="flipHorizontal" id="axo-lA-u0C"/>
                     </connections>
                 </viewController>
@@ -1193,103 +1193,16 @@ Troubleshooting Tips:
             </objects>
             <point key="canvasLocation" x="5129" y="-27"/>
         </scene>
-        <!--Drive History-->
-        <scene sceneID="er9-RE-PsE">
-            <objects>
-                <viewController id="MGo-Mt-QBO" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4US-dc-oPc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="HR1-2V-uX8"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Drive History" id="KE1-Ob-TQf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mCE-nC-u3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1908" y="1437"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="10L-k2-Lk4">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KyN-yC-dfX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="history" id="kKe-Ns-J4Q"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="nCo-yV-108">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="25"/>
-                            <color key="textColor" red="0.99607843139999996" green="0.8365689516" blue="0.28481131790000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="30"/>
-                            <color key="textColor" red="0.99607843139999996" green="0.8365689516" blue="0.28481131790000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="MGo-Mt-QBO" kind="relationship" relationship="rootViewController" id="2CV-oS-OFt"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0pM-YT-bOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="969" y="1437"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="A7R-Gv-BpO">
-            <objects>
-                <viewController id="6fW-68-VEe" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Nix-nF-eaB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Qqa-Ss-1kk"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Settings" id="PlD-pI-Wqk"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dfq-hk-PRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1908" y="2160"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="7LF-kR-B5J">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LXw-ih-KnJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="JYd-J3-xe4"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="yRs-Fl-EG7">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="25"/>
-                            <color key="textColor" red="0.99607843139999996" green="0.8365689516" blue="0.28481131790000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="30"/>
-                            <color key="textColor" red="0.99607843139999996" green="0.8365689516" blue="0.28481131790000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="6fW-68-VEe" kind="relationship" relationship="rootViewController" id="ihp-Ld-gKn"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jAJ-8n-Y51" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="969" y="2160"/>
-        </scene>
     </scenes>
     <resources>
         <image name="BRIDGE Rider Icon" width="1024" height="1024"/>
         <image name="home" width="30" height="30"/>
         <image name="profile" width="400" height="400"/>
         <image name="ride sharing" width="625" height="172"/>
-        <image name="settings" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eyH-Le-hKi"/>
-        <segue reference="Wls-nh-FBB"/>
+        <segue reference="ud3-aT-pQ9"/>
+        <segue reference="axo-lA-u0C"/>
         <segue reference="jKJ-e6-nTK"/>
         <segue reference="Wu4-cn-bIQ"/>
         <segue reference="y2E-HM-QNg"/>

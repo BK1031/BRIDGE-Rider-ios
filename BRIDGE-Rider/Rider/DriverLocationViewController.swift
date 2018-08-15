@@ -119,6 +119,14 @@ class DriverLocationViewController: UIViewController, CLLocationManagerDelegate,
         
     }
     
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor =  UIColor.blue
+        renderer.lineWidth = 5.0
+        
+        return renderer
+    }
+    
     @IBAction func driverInfo(_ sender: Any) {
         //Segue to driver info here
     }

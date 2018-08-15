@@ -8,12 +8,12 @@
 
 import UIKit
 import Firebase
-import MapKit
+import Mapbox
 import UserNotifications
 
-class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapView: MGLMapView!
     @IBOutlet weak var requestButton: UIButton!
     @IBOutlet weak var profileButton: UIButton!
     
@@ -31,6 +31,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
+        
+        mapView.showsUserLocation = true
         
         let center =  UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound, .badge]) { (result, error) in
@@ -76,10 +78,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         let center = location.coordinate
-        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        let region = MKCoordinateRegion(center: center, span: span)
-        mapView.setRegion(region, animated: true)
-        mapView.showsUserLocation = true
+        mapView.setCenter(center, zoomLevel: 15.0, animated: true)
     }
     
     @IBAction func requestRide(_ sender: Any) {
