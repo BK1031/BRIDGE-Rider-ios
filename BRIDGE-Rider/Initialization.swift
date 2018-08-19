@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-var appVersion = 1.1
+var appVersion = 1.0
 
 var tempPassword = ""
 

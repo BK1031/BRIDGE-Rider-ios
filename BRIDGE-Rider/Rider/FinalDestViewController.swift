@@ -9,12 +9,12 @@
 import UIKit
 import Firebase
 import CoreLocation
-import MapKit
+import GoogleMaps
 import Firebase
 
-class FinalDestViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class FinalDestViewController: UIViewController, CLLocationManagerDelegate {
     
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var descriptionView: UIView!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var descriptionText: UILabel!
@@ -39,15 +39,13 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate, MKMa
         locationManager.startUpdatingLocation()
         locationManager.allowsBackgroundLocationUpdates = true
         
-        mapView.delegate = self
-        mapView.showsScale = true
-        mapView.showsPointsOfInterest = true
-        mapView.showsUserLocation = true
+        mapView.isMyLocationEnabled = true
         
         descriptionView.layer.cornerRadius = 10
         doneButton.layer.cornerRadius = 10
         
         let sourceCoordinates = locationManager.location?.coordinate
+        
         if destination == "Home" {
             destCoordinates = CLLocationCoordinate2DMake(Double(homeLat), Double(homeLong))
         }
@@ -55,48 +53,68 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate, MKMa
             destCoordinates = CLLocationCoordinate2DMake(Double(schoolLat), Double(schoolLong))
         }
         
-        let sourcePlacemark = MKPlacemark(coordinate: sourceCoordinates!)
-        let destPlacemark = MKPlacemark(coordinate: destCoordinates)
+        let destMarker = GMSMarker()
+        destMarker.position = destCoordinates
+        destMarker.title = "Destination"
+        destMarker.snippet = "This is the location of your rider's destinaton"
+        destMarker.map = self.mapView
         
-        let sourceItem = MKMapItem(placemark: sourcePlacemark)
-        let destItem = MKMapItem(placemark: destPlacemark)
+        let sourceCoorString = "\(sourceCoordinates!.latitude),\(sourceCoordinates!.longitude)"
+        let destCoorString = "\(destCoordinates.latitude),\(destCoordinates.longitude)"
         
-        let directionRequest = MKDirectionsRequest()
-        directionRequest.source = sourceItem
-        directionRequest.destination = destItem
-        directionRequest.transportType = .automobile
+        let urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(sourceCoorString)&destination=\(destCoorString)&key=AIzaSyDpnFep4SN9iBjtN6MKG9bwdS1ocxNXuRs"
+        guard let url = URL(string: urlString) else {return}
         
-        let directions = MKDirections(request: directionRequest)
-        directions.calculate { (response, error) in
-            guard let response = response else {
-                if let error = error {
-                    print("Something Went Wrong! \(error)")
-                }
-                return
-            }
-            let route = response.routes[0]
-            self.mapView.add(route.polyline, level: .aboveRoads)
+        URLSession.shared.dataTask(with: url) { (data, response, erro) in
+            //Extract data here
+            guard let data = data else {return}
             
-            let rekt = route.polyline.boundingMapRect
-            self.mapView.setRegion(MKCoordinateRegionForMapRect(rekt), animated: true)
-        }
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = destCoordinates
-        annotation.title = destination
-        annotation.subtitle = "This is the location of your destination."
-        mapView.addAnnotation(annotation)
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String: AnyObject]
+                
+                print(json)
+                
+                //Extract JSON Data
+                let arrayRoutes = json["routes"] as! NSArray
+                let arrLegs = (arrayRoutes[0] as! NSDictionary).object(forKey: "legs") as! NSArray
+                let arrSteps = arrLegs[0] as! NSDictionary
+                
+                let dicDistance = arrSteps["distance"] as! NSDictionary
+                let distance = dicDistance["text"] as! String
+                
+                let dicDuration = arrSteps["duration"] as! NSDictionary
+                let duration = dicDuration["text"] as! String
+                
+                print("\(distance), \(duration)")
+                
+                //Extract Polyline Data
+                let array = json["routes"] as! NSArray
+                let dic = array[0] as! NSDictionary
+                let dic1 = dic["overview_polyline"] as! NSDictionary
+                let points = dic1["points"] as! String
+                print(points)
+                
+                //Return to main thread
+                DispatchQueue.main.async {
+                    //Show polyline
+                    let path = GMSPath(fromEncodedPath: points)
+                    var rectangle = GMSPolyline(path: path)
+                    rectangle.map = nil
+                    rectangle.strokeWidth = 4.0
+                    rectangle.strokeColor = UIColor.blue
+                    rectangle.map = self.mapView
+                    
+                    self.mapView.animate(with: GMSCameraUpdate.fit(GMSCoordinateBounds(path: rectangle.path!), withPadding: 50))
+                    
+                }
+                
+            } catch let jsonError {
+                print("Error Serializing JSON")
+            }
+            }.resume()
         
         let geoFenceRegion:CLCircularRegion = CLCircularRegion(center: destCoordinates, radius: 10, identifier: "Destination")
         locationManager.startMonitoring(for: geoFenceRegion)
-    }
-    
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor =  UIColor.blue
-        renderer.lineWidth = 5.0
-        
-        return renderer
     }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
@@ -133,6 +151,8 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate, MKMa
                 let requestRef = self.ref?.child("acceptedRides").child(userID)
                 let values = ["riderName": nil, "riderLat": nil, "riderLong": nil, "driverID": nil, "driverLat": nil, "driverLong": nil, "driverArrived": nil, "pickedUp": nil, "dest": nil] as [String : AnyObject]
                 requestRef?.updateChildValues(values)
+                
+                destination = ""
                 
                 self.performSegue(withIdentifier: "rideDone", sender: self)
             }

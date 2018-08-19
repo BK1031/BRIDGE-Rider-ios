@@ -15,6 +15,24 @@
 		4F6B3B3220EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2D20EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx */; };
 		4F73376921122BDB00DD005E /* DriverLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F73376821122BDB00DD005E /* DriverLocationViewController.swift */; };
 		4F863DB7211011AD00406B81 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F863DB6211011AC00406B81 /* AccountViewController.swift */; };
+		4F91CBB92127F7CF00FD95C8 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBB62127E89400FD95C8 /* Montserrat-Black.ttf */; };
+		4F91CBBA2127F7DD00FD95C8 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBAE2127E87D00FD95C8 /* Montserrat-BlackItalic.ttf */; };
+		4F91CBBB2127F7DD00FD95C8 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBB02127E88300FD95C8 /* Montserrat-Bold.ttf */; };
+		4F91CBBC2127F7DD00FD95C8 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBAC2127E87700FD95C8 /* Montserrat-BoldItalic.ttf */; };
+		4F91CBBD2127F7DD00FD95C8 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBAA2127E87200FD95C8 /* Montserrat-ExtraBold.ttf */; };
+		4F91CBBE2127F7DD00FD95C8 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBB52127E89100FD95C8 /* Montserrat-ExtraBoldItalic.ttf */; };
+		4F91CBBF2127F7DD00FD95C8 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBAB2127E87500FD95C8 /* Montserrat-ExtraLight.ttf */; };
+		4F91CBC02127F7DD00FD95C8 /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBB12127E88500FD95C8 /* Montserrat-ExtraLightItalic.ttf */; };
+		4F91CBC12127F7DD00FD95C8 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBA62127E86600FD95C8 /* Montserrat-Italic.ttf */; };
+		4F91CBC22127F7DD00FD95C8 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBA92127E86F00FD95C8 /* Montserrat-Light.ttf */; };
+		4F91CBC32127F7DD00FD95C8 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBB22127E88800FD95C8 /* Montserrat-LightItalic.ttf */; };
+		4F91CBC42127F7DD00FD95C8 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBB32127E88B00FD95C8 /* Montserrat-Medium.ttf */; };
+		4F91CBC52127F7DD00FD95C8 /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBB42127E88E00FD95C8 /* Montserrat-MediumItalic.ttf */; };
+		4F91CBC62127F7DD00FD95C8 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBAD2127E87A00FD95C8 /* Montserrat-Regular.ttf */; };
+		4F91CBC72127F7DD00FD95C8 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBA72127E86900FD95C8 /* Montserrat-SemiBold.ttf */; };
+		4F91CBC82127F7DD00FD95C8 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBB72127E89700FD95C8 /* Montserrat-SemiBoldItalic.ttf */; };
+		4F91CBC92127F7DD00FD95C8 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBA82127E86C00FD95C8 /* Montserrat-Thin.ttf */; };
+		4F91CBCA2127F7DD00FD95C8 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBAF2127E88000FD95C8 /* Montserrat-ThinItalic.ttf */; };
 		4F9399F520E3222100268AA6 /* CheckUserLoggedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F220E3221F00268AA6 /* CheckUserLoggedViewController.swift */; };
 		4F9399F620E3222100268AA6 /* ConnectionCheckerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F320E3222000268AA6 /* ConnectionCheckerViewController.swift */; };
 		4F9399F720E3222100268AA6 /* ConnectionErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F420E3222100268AA6 /* ConnectionErrorViewController.swift */; };
@@ -26,7 +44,7 @@
 		4FC5989120E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4FC5988F20E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld */; };
 		4FC5989320E2CEC80042899B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FC5989220E2CEC80042899B /* Assets.xcassets */; };
 		4FC5989620E2CEC80042899B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC5989420E2CEC80042899B /* LaunchScreen.storyboard */; };
-		4FD1F22520E2D3700011808D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FD1F22420E2D3700011808D /* GoogleService-Info.plist */; };
+		4FDA5BA62127ABCE00BDA5D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FDA5BA52127ABCE00BDA5D0 /* GoogleService-Info.plist */; };
 		4FF938E5211E705B00C55AFE /* FinalDestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF938E4211E705B00C55AFE /* FinalDestViewController.swift */; };
 		84EE5065E7732310C155EC0A /* Pods_BRIDGE_Rider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6ECB225865E0AB04BF1BC25 /* Pods_BRIDGE_Rider.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +60,24 @@
 		4F6B3B2D20EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoRouteDropOff.gpx; sourceTree = "<group>"; };
 		4F73376821122BDB00DD005E /* DriverLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverLocationViewController.swift; sourceTree = "<group>"; };
 		4F863DB6211011AC00406B81 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		4F91CBA62127E86600FD95C8 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		4F91CBA72127E86900FD95C8 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		4F91CBA82127E86C00FD95C8 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		4F91CBA92127E86F00FD95C8 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		4F91CBAA2127E87200FD95C8 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		4F91CBAB2127E87500FD95C8 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		4F91CBAC2127E87700FD95C8 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4F91CBAD2127E87A00FD95C8 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		4F91CBAE2127E87D00FD95C8 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
+		4F91CBAF2127E88000FD95C8 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
+		4F91CBB02127E88300FD95C8 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		4F91CBB12127E88500FD95C8 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		4F91CBB22127E88800FD95C8 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
+		4F91CBB32127E88B00FD95C8 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		4F91CBB42127E88E00FD95C8 /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
+		4F91CBB52127E89100FD95C8 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		4F91CBB62127E89400FD95C8 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		4F91CBB72127E89700FD95C8 /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		4F9399F220E3221F00268AA6 /* CheckUserLoggedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckUserLoggedViewController.swift; sourceTree = "<group>"; };
 		4F9399F320E3222000268AA6 /* ConnectionCheckerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCheckerViewController.swift; sourceTree = "<group>"; };
 		4F9399F420E3222100268AA6 /* ConnectionErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionErrorViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +91,7 @@
 		4FC5989220E2CEC80042899B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FC5989520E2CEC80042899B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FC5989720E2CEC80042899B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FD1F22420E2D3700011808D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4FDA5BA52127ABCE00BDA5D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4FF938E4211E705B00C55AFE /* FinalDestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalDestViewController.swift; sourceTree = "<group>"; };
 		AD63462D0C6786F7DB130B70 /* Pods-BRIDGE-Rider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRIDGE-Rider.release.xcconfig"; path = "Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider.release.xcconfig"; sourceTree = "<group>"; };
 		C6ECB225865E0AB04BF1BC25 /* Pods_BRIDGE_Rider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BRIDGE_Rider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +148,31 @@
 			path = Account;
 			sourceTree = "<group>";
 		};
+		4F91CBB82127E8BF00FD95C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F91CBB62127E89400FD95C8 /* Montserrat-Black.ttf */,
+				4F91CBAE2127E87D00FD95C8 /* Montserrat-BlackItalic.ttf */,
+				4F91CBB02127E88300FD95C8 /* Montserrat-Bold.ttf */,
+				4F91CBAC2127E87700FD95C8 /* Montserrat-BoldItalic.ttf */,
+				4F91CBAA2127E87200FD95C8 /* Montserrat-ExtraBold.ttf */,
+				4F91CBB52127E89100FD95C8 /* Montserrat-ExtraBoldItalic.ttf */,
+				4F91CBAB2127E87500FD95C8 /* Montserrat-ExtraLight.ttf */,
+				4F91CBB12127E88500FD95C8 /* Montserrat-ExtraLightItalic.ttf */,
+				4F91CBA62127E86600FD95C8 /* Montserrat-Italic.ttf */,
+				4F91CBA92127E86F00FD95C8 /* Montserrat-Light.ttf */,
+				4F91CBB22127E88800FD95C8 /* Montserrat-LightItalic.ttf */,
+				4F91CBB32127E88B00FD95C8 /* Montserrat-Medium.ttf */,
+				4F91CBB42127E88E00FD95C8 /* Montserrat-MediumItalic.ttf */,
+				4F91CBAD2127E87A00FD95C8 /* Montserrat-Regular.ttf */,
+				4F91CBA72127E86900FD95C8 /* Montserrat-SemiBold.ttf */,
+				4F91CBB72127E89700FD95C8 /* Montserrat-SemiBoldItalic.ttf */,
+				4F91CBA82127E86C00FD95C8 /* Montserrat-Thin.ttf */,
+				4F91CBAF2127E88000FD95C8 /* Montserrat-ThinItalic.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		4F9399FA20E3272600268AA6 /* Startup */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +186,7 @@
 		4FC5987C20E2CEC60042899B = {
 			isa = PBXGroup;
 			children = (
+				4F91CBB82127E8BF00FD95C8 /* Resources */,
 				4FC5988720E2CEC60042899B /* BRIDGE-Rider */,
 				4FC5988620E2CEC60042899B /* Products */,
 				34ADB6464F23FAD487A8AEF1 /* Pods */,
@@ -156,7 +218,7 @@
 				4FC5989420E2CEC80042899B /* LaunchScreen.storyboard */,
 				4F6B3B3320EE89D600AB5DE2 /* GPX Files */,
 				4FC5989720E2CEC80042899B /* Info.plist */,
-				4FD1F22420E2D3700011808D /* GoogleService-Info.plist */,
+				4FDA5BA52127ABCE00BDA5D0 /* GoogleService-Info.plist */,
 				4FC5988F20E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld */,
 			);
 			path = "BRIDGE-Rider";
@@ -182,6 +244,7 @@
 				4FC5988220E2CEC60042899B /* Frameworks */,
 				4FC5988320E2CEC60042899B /* Resources */,
 				A9E86DADA1565EC53717FEB3 /* [CP] Embed Pods Frameworks */,
+				B7FCB8BAA3E9DA702AF004CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,13 +301,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F91CBC52127F7DD00FD95C8 /* Montserrat-MediumItalic.ttf in Resources */,
+				4F91CBBC2127F7DD00FD95C8 /* Montserrat-BoldItalic.ttf in Resources */,
+				4F91CBC62127F7DD00FD95C8 /* Montserrat-Regular.ttf in Resources */,
 				4FC5989620E2CEC80042899B /* LaunchScreen.storyboard in Resources */,
+				4F91CBB92127F7CF00FD95C8 /* Montserrat-Black.ttf in Resources */,
 				4F6B3B3120EE89CA00AB5DE2 /* BridgeDemoRiderLocation.gpx in Resources */,
-				4FD1F22520E2D3700011808D /* GoogleService-Info.plist in Resources */,
+				4F91CBC72127F7DD00FD95C8 /* Montserrat-SemiBold.ttf in Resources */,
+				4F91CBBA2127F7DD00FD95C8 /* Montserrat-BlackItalic.ttf in Resources */,
+				4F91CBC82127F7DD00FD95C8 /* Montserrat-SemiBoldItalic.ttf in Resources */,
+				4F91CBBD2127F7DD00FD95C8 /* Montserrat-ExtraBold.ttf in Resources */,
+				4FDA5BA62127ABCE00BDA5D0 /* GoogleService-Info.plist in Resources */,
 				4FC5989320E2CEC80042899B /* Assets.xcassets in Resources */,
+				4F91CBC32127F7DD00FD95C8 /* Montserrat-LightItalic.ttf in Resources */,
 				4F6B3B3220EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx in Resources */,
+				4F91CBC92127F7DD00FD95C8 /* Montserrat-Thin.ttf in Resources */,
+				4F91CBC42127F7DD00FD95C8 /* Montserrat-Medium.ttf in Resources */,
 				4F6B3B3020EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx in Resources */,
+				4F91CBBB2127F7DD00FD95C8 /* Montserrat-Bold.ttf in Resources */,
 				4F6B3B2E20EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx in Resources */,
+				4F91CBBE2127F7DD00FD95C8 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
+				4F91CBBF2127F7DD00FD95C8 /* Montserrat-ExtraLight.ttf in Resources */,
+				4F91CBC02127F7DD00FD95C8 /* Montserrat-ExtraLightItalic.ttf in Resources */,
+				4F91CBC12127F7DD00FD95C8 /* Montserrat-Italic.ttf in Resources */,
+				4F91CBCA2127F7DD00FD95C8 /* Montserrat-ThinItalic.ttf in Resources */,
+				4F91CBC22127F7DD00FD95C8 /* Montserrat-Light.ttf in Resources */,
 				4FC5988E20E2CEC60042899B /* Main.storyboard in Resources */,
 				4F6B3B2F20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx in Resources */,
 			);
@@ -261,42 +342,42 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
-				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
-				"${BUILT_PRODUCTS_DIR}/MapboxCoreNavigation/MapboxCoreNavigation.framework",
-				"${BUILT_PRODUCTS_DIR}/MapboxDirections.swift/MapboxDirections.framework",
-				"${BUILT_PRODUCTS_DIR}/MapboxMobileEvents/MapboxMobileEvents.framework",
-				"${BUILT_PRODUCTS_DIR}/MapboxNavigation/MapboxNavigation.framework",
-				"${BUILT_PRODUCTS_DIR}/MapboxSpeech/MapboxSpeech.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Polyline/Polyline.framework",
-				"${BUILT_PRODUCTS_DIR}/Solar/Solar.framework",
-				"${BUILT_PRODUCTS_DIR}/Turf/Turf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxCoreNavigation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxDirections.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxMobileEvents.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxNavigation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxSpeech.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Polyline.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Solar.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Turf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7FCB8BAA3E9DA702AF004CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CF5EA0B8298ECC2DA631C679 /* [CP] Check Pods Manifest.lock */ = {
@@ -485,7 +566,10 @@
 				DEVELOPMENT_TEAM = EN646ZUBQA;
 				INFOPLIST_FILE = "BRIDGE-Rider/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bk1031.BRIDGE-Rider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -503,7 +587,10 @@
 				DEVELOPMENT_TEAM = EN646ZUBQA;
 				INFOPLIST_FILE = "BRIDGE-Rider/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bk1031.BRIDGE-Rider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

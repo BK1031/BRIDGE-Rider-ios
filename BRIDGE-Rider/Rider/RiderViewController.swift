@@ -8,13 +8,12 @@
 
 import UIKit
 import Firebase
-import FirebaseDatabase
-import MapKit
+import GoogleMaps
 import CoreLocation
 
-class RiderViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-
-    @IBOutlet weak var mapView: MKMapView!
+class RiderViewController: UIViewController, CLLocationManagerDelegate {
+    
+    @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var cancelRideButton: UIButton!
     @IBOutlet weak var selectionView: UIView!
     @IBOutlet weak var selectionViewHeight: NSLayoutConstraint!
@@ -44,6 +43,8 @@ class RiderViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         
         ref = Database.database().reference()
         
+        mapView.isUserInteractionEnabled = true
+        
         let usersReference = self.ref?.child("rideRequests").child(userID)
         let values = ["riderName": name, "lat": 0.0, "long": 0.0, "riderID": userID, "riderSchool": school, "rideAccepted": false, "dest": destination, "destLat": 0.0, "destLong": 0.0] as [String : Any]
         usersReference?.updateChildValues(values)
@@ -71,10 +72,8 @@ class RiderViewController: UIViewController, MKMapViewDelegate, CLLocationManage
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         let center = location.coordinate
-        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        let region = MKCoordinateRegion(center: center, span: span)
-        mapView.setRegion(region, animated: false)
-        mapView.showsUserLocation = true
+        let camera = GMSCameraPosition(target: center, zoom: 16.0, bearing: 0, viewingAngle: 0)
+        mapView.animate(to: camera)
         if let location = locationManager.location?.coordinate {
             userLocation = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
             ref = Database.database().reference()
@@ -140,6 +139,7 @@ class RiderViewController: UIViewController, MKMapViewDelegate, CLLocationManage
         let values = ["riderName": nil, "riderAddress": nil, "lat": nil, "long": nil, "riderSchool": nil, "riderID": nil, "rideAccepted": nil, "dest": nil, "destLat": nil, "destLong": nil] as [String : Any?]
         let usersReference = self.ref?.child("rideRequests").child(userID)
         usersReference?.updateChildValues(values)
+        destination = ""
         performSegue(withIdentifier: "cancelRide", sender: self)
     }
     

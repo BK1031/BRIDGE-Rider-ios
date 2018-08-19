@@ -7,20 +7,12 @@ target 'BRIDGE-Rider' do
 
   # Pods for BRIDGE-Rider
   source 'https://github.com/CocoaPods/Specs.git'
-  pod 'Mapbox-iOS-SDK', '~> 4.2'
-  pod 'MapboxDirections.swift', '~> 0.22'
-  pod 'MapboxNavigation', '~> 0.19'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
   pod 'PhoneNumberKit', '~> 2.1'
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
 
-end
-
-post_install do |installer|
-    installer.pods_project.build_configurations.each do |config|
-        config.build_settings.delete('CODE_SIGNING_ALLOWED')
-        config.build_settings.delete('CODE_SIGNING_REQUIRED')
-    end
 end

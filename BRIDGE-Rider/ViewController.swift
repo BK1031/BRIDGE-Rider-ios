@@ -8,16 +8,17 @@
 
 import UIKit
 import Firebase
-import Mapbox
+import GoogleMaps
 import UserNotifications
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
-    @IBOutlet weak var mapView: MGLMapView!
+    @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var requestButton: UIButton!
     @IBOutlet weak var profileButton: UIButton!
     
     let locationManager = CLLocationManager()
+    var userLocation:CLLocationCoordinate2D?
     
     //Firebase Database Reference Creation
     var ref:DatabaseReference?
@@ -32,7 +33,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
-        mapView.showsUserLocation = true
+        mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
+        mapView.padding.bottom = view.safeAreaInsets.bottom + 70
         
         let center =  UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound, .badge]) { (result, error) in
@@ -78,7 +81,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         let center = location.coordinate
-        mapView.setCenter(center, zoomLevel: 15.0, animated: true)
+        let camera = GMSCameraPosition(target: center, zoom: 16.0, bearing: 0, viewingAngle: 0)
+        mapView.animate(to: camera)
     }
     
     @IBAction func requestRide(_ sender: Any) {

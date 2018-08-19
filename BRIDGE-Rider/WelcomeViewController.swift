@@ -72,7 +72,7 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         loginButton.layer.cornerRadius = 10
         loginButton.isHidden = true
         haveAccountButton.isHidden = true
-        schoolsPciker.isHidden = true
+        schoolsPickerHeight.constant = 0
         registrationViewHeight.constant = 0
         addressViewHeight.constant = 0
         loginViewHeight.constant = 0
@@ -97,11 +97,12 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         school = schoolsList[row]
         schoolButton.setTitle(school, for: .normal)
         UIView.animate(withDuration: 0.25, animations: {
-            self.schoolsPciker.isHidden = true
             self.schoolsPickerHeight.constant = 0
+            self.schoolsPciker.isHidden = true
             self.view.layoutIfNeeded()
         }) { (finished) in
             //Exectute code once finished
+            self.studentText.text = "I am a student at \(school)"
         }
     }
     
@@ -171,11 +172,11 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBAction func selectSchool(_ sender: UIButton) {
         UIView.animate(withDuration: 0.25, animations: {
-            self.schoolsPciker.isHidden = false
             self.schoolsPickerHeight.constant = 125
+            self.schoolsPciker.isHidden = false
             self.view.layoutIfNeeded()
         }) { (finished) in
-            self.studentText.text = "I am a student at \(school)"
+            //Execute once finished
         }
     }
     

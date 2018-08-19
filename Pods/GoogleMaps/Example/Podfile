@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'GoogleMapsDemos' do
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
+    pod 'Alamofire'
+    pod 'GooglePlacesAPI'
+    pod 'ObjectMapper'
+    pod 'PXGoogleDirections'
+    pod 'SwiftyJSON'
+end
