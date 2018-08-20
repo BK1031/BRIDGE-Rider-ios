@@ -28,6 +28,8 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate {
     
     var destCoordinates:CLLocationCoordinate2D!
     
+    var geoFenceRegion:CLCircularRegion = CLCircularRegion(center: CLLocationCoordinate2DMake(0.0, 0.0), radius: 10, identifier: "Destination")
+    
     var arrived = false
     
     override func viewDidLoad() {
@@ -113,7 +115,7 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate {
             }
             }.resume()
         
-        let geoFenceRegion:CLCircularRegion = CLCircularRegion(center: destCoordinates, radius: 10, identifier: "Destination")
+        self.geoFenceRegion = CLCircularRegion(center: destCoordinates, radius: 10, identifier: "Destination")
         locationManager.startMonitoring(for: geoFenceRegion)
     }
     
@@ -126,13 +128,36 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate {
             self.descriptionText.text = "You have arrived at your final destination. Thank you for using BRIDGE!"
             self.view.layoutIfNeeded()
         }
+        locationManager.stopMonitoring(for: geoFenceRegion)
     }
 
     @IBAction func doneRide(_ sender: Any) {
         if arrived {
             //TODO: Save ride history here
+            let now = Date()
+            let formatter = DateFormatter()
+            formatter.timeZone = TimeZone.current
+            formatter.dateFormat = "hh:mm a"
+            formatter.amSymbol = "AM"
+            formatter.pmSymbol = "PM"
+            endTime = formatter.string(from: now)
+            
+            let date = Date()
+            let format = DateFormatter()
+            format.timeZone = TimeZone.current
+            format.dateFormat = "MM/dd/yy"
+            let rideDate = formatter.string(from: now)
+            
+            let historyValues = ["date": rideDate, "startTime": startTime, "midTime": midTime, "endTime": endTime, "riderID": driverID]
+            let historyRef = ref?.child("users").child(userID).child("history").child("\(date)")
+            historyRef?.updateChildValues(historyValues)
             
             //Delete Request Data
+            destination = ""
+            startTime = ""
+            midTime = ""
+            endTime = ""
+            
             self.locationManager.stopUpdatingLocation()
             let requestRef = ref?.child("acceptedRides").child(userID)
             let values = ["riderName": nil, "riderLat": nil, "riderLong": nil, "driverID": nil, "driverLat": nil, "driverLong": nil, "driverArrived": nil, "pickedUp": nil, "dest": nil] as [String : AnyObject]
@@ -145,8 +170,30 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate {
             let action = UIAlertAction(title: "Cancel", style: .default, handler: nil)
             let action2 = UIAlertAction(title: "End Ride", style: .destructive) { (done) in
                 //TODO: Copy ride history saving shit here
+                let now = Date()
+                let formatter = DateFormatter()
+                formatter.timeZone = TimeZone.current
+                formatter.dateFormat = "hh:mm a"
+                formatter.amSymbol = "AM"
+                formatter.pmSymbol = "PM"
+                endTime = formatter.string(from: now)
+                
+                let date = Date()
+                let format = DateFormatter()
+                format.timeZone = TimeZone.current
+                format.dateFormat = "MM/dd/yy"
+                let rideDate = formatter.string(from: date)
+                
+                let historyValues = ["date": rideDate, "startTime": startTime, "midTime": midTime, "endTime": endTime, "driverID": driverID]
+                let historyRef = self.ref?.child("users").child(userID).child("history").child("\(date)")
+                historyRef?.updateChildValues(historyValues)
                 
                 //Delete Request Data
+                destination = ""
+                startTime = ""
+                midTime = ""
+                endTime = ""
+                
                 self.locationManager.stopUpdatingLocation()
                 let requestRef = self.ref?.child("acceptedRides").child(userID)
                 let values = ["riderName": nil, "riderLat": nil, "riderLong": nil, "driverID": nil, "driverLat": nil, "driverLong": nil, "driverArrived": nil, "pickedUp": nil, "dest": nil] as [String : AnyObject]

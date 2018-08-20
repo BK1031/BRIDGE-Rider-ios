@@ -54,6 +54,7 @@ class DriverLocationViewController: UIViewController, CLLocationManagerDelegate 
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 self.driverLat = dictionary["driverLat"] as! Double
                 self.driverLong = dictionary["driverLong"] as! Double
+                driverID = dictionary["driverID"] as! String
                 self.driverCoordinates = CLLocationCoordinate2DMake(self.driverLat, self.driverLong)
                 driverMarker.position = self.driverCoordinates
                 
@@ -134,6 +135,14 @@ class DriverLocationViewController: UIViewController, CLLocationManagerDelegate 
         ref?.child("acceptedRides").child(userID).child("pickedUp").observe(.value, with: { (snapshot) in
             if let pickedUp = snapshot.value as? Bool {
                 if pickedUp {
+                    //Save time info
+                    let now = Date()
+                    let formatter = DateFormatter()
+                    formatter.timeZone = TimeZone.current
+                    formatter.dateFormat = "hh:mm a"
+                    formatter.amSymbol = "AM"
+                    formatter.pmSymbol = "PM"
+                    midTime = formatter.string(from: now)
                     //Rider has been picked up!
                     self.performSegue(withIdentifier: "finalStretch", sender: self)
                 }

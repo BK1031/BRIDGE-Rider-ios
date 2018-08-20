@@ -44,6 +44,17 @@ class RiderViewController: UIViewController, CLLocationManagerDelegate {
         ref = Database.database().reference()
         
         mapView.isUserInteractionEnabled = true
+        mapView.settings.myLocationButton = true
+        mapView.padding.bottom = view.safeAreaInsets.bottom + 70
+        
+        //Save time info
+        let now = Date()
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone.current
+        formatter.dateFormat = "hh:mm a"
+        formatter.amSymbol = "AM"
+        formatter.pmSymbol = "PM"
+        startTime = formatter.string(from: now)
         
         let usersReference = self.ref?.child("rideRequests").child(userID)
         let values = ["riderName": name, "lat": 0.0, "long": 0.0, "riderID": userID, "riderSchool": school, "rideAccepted": false, "dest": destination, "destLat": 0.0, "destLong": 0.0] as [String : Any]
@@ -140,6 +151,7 @@ class RiderViewController: UIViewController, CLLocationManagerDelegate {
         let usersReference = self.ref?.child("rideRequests").child(userID)
         usersReference?.updateChildValues(values)
         destination = ""
+        startTime = ""
         performSegue(withIdentifier: "cancelRide", sender: self)
     }
     

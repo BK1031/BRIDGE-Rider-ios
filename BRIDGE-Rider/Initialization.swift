@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-var appVersion = 1.0
+var appVersion = 1.1
 
 var tempPassword = ""
 
@@ -34,6 +34,12 @@ var accountBalance = 0.0
 var school = ""
 var schoolLat = 0.0
 var schoolLong = 0.0
+
+var startTime = ""
+var midTime = ""
+var endTime = ""
+
+var driverID = ""
 
 var destination = ""
 
