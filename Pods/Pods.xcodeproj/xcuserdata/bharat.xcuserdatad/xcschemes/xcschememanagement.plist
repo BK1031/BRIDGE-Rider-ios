@@ -19,10 +19,15 @@
 			<key>orderHint</key>
 			<integer>17</integer>
 		</dict>
-		<key>FirebaseStorage.xcscheme</key>
+		<key>FirebaseMessaging.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>18</integer>
+		</dict>
+		<key>FirebaseStorage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>19</integer>
 		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
@@ -41,7 +46,7 @@
 		<key>GoogleUtilities.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>20</integer>
 		</dict>
 		<key>MapboxCoreNavigation.xcscheme</key>
 		<dict>
@@ -98,6 +103,11 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>12</integer>
+		</dict>
+		<key>Protobuf.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>21</integer>
 		</dict>
 		<key>Solar.xcscheme</key>
 		<dict>

@@ -10,6 +10,9 @@ PODS:
   - Firebase/Database (5.5.0):
     - Firebase/CoreOnly
     - FirebaseDatabase (= 5.0.2)
+  - Firebase/Messaging (5.5.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (= 3.1.0)
   - Firebase/Storage (5.5.0):
     - Firebase/CoreOnly
     - FirebaseStorage (= 3.0.0)
@@ -36,6 +39,11 @@ PODS:
   - FirebaseInstanceID (3.2.0):
     - FirebaseCore (~> 5.1)
     - GoogleUtilities/Environment (~> 5.2)
+  - FirebaseMessaging (3.1.0):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - GoogleUtilities/Reachability (~> 5.2)
+    - Protobuf (~> 3.1)
   - FirebaseStorage (3.0.0):
     - FirebaseCore (~> 5.0)
     - GTMSessionFetcher/Core (~> 1.1)
@@ -81,11 +89,13 @@ PODS:
   - PhoneNumberKit/PhoneNumberKitCore (2.1.0)
   - PhoneNumberKit/UIKit (2.1.0):
     - PhoneNumberKit/PhoneNumberKitCore
+  - Protobuf (3.6.1)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - Firebase/Messaging
   - Firebase/Storage
   - GoogleMaps
   - GooglePlaces
@@ -100,6 +110,7 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseDatabase
     - FirebaseInstanceID
+    - FirebaseMessaging
     - FirebaseStorage
     - GoogleAppMeasurement
     - GoogleMaps
@@ -109,6 +120,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PhoneNumberKit
+    - Protobuf
 
 SPEC CHECKSUMS:
   Firebase: 8c957f9cb3852b519180fb378801b7eeeba4d288
@@ -118,6 +130,7 @@ SPEC CHECKSUMS:
   FirebaseCore: ee4b35cf8c8e781da296cc7c15125e4608bb954d
   FirebaseDatabase: 27be5ac5bc75e0b17537b2bbfada8258addcc8cd
   FirebaseInstanceID: 8cd2c6cfe7b9ab65ce7e248f6da7f26f6775b9be
+  FirebaseMessaging: f67b3719f520ee200da0e20ce577fe2bce0c01d0
   FirebaseStorage: 7ca4bb7b58a25fa647b04f524033fc7cb7eb272b
   GoogleAppMeasurement: e785bdb86d3d280abc778156cec323a975f11d1d
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
@@ -127,7 +140,8 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   PhoneNumberKit: 62003f40ff75315fd3738286558bc365365ac222
+  Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: 389fa4d73622e3c74bd8a4b701e5c86c24f14490
+PODFILE CHECKSUM: 1945547c1958f2ca655dd1d36652167ed6c9d9ed
 
 COCOAPODS: 1.5.2
