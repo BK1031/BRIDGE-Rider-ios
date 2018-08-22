@@ -148,7 +148,7 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate {
             format.dateFormat = "MM/dd/yy"
             let rideDate = formatter.string(from: now)
             
-            let historyValues = ["date": rideDate, "startTime": startTime, "midTime": midTime, "endTime": endTime, "riderID": driverID]
+            let historyValues = ["date": rideDate, "startTime": startTime, "midTime": midTime, "endTime": endTime, "riderID": driverID, "dest": destination]
             let historyRef = ref?.child("users").child(userID).child("history").child("\(date)")
             historyRef?.updateChildValues(historyValues)
             
@@ -184,7 +184,7 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate {
                 format.dateFormat = "MM/dd/yy"
                 let rideDate = formatter.string(from: date)
                 
-                let historyValues = ["date": rideDate, "startTime": startTime, "midTime": midTime, "endTime": endTime, "driverID": driverID]
+                let historyValues = ["date": rideDate, "startTime": startTime, "midTime": midTime, "endTime": endTime, "driverID": driverID, "dest": destination]
                 let historyRef = self.ref?.child("users").child(userID).child("history").child("\(date)")
                 historyRef?.updateChildValues(historyValues)
                 

@@ -16,7 +16,6 @@
 		4F73376921122BDB00DD005E /* DriverLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F73376821122BDB00DD005E /* DriverLocationViewController.swift */; };
 		4F863DB7211011AD00406B81 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F863DB6211011AC00406B81 /* AccountViewController.swift */; };
 		4F91CBB92127F7CF00FD95C8 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBB62127E89400FD95C8 /* Montserrat-Black.ttf */; };
-		4F91CBBA2127F7DD00FD95C8 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBAE2127E87D00FD95C8 /* Montserrat-BlackItalic.ttf */; };
 		4F91CBBB2127F7DD00FD95C8 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBB02127E88300FD95C8 /* Montserrat-Bold.ttf */; };
 		4F91CBBC2127F7DD00FD95C8 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBAC2127E87700FD95C8 /* Montserrat-BoldItalic.ttf */; };
 		4F91CBBD2127F7DD00FD95C8 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBAA2127E87200FD95C8 /* Montserrat-ExtraBold.ttf */; };
@@ -44,6 +43,10 @@
 		4FC5989120E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4FC5988F20E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld */; };
 		4FC5989320E2CEC80042899B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FC5989220E2CEC80042899B /* Assets.xcassets */; };
 		4FC5989620E2CEC80042899B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC5989420E2CEC80042899B /* LaunchScreen.storyboard */; };
+		4FC89D59212D1C5D0002880A /* RideHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC89D58212D1C5D0002880A /* RideHistoryTableViewCell.swift */; };
+		4FC89D5C212D1CD80002880A /* RideHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC89D5B212D1CD80002880A /* RideHistoryViewController.swift */; };
+		4FC89D5D212D1E1E0002880A /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBAE2127E87D00FD95C8 /* Montserrat-BlackItalic.ttf */; };
+		4FC89D5F212E1E3B0002880A /* RideDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC89D5E212E1E3B0002880A /* RideDetailsViewController.swift */; };
 		4FDA5BA62127ABCE00BDA5D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FDA5BA52127ABCE00BDA5D0 /* GoogleService-Info.plist */; };
 		4FF938E5211E705B00C55AFE /* FinalDestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF938E4211E705B00C55AFE /* FinalDestViewController.swift */; };
 		84EE5065E7732310C155EC0A /* Pods_BRIDGE_Rider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6ECB225865E0AB04BF1BC25 /* Pods_BRIDGE_Rider.framework */; };
@@ -91,6 +94,9 @@
 		4FC5989220E2CEC80042899B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FC5989520E2CEC80042899B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FC5989720E2CEC80042899B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FC89D58212D1C5D0002880A /* RideHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		4FC89D5B212D1CD80002880A /* RideHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideHistoryViewController.swift; sourceTree = "<group>"; };
+		4FC89D5E212E1E3B0002880A /* RideDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsViewController.swift; sourceTree = "<group>"; };
 		4FDA5BA52127ABCE00BDA5D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4FF938E4211E705B00C55AFE /* FinalDestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalDestViewController.swift; sourceTree = "<group>"; };
 		AD63462D0C6786F7DB130B70 /* Pods-BRIDGE-Rider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRIDGE-Rider.release.xcconfig"; path = "Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider.release.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +219,7 @@
 				4F9399FB20E3282B00268AA6 /* WelcomeViewController.swift */,
 				4F121963210FE82C00BE0BD4 /* Rider */,
 				4F863DB82110162700406B81 /* Account */,
+				4FC89D5A212D1C900002880A /* Ride History */,
 				4FC5988C20E2CEC60042899B /* Main.storyboard */,
 				4FC5989220E2CEC80042899B /* Assets.xcassets */,
 				4FC5989420E2CEC80042899B /* LaunchScreen.storyboard */,
@@ -222,6 +229,16 @@
 				4FC5988F20E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld */,
 			);
 			path = "BRIDGE-Rider";
+			sourceTree = "<group>";
+		};
+		4FC89D5A212D1C900002880A /* Ride History */ = {
+			isa = PBXGroup;
+			children = (
+				4FC89D58212D1C5D0002880A /* RideHistoryTableViewCell.swift */,
+				4FC89D5B212D1CD80002880A /* RideHistoryViewController.swift */,
+				4FC89D5E212E1E3B0002880A /* RideDetailsViewController.swift */,
+			);
+			path = "Ride History";
 			sourceTree = "<group>";
 		};
 		C6B6BA39D56018AFE10FC9A9 /* Frameworks */ = {
@@ -301,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FC89D5D212D1E1E0002880A /* Montserrat-BlackItalic.ttf in Resources */,
 				4F91CBC52127F7DD00FD95C8 /* Montserrat-MediumItalic.ttf in Resources */,
 				4F91CBBC2127F7DD00FD95C8 /* Montserrat-BoldItalic.ttf in Resources */,
 				4F91CBC62127F7DD00FD95C8 /* Montserrat-Regular.ttf in Resources */,
@@ -308,7 +326,6 @@
 				4F91CBB92127F7CF00FD95C8 /* Montserrat-Black.ttf in Resources */,
 				4F6B3B3120EE89CA00AB5DE2 /* BridgeDemoRiderLocation.gpx in Resources */,
 				4F91CBC72127F7DD00FD95C8 /* Montserrat-SemiBold.ttf in Resources */,
-				4F91CBBA2127F7DD00FD95C8 /* Montserrat-BlackItalic.ttf in Resources */,
 				4F91CBC82127F7DD00FD95C8 /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				4F91CBBD2127F7DD00FD95C8 /* Montserrat-ExtraBold.ttf in Resources */,
 				4FDA5BA62127ABCE00BDA5D0 /* GoogleService-Info.plist in Resources */,
@@ -413,12 +430,15 @@
 				4F9399FC20E3282B00268AA6 /* WelcomeViewController.swift in Sources */,
 				4F9399F720E3222100268AA6 /* ConnectionErrorViewController.swift in Sources */,
 				4FC5989120E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld in Sources */,
+				4FC89D5F212E1E3B0002880A /* RideDetailsViewController.swift in Sources */,
 				4F121962210FE82600BE0BD4 /* RiderViewController.swift in Sources */,
+				4FC89D5C212D1CD80002880A /* RideHistoryViewController.swift in Sources */,
 				4F9399F620E3222100268AA6 /* ConnectionCheckerViewController.swift in Sources */,
 				4F863DB7211011AD00406B81 /* AccountViewController.swift in Sources */,
 				4FC5988B20E2CEC60042899B /* ViewController.swift in Sources */,
 				4F9399F920E3238300268AA6 /* Initialization.swift in Sources */,
 				4FC5988920E2CEC60042899B /* AppDelegate.swift in Sources */,
+				4FC89D59212D1C5D0002880A /* RideHistoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
