@@ -18,7 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
 
     var window: UIWindow?
     let gcmMessageIDKey = "gcm.message_id"
-
+    
+    var ref:DatabaseReference?
+    var databaseHandle:DatabaseHandle?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyDpnFep4SN9iBjtN6MKG9bwdS1ocxNXuRs")

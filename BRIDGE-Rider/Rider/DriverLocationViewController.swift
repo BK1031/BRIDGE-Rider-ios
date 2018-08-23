@@ -55,6 +55,7 @@ class DriverLocationViewController: UIViewController, CLLocationManagerDelegate 
                 self.driverLat = dictionary["driverLat"] as! Double
                 self.driverLong = dictionary["driverLong"] as! Double
                 driverID = dictionary["driverID"] as! String
+                driverName = dictionary["driverName"] as! String
                 self.driverCoordinates = CLLocationCoordinate2DMake(self.driverLat, self.driverLong)
                 driverMarker.position = self.driverCoordinates
                 

@@ -40,6 +40,7 @@ var midTime = ""
 var endTime = ""
 
 var driverID = ""
+var driverName = ""
 
 var destination = ""
 

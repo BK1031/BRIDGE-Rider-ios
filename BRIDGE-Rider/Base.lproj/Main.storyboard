@@ -60,7 +60,7 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXQ-0v-dJE">
-                                <rect key="frame" x="0.0" y="192" width="375" height="475"/>
+                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your BRIDGE Account below." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjQ-1H-ZMO">
                                         <rect key="frame" x="20" y="20" width="335" height="21"/>
@@ -131,7 +131,7 @@
                                     <constraint firstItem="VjQ-1H-ZMO" firstAttribute="top" secondItem="NXQ-0v-dJE" secondAttribute="top" constant="20" id="HLh-uB-C7o"/>
                                     <constraint firstItem="dLX-CU-fFg" firstAttribute="leading" secondItem="NXQ-0v-dJE" secondAttribute="leading" constant="20" id="Otq-M0-k6b"/>
                                     <constraint firstItem="z8m-2P-uDj" firstAttribute="top" secondItem="VjQ-1H-ZMO" secondAttribute="bottom" constant="10" id="ToB-Tk-ZkX"/>
-                                    <constraint firstAttribute="height" constant="475" id="TpV-CA-Pje"/>
+                                    <constraint firstAttribute="height" id="TpV-CA-Pje"/>
                                     <constraint firstAttribute="trailing" secondItem="z8m-2P-uDj" secondAttribute="trailing" constant="20" id="Wij-Zd-j1q"/>
                                     <constraint firstItem="Z25-ox-J34" firstAttribute="top" secondItem="dLX-CU-fFg" secondAttribute="bottom" constant="25" id="YFQ-AB-jKl"/>
                                     <constraint firstAttribute="trailing" secondItem="VjQ-1H-ZMO" secondAttribute="trailing" constant="20" id="aBa-nf-5Sv"/>
@@ -147,7 +147,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gha-IW-ZLn">
-                                <rect key="frame" x="0.0" y="192" width="375" height="475"/>
+                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address Line 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p9s-6a-jmd">
                                         <rect key="frame" x="20" y="41" width="335" height="31"/>
@@ -210,7 +210,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="afk-Ml-SDf" firstAttribute="top" secondItem="JKh-qB-egE" secondAttribute="bottom" id="010-sX-MPC"/>
-                                    <constraint firstAttribute="height" constant="475" id="0C4-gl-Esg"/>
+                                    <constraint firstAttribute="height" id="0C4-gl-Esg"/>
                                     <constraint firstItem="pXu-zS-07E" firstAttribute="top" secondItem="p9s-6a-jmd" secondAttribute="bottom" constant="10" id="2WR-ov-20d"/>
                                     <constraint firstItem="JQX-FN-w7c" firstAttribute="centerX" secondItem="Gha-IW-ZLn" secondAttribute="centerX" id="3U5-9M-jux"/>
                                     <constraint firstAttribute="trailing" secondItem="p9s-6a-jmd" secondAttribute="trailing" constant="20" id="7RW-ny-ITs"/>
@@ -1239,14 +1239,44 @@ Troubleshooting Tips:
                                                         <constraint firstAttribute="width" constant="65" id="bUv-8n-JYY"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Driver Name]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9x-sd-APD">
+                                                    <rect key="frame" x="83" y="11" width="267" height="26"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhZ-xD-z78">
+                                                    <rect key="frame" x="83" y="37" width="267" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vL-U9-7Em">
+                                                    <rect key="frame" x="83" y="56" width="272" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="mhZ-xD-z78" firstAttribute="top" secondItem="H9x-sd-APD" secondAttribute="bottom" id="09k-Kf-4TW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mhZ-xD-z78" secondAttribute="trailing" constant="10" id="AVY-ge-htP"/>
+                                                <constraint firstItem="mhZ-xD-z78" firstAttribute="leading" secondItem="S2Q-16-TFE" secondAttribute="trailing" constant="10" id="F4h-Mz-scU"/>
+                                                <constraint firstItem="H9x-sd-APD" firstAttribute="leading" secondItem="S2Q-16-TFE" secondAttribute="trailing" constant="10" id="Uv0-Zd-10v"/>
+                                                <constraint firstAttribute="trailing" secondItem="6vL-U9-7Em" secondAttribute="trailing" constant="20" id="VIh-qJ-JBB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="H9x-sd-APD" secondAttribute="trailing" constant="10" id="d4p-tT-Ps5"/>
                                                 <constraint firstItem="S2Q-16-TFE" firstAttribute="leading" secondItem="oJY-Zh-yrD" secondAttribute="leading" constant="8" id="dcP-0a-G5J"/>
+                                                <constraint firstItem="H9x-sd-APD" firstAttribute="top" secondItem="oJY-Zh-yrD" secondAttribute="topMargin" id="frR-zk-Sgr"/>
                                                 <constraint firstItem="S2Q-16-TFE" firstAttribute="centerY" secondItem="oJY-Zh-yrD" secondAttribute="centerY" id="mO3-mt-rtK"/>
+                                                <constraint firstItem="6vL-U9-7Em" firstAttribute="top" secondItem="mhZ-xD-z78" secondAttribute="bottom" id="ocV-td-GPG"/>
+                                                <constraint firstItem="6vL-U9-7Em" firstAttribute="leading" secondItem="S2Q-16-TFE" secondAttribute="trailing" constant="10" id="ty7-B6-n0x"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="driverName" destination="H9x-sd-APD" id="Qk7-jo-eRh"/>
                                             <outlet property="profilePic" destination="S2Q-16-TFE" id="uJM-xn-Mwa"/>
+                                            <outlet property="rideDate" destination="mhZ-xD-z78" id="VOA-yN-l7c"/>
+                                            <outlet property="rideDest" destination="6vL-U9-7Em" id="rs0-fg-Ory"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1270,7 +1300,7 @@ Troubleshooting Tips:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JdW-eh-k39" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1908" y="1462"/>
+            <point key="canvasLocation" x="1930" y="1454"/>
         </scene>
         <!--Ride Details View Controller-->
         <scene sceneID="wWA-DO-ghI">
@@ -1285,7 +1315,7 @@ Troubleshooting Tips:
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwr-9B-dzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2737" y="1461"/>
+            <point key="canvasLocation" x="2726" y="1453"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4M0-vr-PCe">
@@ -1312,7 +1342,7 @@ Troubleshooting Tips:
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eap-Qp-lKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="1462"/>
+            <point key="canvasLocation" x="969" y="1452"/>
         </scene>
     </scenes>
     <resources>
@@ -1322,7 +1352,7 @@ Troubleshooting Tips:
         <image name="ride sharing" width="625" height="172"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="axo-lA-u0C"/>
+        <segue reference="BrH-lN-SPC"/>
         <segue reference="6ls-Jt-lhT"/>
         <segue reference="d4F-xI-KIQ"/>
         <segue reference="y2E-HM-QNg"/>

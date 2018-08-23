@@ -134,79 +134,50 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func doneRide(_ sender: Any) {
         if arrived {
             //TODO: Save ride history here
-            let now = Date()
-            let formatter = DateFormatter()
-            formatter.timeZone = TimeZone.current
-            formatter.dateFormat = "hh:mm a"
-            formatter.amSymbol = "AM"
-            formatter.pmSymbol = "PM"
-            endTime = formatter.string(from: now)
-            
-            let date = Date()
-            let format = DateFormatter()
-            format.timeZone = TimeZone.current
-            format.dateFormat = "MM/dd/yy"
-            let rideDate = formatter.string(from: now)
-            
-            let historyValues = ["date": rideDate, "startTime": startTime, "midTime": midTime, "endTime": endTime, "riderID": driverID, "dest": destination]
-            let historyRef = ref?.child("users").child(userID).child("history").child("\(date)")
-            historyRef?.updateChildValues(historyValues)
-            
-            //Delete Request Data
-            destination = ""
-            startTime = ""
-            midTime = ""
-            endTime = ""
-            
-            self.locationManager.stopUpdatingLocation()
-            let requestRef = ref?.child("acceptedRides").child(userID)
-            let values = ["riderName": nil, "riderLat": nil, "riderLong": nil, "driverID": nil, "driverLat": nil, "driverLong": nil, "driverArrived": nil, "pickedUp": nil, "dest": nil] as [String : AnyObject]
-            requestRef?.updateChildValues(values)
-            
-            self.performSegue(withIdentifier: "rideDone", sender: self)
+            self.endRide()
         }
         else {
             let alert = UIAlertController(title: "End Ride", message: "Are you sure you want to end the ride? It looks like you're not at your destination yet.", preferredStyle: .alert)
             let action = UIAlertAction(title: "Cancel", style: .default, handler: nil)
             let action2 = UIAlertAction(title: "End Ride", style: .destructive) { (done) in
                 //TODO: Copy ride history saving shit here
-                let now = Date()
-                let formatter = DateFormatter()
-                formatter.timeZone = TimeZone.current
-                formatter.dateFormat = "hh:mm a"
-                formatter.amSymbol = "AM"
-                formatter.pmSymbol = "PM"
-                endTime = formatter.string(from: now)
-                
-                let date = Date()
-                let format = DateFormatter()
-                format.timeZone = TimeZone.current
-                format.dateFormat = "MM/dd/yy"
-                let rideDate = formatter.string(from: date)
-                
-                let historyValues = ["date": rideDate, "startTime": startTime, "midTime": midTime, "endTime": endTime, "driverID": driverID, "dest": destination]
-                let historyRef = self.ref?.child("users").child(userID).child("history").child("\(date)")
-                historyRef?.updateChildValues(historyValues)
-                
-                //Delete Request Data
-                destination = ""
-                startTime = ""
-                midTime = ""
-                endTime = ""
-                
-                self.locationManager.stopUpdatingLocation()
-                let requestRef = self.ref?.child("acceptedRides").child(userID)
-                let values = ["riderName": nil, "riderLat": nil, "riderLong": nil, "driverID": nil, "driverLat": nil, "driverLong": nil, "driverArrived": nil, "pickedUp": nil, "dest": nil] as [String : AnyObject]
-                requestRef?.updateChildValues(values)
-                
-                destination = ""
-                
-                self.performSegue(withIdentifier: "rideDone", sender: self)
+                self.endRide()
             }
             alert.addAction(action)
             alert.addAction(action2)
             self.present(alert, animated: true, completion: nil)
         }
+    }
+    
+    func endRide() {
+        let now = Date()
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone.current
+        formatter.dateFormat = "hh:mm a"
+        formatter.amSymbol = "AM"
+        formatter.pmSymbol = "PM"
+        endTime = formatter.string(from: now)
+        formatter.timeZone = TimeZone.current
+        formatter.dateFormat = "MM/dd/yy"
+        let rideDate = formatter.string(from: now)
+        
+        let historyValues = ["driverName": driverName, "date": rideDate, "startTime": startTime, "midTime": midTime, "endTime": endTime, "driverID": driverID, "dest": destination]
+        let historyRef = self.ref?.child("users").child(userID).child("history").child("\(now)")
+        historyRef?.updateChildValues(historyValues)
+        
+        //Delete Request Data
+        destination = ""
+        driverName = ""
+        startTime = ""
+        midTime = ""
+        endTime = ""
+        
+        self.locationManager.stopUpdatingLocation()
+        let requestRef = self.ref?.child("acceptedRides")
+        let values = [userID: nil] as [String : AnyObject]
+        requestRef?.updateChildValues(values)
+        
+        self.performSegue(withIdentifier: "rideDone", sender: self)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
