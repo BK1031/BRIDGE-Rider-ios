@@ -36,6 +36,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
         mapView.padding.bottom = view.safeAreaInsets.bottom + 70
+        mapView.mapStyle = bridgeMapStyle
         
         let center =  UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound, .badge]) { (result, error) in

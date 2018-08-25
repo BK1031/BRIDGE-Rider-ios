@@ -14,6 +14,7 @@
 		4F6B3B3120EE89CA00AB5DE2 /* BridgeDemoRiderLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2C20EE89CA00AB5DE2 /* BridgeDemoRiderLocation.gpx */; };
 		4F6B3B3220EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2D20EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx */; };
 		4F73376921122BDB00DD005E /* DriverLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F73376821122BDB00DD005E /* DriverLocationViewController.swift */; };
+		4F836D4E212FB02B00A402CC /* BridgeGMapsStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F836D4D212FB02B00A402CC /* BridgeGMapsStyle.json */; };
 		4F863DB7211011AD00406B81 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F863DB6211011AC00406B81 /* AccountViewController.swift */; };
 		4F91CBB92127F7CF00FD95C8 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBB62127E89400FD95C8 /* Montserrat-Black.ttf */; };
 		4F91CBBB2127F7DD00FD95C8 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBB02127E88300FD95C8 /* Montserrat-Bold.ttf */; };
@@ -62,6 +63,7 @@
 		4F6B3B2C20EE89CA00AB5DE2 /* BridgeDemoRiderLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoRiderLocation.gpx; sourceTree = "<group>"; };
 		4F6B3B2D20EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoRouteDropOff.gpx; sourceTree = "<group>"; };
 		4F73376821122BDB00DD005E /* DriverLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverLocationViewController.swift; sourceTree = "<group>"; };
+		4F836D4D212FB02B00A402CC /* BridgeGMapsStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BridgeGMapsStyle.json; sourceTree = "<group>"; };
 		4F863DB6211011AC00406B81 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		4F91CBA62127E86600FD95C8 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		4F91CBA72127E86900FD95C8 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		4F91CBB82127E8BF00FD95C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4F836D4D212FB02B00A402CC /* BridgeGMapsStyle.json */,
 				4F91CBB62127E89400FD95C8 /* Montserrat-Black.ttf */,
 				4F91CBAE2127E87D00FD95C8 /* Montserrat-BlackItalic.ttf */,
 				4F91CBB02127E88300FD95C8 /* Montserrat-Bold.ttf */,
@@ -345,6 +348,7 @@
 				4F91CBC22127F7DD00FD95C8 /* Montserrat-Light.ttf in Resources */,
 				4FC5988E20E2CEC60042899B /* Main.storyboard in Resources */,
 				4F6B3B2F20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx in Resources */,
+				4F836D4E212FB02B00A402CC /* BridgeGMapsStyle.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

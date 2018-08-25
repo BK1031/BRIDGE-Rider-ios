@@ -42,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
         }
         
         application.registerForRemoteNotifications()
+        UINavigationBar.appearance().tintColor = #colorLiteral(red: 0.9960784314, green: 0.8365689516, blue: 0.2848113179, alpha: 1)
         return true
     }
 

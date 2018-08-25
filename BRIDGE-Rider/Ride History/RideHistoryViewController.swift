@@ -17,11 +17,13 @@ class RideHistoryViewController: UIViewController, UITableViewDelegate, UITableV
     var databaseHandle:DatabaseHandle?
     
     var driverIDList = [String]()
+    var rideIDList = [String]()
     var driverNameList = [String]()
     var dateList = [String]()
     var destinationList = [String]()
     var timeList = [String]()
     
+    var rideID = ""
     var driverID = ""
     var date = ""
     var destination = ""
@@ -39,11 +41,13 @@ class RideHistoryViewController: UIViewController, UITableViewDelegate, UITableV
             if snapshot.childrenCount > 0 {
                 self.driverIDList.removeAll()
                 self.driverNameList.removeAll()
+                self.rideIDList.removeAll()
                 self.dateList.removeAll()
                 self.destinationList.removeAll()
                 self.timeList.removeAll()
                 
                 for ride in snapshot.children.allObjects as! [DataSnapshot] {
+                    self.rideID = ride.key as String
                     let history = ride.value as? [String: AnyObject]
                     self.driverID = history!["driverID"] as! String
                     self.driverName = history!["driverName"] as! String
@@ -51,6 +55,7 @@ class RideHistoryViewController: UIViewController, UITableViewDelegate, UITableV
                     self.destination = history!["dest"] as! String
                     self.time = history!["endTime"] as! String
                     
+                    self.rideIDList.append(self.rideID)
                     self.driverIDList.append(self.driverID)
                     self.dateList.append(self.date)
                     self.driverNameList.append(self.driverName)
@@ -63,6 +68,7 @@ class RideHistoryViewController: UIViewController, UITableViewDelegate, UITableV
                 self.driverIDList.removeAll()
                 self.dateList.removeAll()
                 self.driverNameList.removeAll()
+                self.rideIDList.removeAll()
                 self.destinationList.removeAll()
                 self.timeList.removeAll()
                 self.tableView.reloadData()
@@ -87,16 +93,11 @@ class RideHistoryViewController: UIViewController, UITableViewDelegate, UITableV
         cell.driverName.text = driverNameList[indexPath.row]
         cell.rideDate.text = "\(dateList[indexPath.row]), \(timeList[indexPath.row])"
         cell.rideDest.text = destinationList[indexPath.row]
-        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-        self.tableView.reloadData()
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedRide = driverIDList[indexPath.row]
+        selectedRide = rideIDList[indexPath.row]
         
         performSegue(withIdentifier: "rideDetails", sender: self)
     }

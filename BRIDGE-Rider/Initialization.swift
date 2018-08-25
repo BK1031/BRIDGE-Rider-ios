@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GoogleMaps
 
 var appVersion = 1.1
 
@@ -38,6 +39,10 @@ var schoolLong = 0.0
 var startTime = ""
 var midTime = ""
 var endTime = ""
+var startLat = 0.0
+var startLong = 0.0
+var endLat = 0.0
+var endLong = 0.0
 
 var driverID = ""
 var driverName = ""
@@ -47,3 +52,5 @@ var destination = ""
 var schoolsList = ["BASIS Independent Silicon Valley", "Bellarmine College Preparatory", "Harker’s Upper School", "Valley Christian High School"]
 
 var selectedRide = ""
+
+let bridgeMapStyle = try! GMSMapStyle.init(contentsOfFileURL: Bundle.main.url(forResource: "BridgeGMapsStyle", withExtension: "json")!)

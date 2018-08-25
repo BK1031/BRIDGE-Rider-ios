@@ -161,7 +161,10 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate {
         formatter.dateFormat = "MM/dd/yy"
         let rideDate = formatter.string(from: now)
         
-        let historyValues = ["driverName": driverName, "date": rideDate, "startTime": startTime, "midTime": midTime, "endTime": endTime, "driverID": driverID, "dest": destination]
+        endLat = (self.locationManager.location?.coordinate.latitude)!
+        endLong = (self.locationManager.location?.coordinate.longitude)!
+        
+        let historyValues = ["driverName": driverName, "date": rideDate, "startTime": startTime, "midTime": midTime, "endTime": endTime, "driverID": driverID, "dest": destination, "startLat": startLat, "startLong": startLong, "endLat": endLat, "endLong": endLong] as [String : AnyObject]
         let historyRef = self.ref?.child("users").child(userID).child("history").child("\(now)")
         historyRef?.updateChildValues(historyValues)
         
@@ -171,6 +174,10 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate {
         startTime = ""
         midTime = ""
         endTime = ""
+        startLat = 0.0
+        startLong = 0.0
+        endLat = 0.0
+        endLong = 0.0
         
         self.locationManager.stopUpdatingLocation()
         let requestRef = self.ref?.child("acceptedRides")
