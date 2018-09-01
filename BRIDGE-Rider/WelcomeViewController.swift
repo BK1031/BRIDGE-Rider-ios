@@ -10,6 +10,7 @@ import UIKit
 import PhoneNumberKit
 import Firebase
 import CoreLocation
+import MaterialComponents
 
 class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -104,6 +105,24 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             //Exectute code once finished
             self.studentText.text = "I am a student at \(school)"
         }
+    }
+    
+    @IBAction func displayTerms(_ sender: Any) {
+        //Display terms here
+        let alert = MDCAlertController(title: "BRIDGE Terms and Conditions", message: terms)
+        alert.addAction(MDCAlertAction(title: "Accept", handler: { (handler) in
+            self.termsSwitch.isOn = true
+            self.confirm = true
+        }))
+        alert.addAction(MDCAlertAction(title: "Cancel", handler: { (handler) in
+            self.termsSwitch.isOn = false
+            self.confirm = false
+        }))
+        alert.view.layer.cornerRadius = 10
+        alert.titleFont = UIFont(name: "Montserrat-SemiBold", size: 18.0)
+        alert.messageFont = UIFont(name: "Montserrat-Regular", size: 15.0)
+        alert.buttonFont = UIFont(name: "Montserrat-Regular", size: 15.0)
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func getStarted(_ sender: UIButton) {

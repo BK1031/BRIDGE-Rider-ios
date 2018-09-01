@@ -27,6 +27,8 @@ class RiderViewController: UIViewController, CLLocationManagerDelegate {
     var ref:DatabaseReference?
     var databaseHandle:DatabaseHandle?
     
+    var alertDismissed = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -65,18 +67,7 @@ class RiderViewController: UIViewController, CLLocationManagerDelegate {
                 if driverConfirmed {
                     //Driver Confirmed Ride
                     self.locationManager.stopUpdatingLocation()
-                    let alert = UIAlertController(title: "Ride Confirmed", message: "Your ride request has been confirmed.", preferredStyle: .alert)
-                    let action = UIAlertAction(title: "Got it", style: .default, handler: { (action) in
-                        let usersReference = self.ref?.child("rideRequests").child(userID)
-                        let values = ["riderName": nil, "riderAddress": nil, "lat": nil, "long": nil, "riderSchool": nil, "riderID": nil, "rideAccepted": nil, "dest": nil, "destLat": nil, "destLong": nil] as [String : AnyObject]
-                        usersReference?.updateChildValues(values)
-                        //Segue to Driver Location VC
-                        startLat = (self.locationManager.location?.coordinate.latitude)!
-                        startLong = (self.locationManager.location?.coordinate.longitude)!
-                        self.performSegue(withIdentifier: "toDriverView", sender: self)
-                    })
-                    alert.addAction(action)
-                    self.present(alert, animated: true, completion: nil)
+                    self.performSegue(withIdentifier: "rideConfirmedAlert", sender: self)
                 }
             }
         })

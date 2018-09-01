@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4F121962210FE82600BE0BD4 /* RiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F121961210FE82600BE0BD4 /* RiderViewController.swift */; };
+		4F56E6A62133B65100985FF3 /* BetaAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56E6A52133B65100985FF3 /* BetaAlertViewController.swift */; };
+		4F56E6A9213446B900985FF3 /* OutdatedAppAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56E6A8213446B900985FF3 /* OutdatedAppAlertViewController.swift */; };
+		4F56E6AB2134863400985FF3 /* RideConfirmedAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56E6AA2134863400985FF3 /* RideConfirmedAlertViewController.swift */; };
 		4F6B3B2E20EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2920EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx */; };
 		4F6B3B2F20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2A20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx */; };
 		4F6B3B3020EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2B20EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx */; };
@@ -38,6 +41,7 @@
 		4F9399F720E3222100268AA6 /* ConnectionErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F420E3222100268AA6 /* ConnectionErrorViewController.swift */; };
 		4F9399F920E3238300268AA6 /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F820E3238300268AA6 /* Initialization.swift */; };
 		4F9399FC20E3282B00268AA6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399FB20E3282B00268AA6 /* WelcomeViewController.swift */; };
+		4FA68D7421334B6D00E7BBC3 /* RideDetailsTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA68D7321334B6D00E7BBC3 /* RideDetailsTitleViewController.swift */; };
 		4FC5988920E2CEC60042899B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC5988820E2CEC60042899B /* AppDelegate.swift */; };
 		4FC5988B20E2CEC60042899B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC5988A20E2CEC60042899B /* ViewController.swift */; };
 		4FC5988E20E2CEC60042899B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC5988C20E2CEC60042899B /* Main.storyboard */; };
@@ -57,6 +61,9 @@
 		0845BD4CAC28B848F299EF24 /* Pods-BRIDGE-Rider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRIDGE-Rider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider.debug.xcconfig"; sourceTree = "<group>"; };
 		4F121961210FE82600BE0BD4 /* RiderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderViewController.swift; sourceTree = "<group>"; };
 		4F5047B3212146740038C55E /* BRIDGE-Rider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BRIDGE-Rider.entitlements"; sourceTree = "<group>"; };
+		4F56E6A52133B65100985FF3 /* BetaAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaAlertViewController.swift; sourceTree = "<group>"; };
+		4F56E6A8213446B900985FF3 /* OutdatedAppAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutdatedAppAlertViewController.swift; sourceTree = "<group>"; };
+		4F56E6AA2134863400985FF3 /* RideConfirmedAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideConfirmedAlertViewController.swift; sourceTree = "<group>"; };
 		4F6B3B2920EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoDropLocation.gpx; sourceTree = "<group>"; };
 		4F6B3B2A20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoRoutePickup.gpx; sourceTree = "<group>"; };
 		4F6B3B2B20EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoDriverStart.gpx; sourceTree = "<group>"; };
@@ -88,6 +95,7 @@
 		4F9399F420E3222100268AA6 /* ConnectionErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionErrorViewController.swift; sourceTree = "<group>"; };
 		4F9399F820E3238300268AA6 /* Initialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Initialization.swift; sourceTree = "<group>"; };
 		4F9399FB20E3282B00268AA6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		4FA68D7321334B6D00E7BBC3 /* RideDetailsTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsTitleViewController.swift; sourceTree = "<group>"; };
 		4FC5988520E2CEC60042899B /* BRIDGE-Rider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BRIDGE-Rider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC5988820E2CEC60042899B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FC5988A20E2CEC60042899B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +142,16 @@
 				4FF938E4211E705B00C55AFE /* FinalDestViewController.swift */,
 			);
 			path = Rider;
+			sourceTree = "<group>";
+		};
+		4F56E6A72133B65700985FF3 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				4F56E6A52133B65100985FF3 /* BetaAlertViewController.swift */,
+				4F56E6A8213446B900985FF3 /* OutdatedAppAlertViewController.swift */,
+				4F56E6AA2134863400985FF3 /* RideConfirmedAlertViewController.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		4F6B3B3320EE89D600AB5DE2 /* GPX Files */ = {
@@ -217,6 +235,7 @@
 				4F5047B3212146740038C55E /* BRIDGE-Rider.entitlements */,
 				4F9399F820E3238300268AA6 /* Initialization.swift */,
 				4FC5988820E2CEC60042899B /* AppDelegate.swift */,
+				4F56E6A72133B65700985FF3 /* Alerts */,
 				4F9399FA20E3272600268AA6 /* Startup */,
 				4FC5988A20E2CEC60042899B /* ViewController.swift */,
 				4F9399FB20E3282B00268AA6 /* WelcomeViewController.swift */,
@@ -240,6 +259,7 @@
 				4FC89D58212D1C5D0002880A /* RideHistoryTableViewCell.swift */,
 				4FC89D5B212D1CD80002880A /* RideHistoryViewController.swift */,
 				4FC89D5E212E1E3B0002880A /* RideDetailsViewController.swift */,
+				4FA68D7321334B6D00E7BBC3 /* RideDetailsTitleViewController.swift */,
 			);
 			path = "Ride History";
 			sourceTree = "<group>";
@@ -364,6 +384,12 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
 				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -373,6 +399,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -433,14 +465,18 @@
 				4F9399F520E3222100268AA6 /* CheckUserLoggedViewController.swift in Sources */,
 				4F9399FC20E3282B00268AA6 /* WelcomeViewController.swift in Sources */,
 				4F9399F720E3222100268AA6 /* ConnectionErrorViewController.swift in Sources */,
+				4F56E6AB2134863400985FF3 /* RideConfirmedAlertViewController.swift in Sources */,
 				4FC5989120E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld in Sources */,
 				4FC89D5F212E1E3B0002880A /* RideDetailsViewController.swift in Sources */,
 				4F121962210FE82600BE0BD4 /* RiderViewController.swift in Sources */,
 				4FC89D5C212D1CD80002880A /* RideHistoryViewController.swift in Sources */,
 				4F9399F620E3222100268AA6 /* ConnectionCheckerViewController.swift in Sources */,
+				4FA68D7421334B6D00E7BBC3 /* RideDetailsTitleViewController.swift in Sources */,
 				4F863DB7211011AD00406B81 /* AccountViewController.swift in Sources */,
 				4FC5988B20E2CEC60042899B /* ViewController.swift in Sources */,
+				4F56E6A62133B65100985FF3 /* BetaAlertViewController.swift in Sources */,
 				4F9399F920E3238300268AA6 /* Initialization.swift in Sources */,
+				4F56E6A9213446B900985FF3 /* OutdatedAppAlertViewController.swift in Sources */,
 				4FC5988920E2CEC60042899B /* AppDelegate.swift in Sources */,
 				4FC89D59212D1C5D0002880A /* RideHistoryTableViewCell.swift in Sources */,
 			);

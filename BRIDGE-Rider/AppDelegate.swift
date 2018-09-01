@@ -12,6 +12,7 @@ import Firebase
 import FirebaseMessaging
 import UserNotifications
 import GoogleMaps
+import MaterialComponents
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
@@ -43,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate, UNUser
         
         application.registerForRemoteNotifications()
         UINavigationBar.appearance().tintColor = #colorLiteral(red: 0.9960784314, green: 0.8365689516, blue: 0.2848113179, alpha: 1)
+        UIBarButtonItem.appearance().setTitleTextAttributes([kCTFontAttributeName as NSAttributedStringKey: UIFont(name: "Montserrat-Regular", size: 17.0)], for: .normal)
         return true
     }
 

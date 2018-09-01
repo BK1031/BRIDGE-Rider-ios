@@ -103,7 +103,7 @@ class FinalDestViewController: UIViewController, CLLocationManagerDelegate {
                     var rectangle = GMSPolyline(path: path)
                     rectangle.map = nil
                     rectangle.strokeWidth = 4.0
-                    rectangle.strokeColor = UIColor.blue
+                    rectangle.strokeColor = #colorLiteral(red: 0.9960784314, green: 0.8365689516, blue: 0.2848113179, alpha: 1)
                     rectangle.map = self.mapView
                     
                     self.mapView.animate(with: GMSCameraUpdate.fit(GMSCoordinateBounds(path: rectangle.path!), withPadding: 50))

@@ -34,6 +34,8 @@ class RideDetailsViewController: UITableViewController, CLLocationManagerDelegat
         super.viewDidLoad()
         ref = Database.database().reference()
         
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .never
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
@@ -55,8 +57,6 @@ class RideDetailsViewController: UITableViewController, CLLocationManagerDelegat
                 let destLong = rideDetails["endLong"] as! Double
                 self.startCoor = CLLocationCoordinate2DMake(originLat, originLong)
                 self.endCoor = CLLocationCoordinate2DMake(destLat, destLong)
-                
-                self.navigationController!.title = "\(rideDetails["date"] as! String), \(rideDetails["endTime"] as! String)"
                 
                 let startMarker = GMSMarker()
                 startMarker.position = self.startCoor
@@ -116,7 +116,7 @@ class RideDetailsViewController: UITableViewController, CLLocationManagerDelegat
                             rectangle.strokeColor = #colorLiteral(red: 0.9960784314, green: 0.8365689516, blue: 0.2848113179, alpha: 1)
                             rectangle.map = self.mapView
                             
-                            self.mapView.animate(with: GMSCameraUpdate.fit(GMSCoordinateBounds(path: rectangle.path!), withPadding: 55))
+                            self.mapView.animate(with: GMSCameraUpdate.fit(GMSCoordinateBounds(path: rectangle.path!), with: UIEdgeInsetsMake(75.0, 25.0, 25.0, 25.0)))
                             
                         }
                         
