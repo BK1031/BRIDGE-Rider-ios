@@ -1,6 +1,6 @@
 # BRIDGE Canary Program
 
-The BRIDGE Canary Program is our version of a beta program. Make sure you meet all of the following requirements before applying to join the program. You can access the appliation [here](bridgeridesharing-app.firebaseio.com)
+The BRIDGE Canary Program is our version of a beta program. Make sure you meet all of the following requirements before applying to join the program. You can access the appliation <a href="www.bridgeridesharing-app.firebaseio.com" target="_blank">here</a>.
 
 ## Canary Application Requirements
 
