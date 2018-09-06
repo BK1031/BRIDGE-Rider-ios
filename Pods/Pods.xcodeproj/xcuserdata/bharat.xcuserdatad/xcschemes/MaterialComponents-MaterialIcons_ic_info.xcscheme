@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AF3F67F510BA80B75BF6ADAD88C1D2BB"
-               BlueprintName = "MapboxSpeech"
+               BlueprintIdentifier = "77DF31A754CBBE295169D6A6A0FF297A"
+               BlueprintName = "MaterialComponents-MaterialIcons_ic_info"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "MapboxSpeech.framework">
+               BuildableName = "MaterialComponents-MaterialIcons_ic_info.bundle">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

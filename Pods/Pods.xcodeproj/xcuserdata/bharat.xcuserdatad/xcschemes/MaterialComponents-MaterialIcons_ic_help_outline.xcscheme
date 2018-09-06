@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5036616F3ABA44E7227EF6F0B86A0445"
-               BlueprintName = "leveldb-library"
+               BlueprintIdentifier = "9ED44A0228CADC62B7E6D829911BC99F"
+               BlueprintName = "MaterialComponents-MaterialIcons_ic_help_outline"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "leveldb-library.framework">
+               BuildableName = "MaterialComponents-MaterialIcons_ic_help_outline.bundle">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

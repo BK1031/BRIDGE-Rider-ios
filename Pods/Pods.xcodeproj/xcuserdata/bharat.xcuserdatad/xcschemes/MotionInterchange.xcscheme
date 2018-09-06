@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5036616F3ABA44E7227EF6F0B86A0445"
-               BlueprintName = "leveldb-library"
+               BlueprintIdentifier = "41BC0FD4423005158CDEE629280517B4"
+               BlueprintName = "MotionInterchange"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "leveldb-library.framework">
+               BuildableName = "MotionInterchange.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5E97ED261E7EA2F20C03BF606732B5A2"
-               BlueprintName = "MapboxMobileEvents"
+               BlueprintIdentifier = "27516329A48658664AB079E7519F22E1"
+               BlueprintName = "FirebaseMessaging"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "MapboxMobileEvents.framework">
+               BuildableName = "FirebaseMessaging.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

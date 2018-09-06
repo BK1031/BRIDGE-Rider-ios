@@ -11,6 +11,8 @@ You can find updates on my twitter here: [@BK1031_OFFICIAL](https://twitter.com/
 
 ## Instructions for Building BRIDGE App Beta
 
+***Note: You will need a Macintosh or device running MacOS to proceed***
+
 Fork the repository.
 
 You will need to have CocoaPods installed for this app to run. Luckily, it is very easy to install if you don't aldready have it.
@@ -19,19 +21,23 @@ You will need to have CocoaPods installed for this app to run. Luckily, it is ve
 
 Navigate to the folder where you forked the repository. You should see something like this.
 
-![alt text](https://github.com/bharat1031/BRIDGE-app/blob/master/Screen%20Shot%202018-03-05%20at%2011.56.52%20AM.png "BRIDGE Project in Finder")
+![alt text](https://github.com/BK1031/ImageAssets/blob/master/Screen%20Shot%202018-09-05%20at%204.56.55%20PM.png "BRIDGE Project in Finder")
 
-Make sure that you see the Podfile in the folder. Then navigate to that same folder, but via terminal this time. You can use this command to verify that you are in the correct directory.
+Make sure that you see the Podfile in the folder. Then navigate to that same folder, but via terminal this time. You can use the command `ls` to verify that you are in the correct directory.
 
-![alt text](https://github.com/bharat1031/BRIDGE-app/blob/master/Screen%20Shot%202018-03-05%20at%2012.04.55%20PM.png "BRIDGE Project in Terminal")
+![alt text](https://github.com/BK1031/ImageAssets/blob/master/Screen%20Shot%202018-09-05%20at%204.53.33%20PM.png "BRIDGE-Rider-ios Project in Terminal")
 
 Once you are in this directory install the Podfile with the following command.
 
 `$ pod install`
 
+Your terminal output should look something like the following.
+
+![alt text](https://github.com/BK1031/ImageAssets/blob/master/Screen%20Shot%202018-09-05%20at%204.53.33%20PM.png "Pod Install in Terminal")
+
 Now, go ahead and open the *BRIDGE.xcworkspace*. Make sure you open this and **not** the *BRIDGE.xcodeproj*. Build the project to make sure that no errors occur.
 
-You now have a BRIDGE App Beta that you can sideload onto your device!
+You now have the Canary Release of the BRIDGE Rider App that you can sideload onto your device!
 
 *If there are any issues, feel free to let us know by creating a new issue report.*
 

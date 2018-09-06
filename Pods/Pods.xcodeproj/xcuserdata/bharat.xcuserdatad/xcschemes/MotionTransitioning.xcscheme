@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5036616F3ABA44E7227EF6F0B86A0445"
-               BlueprintName = "leveldb-library"
+               BlueprintIdentifier = "B26ACB2827B56CC36AE5BB95A3130292"
+               BlueprintName = "MotionTransitioning"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "leveldb-library.framework">
+               BuildableName = "MotionTransitioning.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

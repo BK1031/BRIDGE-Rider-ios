@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "107A9565F9DF88517DFD3E28C05B2B96"
-               BlueprintName = "GoogleToolboxForMac"
+               BlueprintIdentifier = "882980F18199F76A1609951881DF2FAE"
+               BlueprintName = "MaterialComponents-MaterialIcons_ic_color_lens"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "GoogleToolboxForMac.framework">
+               BuildableName = "MaterialComponents-MaterialIcons_ic_color_lens.bundle">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
