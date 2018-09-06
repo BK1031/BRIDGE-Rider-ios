@@ -35,7 +35,7 @@ Your terminal output should look something like the following.
 
 ![alt text](https://github.com/BK1031/ImageAssets/blob/master/Screen%20Shot%202018-09-05%20at%204.54.28%20PM.png "Pod Install in Terminal")
 
-Now, go ahead and open the *BRIDGE.xcworkspace*. Make sure you open this and **not** the *BRIDGE.xcodeproj*. Build the project to make sure that no errors occur.
+Now, go ahead and open the *BRIDGE-Rider.xcworkspace*. Make sure you open this and **not** the *BRIDGE-Rider.xcodeproj*. Build the project to make sure that no errors occur.
 
 You now have the Canary Release of the BRIDGE Rider App that you can sideload onto your device!
 
