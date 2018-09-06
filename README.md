@@ -37,7 +37,7 @@ Your terminal output should look something like the following.
 
 Now, go ahead and open the *BRIDGE-Rider.xcworkspace*. Make sure you open this and **not** the *BRIDGE-Rider.xcodeproj*. Build the project to make sure that no errors occur.
 
-You now have the Canary Release of the BRIDGE Driver App that you can sideload onto your device!
+You now have the Canary Release of the BRIDGE Rider App that you can sideload onto your device!
 
 *If there are any issues, feel free to let us know by creating a new issue report.*
 
