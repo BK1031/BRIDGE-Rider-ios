@@ -33,7 +33,7 @@ Once you are in this directory install the Podfile with the following command.
 
 Your terminal output should look something like the following.
 
-![alt text](https://github.com/BK1031/ImageAssets/blob/master/Screen%20Shot%202018-09-05%20at%204.53.33%20PM.png "Pod Install in Terminal")
+![alt text](https://github.com/BK1031/ImageAssets/blob/master/Screen%20Shot%202018-09-05%20at%204.54.28%20PM.png "Pod Install in Terminal")
 
 Now, go ahead and open the *BRIDGE.xcworkspace*. Make sure you open this and **not** the *BRIDGE.xcodeproj*. Build the project to make sure that no errors occur.
 
