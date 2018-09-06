@@ -42,4 +42,4 @@ You now have the Canary Release of the BRIDGE Rider App that you can sideload on
 *If there are any issues, feel free to let us know by creating a new issue report.*
 
 ###### *Powered By*
-[![IMAGE ALT TEXT HERE](https://github.com/bharat1031/BRIDGE-app/blob/master/Firebase.png)](https://firebase.google.com/)
+[![IMAGE ALT TEXT HERE](https://github.com/bharat1031/BRIDGE-app/blob/master/Firebase.png)](https://bridgeridesharing-app.firebaseio.com)
