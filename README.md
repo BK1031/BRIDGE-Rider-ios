@@ -5,7 +5,7 @@ BRIDGE is a company that bridges students and schools, by providing a trustworth
 
 This repository contains the canary version of the BRIDGE Rider app. This is not intended for public use. The most stable version of the BRIDGE Driver and Rider apps are on the App Store, and are recommended for regular use.
 
-Only fork and build this version if you are a part of the BRIDGE Canary Program, and have been instructed to do so. Instructions for properly building this repository are below.
+Only fork and build this version if you are a part of the BRIDGE Canary Program, and have been instructed to do so. Instructions for properly building this repository are below. If you would like to learn how you can join the BRIDGE Canary Program, check if you are eligible [here](https://github.com/BK1031/BRIDGE-Rider-ios/blob/master/CANARY.md).
 
 You can find updates on my twitter here: [@BK1031_OFFICIAL](https://twitter.com/BK1031_OFFICIAL)
 
