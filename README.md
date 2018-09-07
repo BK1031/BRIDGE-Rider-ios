@@ -68,6 +68,8 @@ After you are done, make sure to add the issue to the BRIDGE Rider iOS Project B
     - Storyboard Design
     - Icon Design
     - Logo Design
+- Kashyap Chaturvedula
+    - Moral Suport
 
 ###### *Powered By*
 [![IMAGE ALT TEXT HERE](https://github.com/bharat1031/BRIDGE-app/blob/master/Firebase.png)](https://bridgeridesharing-app.firebaseio.com)
