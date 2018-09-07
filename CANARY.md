@@ -20,4 +20,4 @@ The best way to provide contructive feedback is through GitHub itself. Create a 
 
 Make sure to add additional labels based on what you are asking for. For example, if you are requesting a new feature that automatically selects the destination, then add the "Enhancement" label as well as the "Ride Request Algorithm" label.
 
-After you are done, make sure to add the issue to the respective Project Board for the repository that you are on.
+After you are done, make sure to add the issue to the BRIDGE Rider iOS Project Board.
