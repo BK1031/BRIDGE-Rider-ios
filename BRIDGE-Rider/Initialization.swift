@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import GoogleMaps
-import MaterialComponents
 
 var appVersion = 1.1
 

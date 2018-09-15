@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class RideHistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 

@@ -10,13 +10,19 @@
 		4F121962210FE82600BE0BD4 /* RiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F121961210FE82600BE0BD4 /* RiderViewController.swift */; };
 		4F56E6A62133B65100985FF3 /* BetaAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56E6A52133B65100985FF3 /* BetaAlertViewController.swift */; };
 		4F56E6A9213446B900985FF3 /* OutdatedAppAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56E6A8213446B900985FF3 /* OutdatedAppAlertViewController.swift */; };
-		4F56E6AB2134863400985FF3 /* RideConfirmedAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56E6AA2134863400985FF3 /* RideConfirmedAlertViewController.swift */; };
 		4F6B3B2E20EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2920EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx */; };
 		4F6B3B2F20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2A20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx */; };
 		4F6B3B3020EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2B20EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx */; };
 		4F6B3B3120EE89CA00AB5DE2 /* BridgeDemoRiderLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2C20EE89CA00AB5DE2 /* BridgeDemoRiderLocation.gpx */; };
 		4F6B3B3220EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2D20EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx */; };
 		4F73376921122BDB00DD005E /* DriverLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F73376821122BDB00DD005E /* DriverLocationViewController.swift */; };
+		4F74ACE8214B1A1C003309B2 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F74ACE7214B1A1C003309B2 /* SettingsTableViewController.swift */; };
+		4F74ACEB214B21CE003309B2 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F74ACEA214B21CE003309B2 /* AboutTableViewController.swift */; };
+		4F74ACED214C057C003309B2 /* PaymentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F74ACEC214C057C003309B2 /* PaymentTableViewController.swift */; };
+		4F74ACEF214C0585003309B2 /* PreferencesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F74ACEE214C0585003309B2 /* PreferencesTableViewController.swift */; };
+		4F74ACF1214C05B5003309B2 /* LegalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F74ACF0214C05B5003309B2 /* LegalTableViewController.swift */; };
+		4F74ACF3214C2DA1003309B2 /* MyAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F74ACF2214C2DA1003309B2 /* MyAccountTableViewController.swift */; };
+		4F74ACF5214C395D003309B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F74ACF4214C395C003309B2 /* GoogleService-Info.plist */; };
 		4F836D4E212FB02B00A402CC /* BridgeGMapsStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F836D4D212FB02B00A402CC /* BridgeGMapsStyle.json */; };
 		4F863DB7211011AD00406B81 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F863DB6211011AC00406B81 /* AccountViewController.swift */; };
 		4F91CBB92127F7CF00FD95C8 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBB62127E89400FD95C8 /* Montserrat-Black.ttf */; };
@@ -41,7 +47,10 @@
 		4F9399F720E3222100268AA6 /* ConnectionErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F420E3222100268AA6 /* ConnectionErrorViewController.swift */; };
 		4F9399F920E3238300268AA6 /* Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399F820E3238300268AA6 /* Initialization.swift */; };
 		4F9399FC20E3282B00268AA6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9399FB20E3282B00268AA6 /* WelcomeViewController.swift */; };
-		4FA68D7421334B6D00E7BBC3 /* RideDetailsTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA68D7321334B6D00E7BBC3 /* RideDetailsTitleViewController.swift */; };
+		4FA364BA2149D32500FAB8FF /* Product Sans Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FA364B62149D32400FAB8FF /* Product Sans Regular.ttf */; };
+		4FA364BB2149D32500FAB8FF /* Product Sans Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FA364B72149D32400FAB8FF /* Product Sans Bold.ttf */; };
+		4FA364BC2149D32500FAB8FF /* Product Sans Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FA364B82149D32500FAB8FF /* Product Sans Bold Italic.ttf */; };
+		4FA364BD2149D32500FAB8FF /* Product Sans Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FA364B92149D32500FAB8FF /* Product Sans Italic.ttf */; };
 		4FC5988920E2CEC60042899B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC5988820E2CEC60042899B /* AppDelegate.swift */; };
 		4FC5988B20E2CEC60042899B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC5988A20E2CEC60042899B /* ViewController.swift */; };
 		4FC5988E20E2CEC60042899B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC5988C20E2CEC60042899B /* Main.storyboard */; };
@@ -52,7 +61,7 @@
 		4FC89D5C212D1CD80002880A /* RideHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC89D5B212D1CD80002880A /* RideHistoryViewController.swift */; };
 		4FC89D5D212D1E1E0002880A /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91CBAE2127E87D00FD95C8 /* Montserrat-BlackItalic.ttf */; };
 		4FC89D5F212E1E3B0002880A /* RideDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC89D5E212E1E3B0002880A /* RideDetailsViewController.swift */; };
-		4FDA5BA62127ABCE00BDA5D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FDA5BA52127ABCE00BDA5D0 /* GoogleService-Info.plist */; };
+		4FD52AAB214CB0CE004BC050 /* EditAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD52AAA214CB0CE004BC050 /* EditAccountViewController.swift */; };
 		4FF938E5211E705B00C55AFE /* FinalDestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF938E4211E705B00C55AFE /* FinalDestViewController.swift */; };
 		84EE5065E7732310C155EC0A /* Pods_BRIDGE_Rider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6ECB225865E0AB04BF1BC25 /* Pods_BRIDGE_Rider.framework */; };
 /* End PBXBuildFile section */
@@ -63,13 +72,19 @@
 		4F5047B3212146740038C55E /* BRIDGE-Rider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BRIDGE-Rider.entitlements"; sourceTree = "<group>"; };
 		4F56E6A52133B65100985FF3 /* BetaAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaAlertViewController.swift; sourceTree = "<group>"; };
 		4F56E6A8213446B900985FF3 /* OutdatedAppAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutdatedAppAlertViewController.swift; sourceTree = "<group>"; };
-		4F56E6AA2134863400985FF3 /* RideConfirmedAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideConfirmedAlertViewController.swift; sourceTree = "<group>"; };
 		4F6B3B2920EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoDropLocation.gpx; sourceTree = "<group>"; };
 		4F6B3B2A20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoRoutePickup.gpx; sourceTree = "<group>"; };
 		4F6B3B2B20EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoDriverStart.gpx; sourceTree = "<group>"; };
 		4F6B3B2C20EE89CA00AB5DE2 /* BridgeDemoRiderLocation.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoRiderLocation.gpx; sourceTree = "<group>"; };
 		4F6B3B2D20EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BridgeDemoRouteDropOff.gpx; sourceTree = "<group>"; };
 		4F73376821122BDB00DD005E /* DriverLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverLocationViewController.swift; sourceTree = "<group>"; };
+		4F74ACE7214B1A1C003309B2 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		4F74ACEA214B21CE003309B2 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		4F74ACEC214C057C003309B2 /* PaymentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewController.swift; sourceTree = "<group>"; };
+		4F74ACEE214C0585003309B2 /* PreferencesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTableViewController.swift; sourceTree = "<group>"; };
+		4F74ACF0214C05B5003309B2 /* LegalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalTableViewController.swift; sourceTree = "<group>"; };
+		4F74ACF2214C2DA1003309B2 /* MyAccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountTableViewController.swift; sourceTree = "<group>"; };
+		4F74ACF4214C395C003309B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F836D4D212FB02B00A402CC /* BridgeGMapsStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BridgeGMapsStyle.json; sourceTree = "<group>"; };
 		4F863DB6211011AC00406B81 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		4F91CBA62127E86600FD95C8 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
@@ -95,7 +110,10 @@
 		4F9399F420E3222100268AA6 /* ConnectionErrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionErrorViewController.swift; sourceTree = "<group>"; };
 		4F9399F820E3238300268AA6 /* Initialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Initialization.swift; sourceTree = "<group>"; };
 		4F9399FB20E3282B00268AA6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		4FA68D7321334B6D00E7BBC3 /* RideDetailsTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsTitleViewController.swift; sourceTree = "<group>"; };
+		4FA364B62149D32400FAB8FF /* Product Sans Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product Sans Regular.ttf"; sourceTree = "<group>"; };
+		4FA364B72149D32400FAB8FF /* Product Sans Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product Sans Bold.ttf"; sourceTree = "<group>"; };
+		4FA364B82149D32500FAB8FF /* Product Sans Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product Sans Bold Italic.ttf"; sourceTree = "<group>"; };
+		4FA364B92149D32500FAB8FF /* Product Sans Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product Sans Italic.ttf"; sourceTree = "<group>"; };
 		4FC5988520E2CEC60042899B /* BRIDGE-Rider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BRIDGE-Rider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FC5988820E2CEC60042899B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FC5988A20E2CEC60042899B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +125,7 @@
 		4FC89D58212D1C5D0002880A /* RideHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		4FC89D5B212D1CD80002880A /* RideHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideHistoryViewController.swift; sourceTree = "<group>"; };
 		4FC89D5E212E1E3B0002880A /* RideDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsViewController.swift; sourceTree = "<group>"; };
-		4FDA5BA52127ABCE00BDA5D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4FD52AAA214CB0CE004BC050 /* EditAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountViewController.swift; sourceTree = "<group>"; };
 		4FF938E4211E705B00C55AFE /* FinalDestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalDestViewController.swift; sourceTree = "<group>"; };
 		AD63462D0C6786F7DB130B70 /* Pods-BRIDGE-Rider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRIDGE-Rider.release.xcconfig"; path = "Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider.release.xcconfig"; sourceTree = "<group>"; };
 		C6ECB225865E0AB04BF1BC25 /* Pods_BRIDGE_Rider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BRIDGE_Rider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,7 +167,6 @@
 			children = (
 				4F56E6A52133B65100985FF3 /* BetaAlertViewController.swift */,
 				4F56E6A8213446B900985FF3 /* OutdatedAppAlertViewController.swift */,
-				4F56E6AA2134863400985FF3 /* RideConfirmedAlertViewController.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -166,10 +183,24 @@
 			path = "GPX Files";
 			sourceTree = "<group>";
 		};
+		4F74ACE9214B1A40003309B2 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4F74ACE7214B1A1C003309B2 /* SettingsTableViewController.swift */,
+				4F74ACEA214B21CE003309B2 /* AboutTableViewController.swift */,
+				4F74ACEC214C057C003309B2 /* PaymentTableViewController.swift */,
+				4F74ACEE214C0585003309B2 /* PreferencesTableViewController.swift */,
+				4F74ACF0214C05B5003309B2 /* LegalTableViewController.swift */,
+				4F74ACF2214C2DA1003309B2 /* MyAccountTableViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		4F863DB82110162700406B81 /* Account */ = {
 			isa = PBXGroup;
 			children = (
 				4F863DB6211011AC00406B81 /* AccountViewController.swift */,
+				4FD52AAA214CB0CE004BC050 /* EditAccountViewController.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -196,6 +227,10 @@
 				4F91CBB72127E89700FD95C8 /* Montserrat-SemiBoldItalic.ttf */,
 				4F91CBA82127E86C00FD95C8 /* Montserrat-Thin.ttf */,
 				4F91CBAF2127E88000FD95C8 /* Montserrat-ThinItalic.ttf */,
+				4FA364B82149D32500FAB8FF /* Product Sans Bold Italic.ttf */,
+				4FA364B72149D32400FAB8FF /* Product Sans Bold.ttf */,
+				4FA364B92149D32500FAB8FF /* Product Sans Italic.ttf */,
+				4FA364B62149D32400FAB8FF /* Product Sans Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -242,12 +277,13 @@
 				4F121963210FE82C00BE0BD4 /* Rider */,
 				4F863DB82110162700406B81 /* Account */,
 				4FC89D5A212D1C900002880A /* Ride History */,
+				4F74ACE9214B1A40003309B2 /* Settings */,
 				4FC5988C20E2CEC60042899B /* Main.storyboard */,
 				4FC5989220E2CEC80042899B /* Assets.xcassets */,
 				4FC5989420E2CEC80042899B /* LaunchScreen.storyboard */,
 				4F6B3B3320EE89D600AB5DE2 /* GPX Files */,
 				4FC5989720E2CEC80042899B /* Info.plist */,
-				4FDA5BA52127ABCE00BDA5D0 /* GoogleService-Info.plist */,
+				4F74ACF4214C395C003309B2 /* GoogleService-Info.plist */,
 				4FC5988F20E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld */,
 			);
 			path = "BRIDGE-Rider";
@@ -259,7 +295,6 @@
 				4FC89D58212D1C5D0002880A /* RideHistoryTableViewCell.swift */,
 				4FC89D5B212D1CD80002880A /* RideHistoryViewController.swift */,
 				4FC89D5E212E1E3B0002880A /* RideDetailsViewController.swift */,
-				4FA68D7321334B6D00E7BBC3 /* RideDetailsTitleViewController.swift */,
 			);
 			path = "Ride History";
 			sourceTree = "<group>";
@@ -351,24 +386,28 @@
 				4F91CBC72127F7DD00FD95C8 /* Montserrat-SemiBold.ttf in Resources */,
 				4F91CBC82127F7DD00FD95C8 /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				4F91CBBD2127F7DD00FD95C8 /* Montserrat-ExtraBold.ttf in Resources */,
-				4FDA5BA62127ABCE00BDA5D0 /* GoogleService-Info.plist in Resources */,
 				4FC5989320E2CEC80042899B /* Assets.xcassets in Resources */,
 				4F91CBC32127F7DD00FD95C8 /* Montserrat-LightItalic.ttf in Resources */,
 				4F6B3B3220EE89CA00AB5DE2 /* BridgeDemoRouteDropOff.gpx in Resources */,
 				4F91CBC92127F7DD00FD95C8 /* Montserrat-Thin.ttf in Resources */,
 				4F91CBC42127F7DD00FD95C8 /* Montserrat-Medium.ttf in Resources */,
+				4FA364BC2149D32500FAB8FF /* Product Sans Bold Italic.ttf in Resources */,
 				4F6B3B3020EE89CA00AB5DE2 /* BridgeDemoDriverStart.gpx in Resources */,
 				4F91CBBB2127F7DD00FD95C8 /* Montserrat-Bold.ttf in Resources */,
 				4F6B3B2E20EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx in Resources */,
 				4F91CBBE2127F7DD00FD95C8 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 				4F91CBBF2127F7DD00FD95C8 /* Montserrat-ExtraLight.ttf in Resources */,
 				4F91CBC02127F7DD00FD95C8 /* Montserrat-ExtraLightItalic.ttf in Resources */,
+				4FA364BA2149D32500FAB8FF /* Product Sans Regular.ttf in Resources */,
 				4F91CBC12127F7DD00FD95C8 /* Montserrat-Italic.ttf in Resources */,
 				4F91CBCA2127F7DD00FD95C8 /* Montserrat-ThinItalic.ttf in Resources */,
+				4F74ACF5214C395D003309B2 /* GoogleService-Info.plist in Resources */,
 				4F91CBC22127F7DD00FD95C8 /* Montserrat-Light.ttf in Resources */,
+				4FA364BB2149D32500FAB8FF /* Product Sans Bold.ttf in Resources */,
 				4FC5988E20E2CEC60042899B /* Main.storyboard in Resources */,
 				4F6B3B2F20EE89CA00AB5DE2 /* BridgeDemoRoutePickup.gpx in Resources */,
 				4F836D4E212FB02B00A402CC /* BridgeGMapsStyle.json in Resources */,
+				4FA364BD2149D32500FAB8FF /* Product Sans Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,12 +423,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
-				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
-				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
-				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
-				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
-				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
 				"${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -399,12 +432,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PhoneNumberKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -463,20 +490,25 @@
 				4F73376921122BDB00DD005E /* DriverLocationViewController.swift in Sources */,
 				4FF938E5211E705B00C55AFE /* FinalDestViewController.swift in Sources */,
 				4F9399F520E3222100268AA6 /* CheckUserLoggedViewController.swift in Sources */,
+				4F74ACF1214C05B5003309B2 /* LegalTableViewController.swift in Sources */,
 				4F9399FC20E3282B00268AA6 /* WelcomeViewController.swift in Sources */,
 				4F9399F720E3222100268AA6 /* ConnectionErrorViewController.swift in Sources */,
-				4F56E6AB2134863400985FF3 /* RideConfirmedAlertViewController.swift in Sources */,
 				4FC5989120E2CEC60042899B /* BRIDGE_Rider.xcdatamodeld in Sources */,
 				4FC89D5F212E1E3B0002880A /* RideDetailsViewController.swift in Sources */,
 				4F121962210FE82600BE0BD4 /* RiderViewController.swift in Sources */,
 				4FC89D5C212D1CD80002880A /* RideHistoryViewController.swift in Sources */,
+				4F74ACF3214C2DA1003309B2 /* MyAccountTableViewController.swift in Sources */,
 				4F9399F620E3222100268AA6 /* ConnectionCheckerViewController.swift in Sources */,
-				4FA68D7421334B6D00E7BBC3 /* RideDetailsTitleViewController.swift in Sources */,
+				4FD52AAB214CB0CE004BC050 /* EditAccountViewController.swift in Sources */,
+				4F74ACEB214B21CE003309B2 /* AboutTableViewController.swift in Sources */,
 				4F863DB7211011AD00406B81 /* AccountViewController.swift in Sources */,
 				4FC5988B20E2CEC60042899B /* ViewController.swift in Sources */,
 				4F56E6A62133B65100985FF3 /* BetaAlertViewController.swift in Sources */,
 				4F9399F920E3238300268AA6 /* Initialization.swift in Sources */,
+				4F74ACE8214B1A1C003309B2 /* SettingsTableViewController.swift in Sources */,
 				4F56E6A9213446B900985FF3 /* OutdatedAppAlertViewController.swift in Sources */,
+				4F74ACEF214C0585003309B2 /* PreferencesTableViewController.swift in Sources */,
+				4F74ACED214C057C003309B2 /* PaymentTableViewController.swift in Sources */,
 				4FC5988920E2CEC60042899B /* AppDelegate.swift in Sources */,
 				4FC89D59212D1C5D0002880A /* RideHistoryTableViewCell.swift in Sources */,
 			);

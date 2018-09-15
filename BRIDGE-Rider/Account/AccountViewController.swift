@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class AccountViewController: UIViewController {
     
@@ -32,6 +33,11 @@ class AccountViewController: UIViewController {
         schoolLabel.text = school
         schoolAddressLabel.text = "100 Skyway Drive, San Jose, CA 95111"
         accountBalanceLabel.text = "$\(accountBalance)"
+        profileImageView.image = profilePic
+        profileImageView.layer.cornerRadius = (profileImageView.frame.height) / 2
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         profileImageView.image = profilePic
         profileImageView.layer.cornerRadius = (profileImageView.frame.height) / 2
     }

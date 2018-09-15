@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Rider</string>
+	<string>Passenger</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.1</string>
 	<key>CFBundleVersion</key>
-	<string>3</string>
+	<string>5</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>googlechromes</string>
@@ -51,6 +51,10 @@
 		<string>Montserrat-BoldItalic.ttf</string>
 		<string>Montserrat-ExtraBoldItalic.ttf</string>
 		<string>Montserrat-BlackItalic.ttf</string>
+		<string>Product Sans Regular</string>
+		<string>Product Sans Bold</string>
+		<string>Product Sans Italic</string>
+		<string>Product Sans Bold Italic</string>
 	</array>
 	<key>UIApplicationExitsOnSuspend</key>
 	<false/>

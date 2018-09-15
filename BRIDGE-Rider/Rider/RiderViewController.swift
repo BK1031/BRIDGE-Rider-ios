@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 import GoogleMaps
 import CoreLocation
 
@@ -66,8 +67,14 @@ class RiderViewController: UIViewController, CLLocationManagerDelegate {
             if let driverConfirmed = snapshot.value as? Bool {
                 if driverConfirmed {
                     //Driver Confirmed Ride
+                    let usersReference = self.ref?.child("rideRequests").child(userID)
+                    let values = ["riderName": nil, "riderAddress": nil, "lat": nil, "long": nil, "riderSchool": nil, "riderID": nil, "rideAccepted": nil, "dest": nil, "destLat": nil, "destLong": nil] as [String : AnyObject]
+                    usersReference?.updateChildValues(values)
+                    //Segue to Driver Location VC
+                    startLat = (self.locationManager.location?.coordinate.latitude)!
+                    startLong = (self.locationManager.location?.coordinate.longitude)!
                     self.locationManager.stopUpdatingLocation()
-                    self.performSegue(withIdentifier: "rideConfirmedAlert", sender: self)
+                    self.performSegue(withIdentifier: "toDriverView", sender: self)
                 }
             }
         })
@@ -80,7 +87,6 @@ class RiderViewController: UIViewController, CLLocationManagerDelegate {
         mapView.animate(to: camera)
         if let location = locationManager.location?.coordinate {
             userLocation = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
-            ref = Database.database().reference()
             let usersReference = self.ref?.child("rideRequests").child(userID)
             let values = ["lat": userLocation!.latitude, "long": userLocation!.longitude] as [String : Any]
             usersReference?.updateChildValues(values)

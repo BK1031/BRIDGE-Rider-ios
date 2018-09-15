@@ -9,8 +9,9 @@
 import UIKit
 import PhoneNumberKit
 import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 import CoreLocation
-import MaterialComponents
 
 class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -56,11 +57,15 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     var ref:DatabaseReference?
     var databaseHandle:DatabaseHandle?
     
+    var storeRef:StorageReference?
+    var store:StorageHandle?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         //Firebase Database Reference Setup
         ref = Database.database().reference()
+        storeRef = Storage.storage().reference()
         
         getStartedButton.layer.cornerRadius = 10
         registrationView.layer.cornerRadius = 10
@@ -109,20 +114,6 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBAction func displayTerms(_ sender: Any) {
         //Display terms here
-        let alert = MDCAlertController(title: "BRIDGE Terms and Conditions", message: terms)
-        alert.addAction(MDCAlertAction(title: "Accept", handler: { (handler) in
-            self.termsSwitch.isOn = true
-            self.confirm = true
-        }))
-        alert.addAction(MDCAlertAction(title: "Cancel", handler: { (handler) in
-            self.termsSwitch.isOn = false
-            self.confirm = false
-        }))
-        alert.view.layer.cornerRadius = 10
-        alert.titleFont = UIFont(name: "Montserrat-SemiBold", size: 18.0)
-        alert.messageFont = UIFont(name: "Montserrat-Regular", size: 15.0)
-        alert.buttonFont = UIFont(name: "Montserrat-Regular", size: 15.0)
-        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func getStarted(_ sender: UIButton) {
@@ -228,6 +219,15 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 if let user = user {
                     userID = user.uid
                 }
+                let imageData: Data = UIImageJPEGRepresentation(profilePic, 1.0)!
+                let usersProfileRef = self.storeRef?.child("images").child("profiles")
+                let uploadUserProfileTask = usersProfileRef?.child("\(userID).png").putData(imageData, metadata: nil) { (metadata, errro) in
+                    guard let metadata = metadata else {
+                        print("Error occurred")
+                        return
+                    }
+                }
+                
                 let usersReference = self.ref?.child("users").child(userID)
                 let values = ["name": name, "email": email, "address": addressFull, "accountBalance": accountBalance, "phone": phone, "school": school, "homeLat": homeLat, "homeLong": homeLong, "isStudent": isStudent] as [String : Any]
                 usersReference?.updateChildValues(values)
@@ -281,6 +281,13 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                     userID = user.uid
                     email = user.email!
                 }
+                
+                let usersProfileRef = self.storeRef?.child("images").child("profiles").child("\(userID).png")
+                let downloadUserProfileTask = usersProfileRef?.getData(maxSize: 20 * 1024 * 1024, completion: { (data, error) in
+                    if let data = data {
+                        profilePic = UIImage(data: data)!
+                    }
+                })
                 
                 //Extract User Info form Firebase Here
                 Database.database().reference().child("users").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in

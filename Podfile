@@ -15,5 +15,4 @@ target 'BRIDGE-Rider' do
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
   pod 'Firebase/Messaging'
-  pod 'MaterialComponents'
 end

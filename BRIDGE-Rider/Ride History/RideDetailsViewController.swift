@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import Firebase
+import FirebaseDatabase
 
 class RideDetailsViewController: UITableViewController, CLLocationManagerDelegate {
 
@@ -20,6 +21,7 @@ class RideDetailsViewController: UITableViewController, CLLocationManagerDelegat
     @IBOutlet weak var midTimeLabel: UILabel!
     @IBOutlet weak var endTimeLabl: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     var ref:DatabaseReference?
     var databaseHandle:DatabaseHandle?
@@ -51,12 +53,15 @@ class RideDetailsViewController: UITableViewController, CLLocationManagerDelegat
                 self.startTimeLabel.text = rideDetails["startTime"] as? String
                 self.midTimeLabel.text = rideDetails["midTime"] as? String
                 self.endTimeLabl.text = rideDetails["endTime"] as? String
+                self.dateLabel.text = rideDetails["date"] as? String
                 let originLat = rideDetails["startLat"] as! Double
                 let originLong = rideDetails["startLong"] as! Double
                 let destLat = rideDetails["endLat"] as! Double
                 let destLong = rideDetails["endLong"] as! Double
                 self.startCoor = CLLocationCoordinate2DMake(originLat, originLong)
                 self.endCoor = CLLocationCoordinate2DMake(destLat, destLong)
+                
+                self.navigationItem.title = "\(rideDetails["date"] as! String), \(rideDetails["endTime"] as! String)"
                 
                 let startMarker = GMSMarker()
                 startMarker.position = self.startCoor
