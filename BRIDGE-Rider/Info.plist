@@ -28,29 +28,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>"Please allow BRIDGE to access your location so we can route drivers to you and notify you when your driver is nearby"</string>
+	<string>&quot;Please allow BRIDGE to access your location so we can route drivers to you and notify you when your driver is nearby&quot;</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>"Please allow BRIDGE to access your location so we can route drivers to you and notify you when your driver is nearby"</string>
+	<string>&quot;Please allow BRIDGE to access your location so we can route drivers to you and notify you when your driver is nearby&quot;</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Montserrat-Thin.ttf</string>
-		<string>Montserrat-ExtraLight.ttf</string>
-		<string>Montserrat-Light.ttf</string>
-		<string>Montserrat-Regular.ttf</string>
-		<string>Montserrat-Medium.ttf</string>
-		<string>Montserrat-SemiBold.ttf</string>
-		<string>Montserrat-Bold.ttf</string>
-		<string>Montserrat-ExtraBold.ttf</string>
-		<string>Montserrat-Black.ttf</string>
-		<string>Montserrat-ThinItalic.ttf</string>
-		<string>Montserrat-ExtraLightItalic.ttf</string>
-		<string>Montserrat-LightItalic.ttf</string>
-		<string>Montserrat-Italic.ttf</string>
-		<string>Montserrat-MediumItalic.ttf</string>
-		<string>Montserrat-SemiBoldItalic.ttf</string>
-		<string>Montserrat-BoldItalic.ttf</string>
-		<string>Montserrat-ExtraBoldItalic.ttf</string>
-		<string>Montserrat-BlackItalic.ttf</string>
 		<string>Product Sans Regular</string>
 		<string>Product Sans Bold</string>
 		<string>Product Sans Italic</string>

@@ -34,6 +34,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
+        profileButton.setImage(profilePic, for: .normal)
+        profileButton.imageView?.layer.cornerRadius = (profileButton.imageView?.frame.height)! / 2
+        
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
         mapView.padding.bottom = view.safeAreaInsets.bottom + 70
@@ -62,6 +65,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 }
             }
         })
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

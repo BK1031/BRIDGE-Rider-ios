@@ -219,6 +219,7 @@ class WelcomeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 if let user = user {
                     userID = user.uid
                 }
+                
                 let imageData: Data = UIImageJPEGRepresentation(profilePic, 1.0)!
                 let usersProfileRef = self.storeRef?.child("images").child("profiles")
                 let uploadUserProfileTask = usersProfileRef?.child("\(userID).png").putData(imageData, metadata: nil) { (metadata, errro) in
