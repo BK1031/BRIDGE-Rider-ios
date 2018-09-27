@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4F121962210FE82600BE0BD4 /* RiderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F121961210FE82600BE0BD4 /* RiderViewController.swift */; };
+		4F1C6F8E2155C6EB00361F61 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1C6F8D2155C6EB00361F61 /* OnboardingViewController.swift */; };
 		4F56E6A62133B65100985FF3 /* BetaAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56E6A52133B65100985FF3 /* BetaAlertViewController.swift */; };
 		4F56E6A9213446B900985FF3 /* OutdatedAppAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56E6A8213446B900985FF3 /* OutdatedAppAlertViewController.swift */; };
 		4F6B3B2E20EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4F6B3B2920EE89CA00AB5DE2 /* BridgeDemoDropLocation.gpx */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		0845BD4CAC28B848F299EF24 /* Pods-BRIDGE-Rider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRIDGE-Rider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRIDGE-Rider/Pods-BRIDGE-Rider.debug.xcconfig"; sourceTree = "<group>"; };
 		4F121961210FE82600BE0BD4 /* RiderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderViewController.swift; sourceTree = "<group>"; };
+		4F1C6F8D2155C6EB00361F61 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		4F5047B3212146740038C55E /* BRIDGE-Rider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BRIDGE-Rider.entitlements"; sourceTree = "<group>"; };
 		4F56E6A52133B65100985FF3 /* BetaAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaAlertViewController.swift; sourceTree = "<group>"; };
 		4F56E6A8213446B900985FF3 /* OutdatedAppAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutdatedAppAlertViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				4F9399FA20E3272600268AA6 /* Startup */,
 				4FC5988A20E2CEC60042899B /* ViewController.swift */,
 				4F9399FB20E3282B00268AA6 /* WelcomeViewController.swift */,
+				4F1C6F8D2155C6EB00361F61 /* OnboardingViewController.swift */,
 				4F121963210FE82C00BE0BD4 /* Rider */,
 				4F863DB82110162700406B81 /* Account */,
 				4FC89D5A212D1C900002880A /* Ride History */,
@@ -355,6 +358,7 @@
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -364,6 +368,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -427,6 +432,7 @@
 				4FC89D5C212D1CD80002880A /* RideHistoryViewController.swift in Sources */,
 				4F74ACF3214C2DA1003309B2 /* MyAccountTableViewController.swift in Sources */,
 				4F9399F620E3222100268AA6 /* ConnectionCheckerViewController.swift in Sources */,
+				4F1C6F8E2155C6EB00361F61 /* OnboardingViewController.swift in Sources */,
 				4FD52AAB214CB0CE004BC050 /* EditAccountViewController.swift in Sources */,
 				4F74ACEB214B21CE003309B2 /* AboutTableViewController.swift in Sources */,
 				4F863DB7211011AD00406B81 /* AccountViewController.swift in Sources */,

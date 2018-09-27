@@ -26,6 +26,9 @@ class RideDetailsViewController: UITableViewController, CLLocationManagerDelegat
     var ref:DatabaseReference?
     var databaseHandle:DatabaseHandle?
     
+    var storeRef:StorageReference?
+    var store:StorageHandle?
+    
     let locationManager = CLLocationManager()
     var userLocation:CLLocationCoordinate2D?
     
@@ -35,6 +38,7 @@ class RideDetailsViewController: UITableViewController, CLLocationManagerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+        storeRef = Storage.storage().reference()
         
         self.navigationController?.navigationItem.largeTitleDisplayMode = .never
         
@@ -45,6 +49,8 @@ class RideDetailsViewController: UITableViewController, CLLocationManagerDelegat
         
         mapView.layer.cornerRadius = 10
         mapView.settings.setAllGesturesEnabled(false)
+        
+        driverPic.layer.cornerRadius = driverPic.frame.height / 2
         
         ref?.child("users").child(userID).child("history").child(selectedRide).observe(.value, with: { (snapshot) in
             if let rideDetails = snapshot.value as? [String: AnyObject] {
@@ -62,6 +68,13 @@ class RideDetailsViewController: UITableViewController, CLLocationManagerDelegat
                 self.endCoor = CLLocationCoordinate2DMake(destLat, destLong)
                 
                 self.navigationItem.title = "\(rideDetails["date"] as! String), \(rideDetails["endTime"] as! String)"
+                
+                let usersProfileRef = self.storeRef?.child("images").child("profiles").child("\(rideDetails["driverID"] as! String).png")
+                let downloadUserProfileTask = usersProfileRef?.getData(maxSize: 20 * 1024 * 1024, completion: { (data, error) in
+                    if let data = data {
+                        self.driverPic.image = UIImage(data: data)!
+                    }
+                })
                 
                 let startMarker = GMSMarker()
                 startMarker.position = self.startCoor

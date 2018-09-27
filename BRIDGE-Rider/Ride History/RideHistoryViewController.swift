@@ -17,6 +17,9 @@ class RideHistoryViewController: UIViewController, UITableViewDelegate, UITableV
     var ref:DatabaseReference?
     var databaseHandle:DatabaseHandle?
     
+    var storeRef:StorageReference?
+    var store:StorageHandle?
+    
     var driverIDList = [String]()
     var rideIDList = [String]()
     var driverNameList = [String]()
@@ -34,6 +37,7 @@ class RideHistoryViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+        storeRef = Storage.storage().reference()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -89,7 +93,13 @@ class RideHistoryViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "rideHistory") as! RideHistoryTableViewCell
         
-        cell.profilePic.image = #imageLiteral(resourceName: "profile")
+        let usersProfileRef = self.storeRef?.child("images").child("profiles").child("\(driverIDList[indexPath.row]).png")
+        let downloadUserProfileTask = usersProfileRef?.getData(maxSize: 20 * 1024 * 1024, completion: { (data, error) in
+            if let data = data {
+                cell.profilePic.image = UIImage(data: data)!
+            }
+        })
+        
         cell.profilePic.layer.cornerRadius = cell.profilePic.frame.height / 2
         cell.driverName.text = driverNameList[indexPath.row]
         cell.rideDate.text = "\(dateList[indexPath.row]), \(timeList[indexPath.row])"
